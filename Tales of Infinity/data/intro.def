@@ -1,0 +1,29 @@
+[SceneDef]
+spr		= system.sff
+startscene	= 0
+
+[Scene 0]
+clearcolor	= 0,0,0
+;bgm		= snd/intro.mp3
+bgm.loop	= 0
+end.time	= 60
+
+[Scene 1]
+clearcolor	= 0,0,0
+fadein.time	= 30
+fadein.col	= 0,0,0
+fadeout.time	= 0
+fadeout.col	= 0,0,0
+bg.name		= Scene01BG
+end.time	= 60
+
+[Scene01BGDef]
+;spr		= 
+debugbg		= 0
+
+[Scene01BG LOGO]
+type		= normal
+spriteno	= 0,0
+layerno		= 0
+start		= 0,33
+mask		= 1

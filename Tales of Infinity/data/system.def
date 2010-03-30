@@ -13,9 +13,9 @@
 
 ;----------------------------
 [Info]
-name ="Default"
-author ="Elecbyte"
-displayname=""
+name ="Tales of Infinity"
+author ="5uper & Thunderbert"
+displayname="Tales of Infinity"
 versiondate=28/3/2010
 mugenversion=
 pal.defaults=1,2,3,4,5
@@ -36,7 +36,7 @@ pal.defaults=1,2,3,4,5
 spr = system.sff          ;Filename of sprite data
 snd = system.snd          ;Filename of sound data
 logo.storyboard =         ;Logo storyboard definition (optional)
-intro.storyboard =        ;Intro storyboard definition (optional)
+intro.storyboard = intro.def        ;Intro storyboard definition (optional)
 select = select.def       ;Character and stage selection list
 fight = fight.def         ;Fight definition filename
 font1 = font/f-4x6.fnt    ;System fonts
@@ -76,7 +76,7 @@ vs.bgm.loop = 1
 ;-------------------------------------------------------------------
 ;Title screen definition
 [Title Info]
-fadein.time = 10
+fadein.time = 0
 fadeout.time = 10
 menu.pos = 159,195
 menu.item.font = 4,0,0
@@ -114,7 +114,7 @@ bgclearcolor = 0,0,0
 [TitleBG 3] 
 type = normal 
 spriteno = 0,0 
-start = 0, 40 
+start = 0, 33 
 mask = 1 
 trans = add 
 

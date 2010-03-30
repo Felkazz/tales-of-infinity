@@ -56,6 +56,9 @@ Set up graphics...timer...OK
 Initializing character info...OK
 Initializing select screen...finding characters...OK
 Entering main loop.
+Playing storyboard intro.def: scene
+Storyboard playback finished OK
+Finished playing storyboard intro.def: scene
 Returned from main loop.
 Deinitializing...
 Clearing player cache...OK
