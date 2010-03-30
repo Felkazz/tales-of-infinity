@@ -41,7 +41,8 @@ select = select.def       ;Character and stage selection list
 fight = fight.def         ;Fight definition filename
 font1 = font/f-4x6.fnt    ;System fonts
 font2 = font/f-6x9.fnt    ;System fonts
-font3 = font/jg.fnt       ;System fonts
+font3 = font/jg.fnt       ;System fonts 
+font4 = font/tales.fnt
 sprite=
 sound=
 anim=
@@ -77,30 +78,30 @@ vs.bgm.loop = 1
 [Title Info]
 fadein.time = 10
 fadeout.time = 10
-menu.pos = 159,158
-menu.item.font = 3,0,0
-menu.item.active.font = 3,5,0
-menu.item.spacing = 0, 13
+menu.pos = 159,195
+menu.item.font = 4,0,0
+menu.item.active.font = 4,0,0
+menu.item.spacing = 0, 500
 ; Names for each of the items in the menu. Names must be in quotes.
 ; Use "" to disable an item. If all are disabled, goes straight to demo mode
 ; (hold Esc to quit demos). *2001.11.14 NEW*
-menu.itemname.arcade = "ARCADE"
-menu.itemname.versus = "VS MODE"
-menu.itemname.teamarcade = "TEAM ARCADE"
-menu.itemname.teamversus = "TEAM VS"
-menu.itemname.teamcoop = "TEAM CO-OP"
-menu.itemname.survival = "SURVIVAL"
-menu.itemname.survivalcoop = "SURVIVAL CO-OP"
-menu.itemname.training = "TRAINING"
-menu.itemname.watch = "WATCH"
-menu.itemname.options = "OPTIONS"
-menu.itemname.exit = "EXIT"
+menu.itemname.arcade = "I"
+menu.itemname.versus = "G"
+menu.itemname.teamarcade = "K"
+menu.itemname.teamversus = "D"
+menu.itemname.teamcoop = "F"
+menu.itemname.survival = "J"
+menu.itemname.survivalcoop = "A"
+menu.itemname.training = "C"
+menu.itemname.watch = "B"
+menu.itemname.options = "E"
+menu.itemname.exit = "H"
 ; These parameters define the window in which the items are visible
 ; in.
-menu.window.margins.y = 12, 8
-menu.window.visibleitems = 5
-menu.boxcursor.visible = 1     ;Set to 0 to disable default cursor display
-menu.boxcursor.coords = -58,-10,57,2
+menu.window.margins.y = -300, -200
+menu.window.visibleitems = 1
+menu.boxcursor.visible = 0     ;Set to 0 to disable default cursor display
+menu.boxcursor.coords = -58,-18,57,2
 ; These are the sounds for cursor movement
 cursor.move.snd = 100,0
 cursor.done.snd = 100,1
@@ -123,17 +124,20 @@ trans = add
 [Select Info]
 fadein.time = 10
 fadeout.time = 10
-rows = 2
-columns = 5
+rows = 4
+columns = 4
 wrapping = 0              ;1 to let cursor wrap around
-pos = 90,170              ;Position to draw to
+pos = 0,0              ;Position to draw to
 showemptyboxes = 0        ;1 to show empty boxes
 moveoveremptyboxes = 0    ;1 to allow cursor to move over empty boxes
-cell.size = 27,27         ;x,y size of each cell (in pixels)
+cell.size = 32,32         ;x,y size of each cell (in pixels)
 cell.spacing = 2          ;Space between each cell
 cell.bg.spr = 150,0       ;Note: Don't use animation for cells
 cell.random.spr = 151,0   ;Icon for random select (don't use animation)
 cell.random.switchtime = 4;Time to wait before changing to another random portrait
+portrait.spr = 9000,0
+portrait.offset = 0,0
+portrait.scale = 0.5,0.5
 p1.cursor.startcell = 0,0
 p1.cursor.active.spr = 160,0
 p1.cursor.done.spr = 161,0
