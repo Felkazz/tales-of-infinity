@@ -124,10 +124,10 @@ trans = add
 [Select Info]
 fadein.time = 10
 fadeout.time = 10
-rows = 4
-columns = 4
-wrapping = 0              ;1 to let cursor wrap around
-pos = 0,0              ;Position to draw to
+rows = 3
+columns = 11
+wrapping = 1              ;1 to let cursor wrap around
+pos = 25,170               ;Position to draw to
 showemptyboxes = 0        ;1 to show empty boxes
 moveoveremptyboxes = 0    ;1 to allow cursor to move over empty boxes
 cell.size = 32,32         ;x,y size of each cell (in pixels)
