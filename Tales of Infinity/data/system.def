@@ -250,10 +250,10 @@ time = 230                ;Time to show screen
 fadein.time = 15
 fadeout.time = 15
 ;Big portraits
-p1.pos =  20,31
+p1.pos =  2,86
 p1.facing = 1
 p1.scale = 1,1
-p2.pos = 299,31
+p2.pos = 317,86
 p2.facing = -1
 p2.scale = 1,1
 ;Names
