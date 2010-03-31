@@ -4,7 +4,7 @@
 M.U.G.E.N ver 2003.06.14 status log
 -----------------------------------
 Parsing command line...
-Command line: F:\MUGEN\Tales of Infinity\Tales of Infinity\winmugen.exe
+Command line: E:\PROGRAMAS\etc\Minhas Criações\Tales of Infinity\Tales of Infinity\winmugen.exe
 Parse command line OK
 Initializing...
 Allocating game variables
@@ -57,7 +57,7 @@ Initializing character info...OK
 Initializing select screen...finding characters...OK
 Entering main loop.
 Playing storyboard intro.def: scene
-Storyboard playback finished OK
+Storyboard playback canceled 400:0 k1C p0
 Finished playing storyboard intro.def: scene
 Returned from main loop.
 Deinitializing...
