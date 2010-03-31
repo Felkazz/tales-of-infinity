@@ -66,29 +66,25 @@
  ;
  ;Insert your characters below.
 
-kfm, stages/kfm.def
-kfm, stages/kfm.def
-kfm, stages/kfm.def
-kfm, stages/kfm.def
-kfm, stages/kfm.def
-kfm, stages/kfm.def
-kfm, stages/kfm.def
-kfm, stages/kfm.def
+Teste/Teste.def
+Teste/Teste.def
+Teste/Teste.def
+Teste/Teste.def
+Teste/Teste.def
+Teste/Teste.def
+Teste/Teste.def
+Teste/Teste.def
 BLANK
 BLANK
 BLANK
-kfm, stages/kfm.def
-kfm, stages/kfm.def
-kfm, stages/kfm.def
-kfm, stages/kfm.def
-kfm, stages/kfm.def
-kfm, stages/kfm.def
-kfm, stages/kfm.def
-kfm, stages/kfm.def
-BLANK
-BLANK
-BLANK
-BLANK
+Teste/Teste.def
+Teste/Teste.def
+Teste/Teste.def
+Teste/Teste.def
+Teste/Teste.def
+Teste/Teste.def
+Teste/Teste.def
+Teste/Teste.def
 BLANK
 BLANK
 BLANK
@@ -96,9 +92,13 @@ BLANK
 BLANK
 BLANK
 BLANK
-kfm, stages/kfm.def
-kfm, stages/kfm.def
-kfm, stages/kfm.def
+BLANK
+BLANK
+BLANK
+BLANK
+Teste/Teste.def
+Teste/Teste.def
+Teste/Teste.def
 
 ;-----------------------
 [ExtraStages]

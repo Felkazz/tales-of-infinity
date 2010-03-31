@@ -135,9 +135,6 @@ cell.spacing = 2          ;Space between each cell
 cell.bg.spr = 150,0       ;Note: Don't use animation for cells
 cell.random.spr = 151,0   ;Icon for random select (don't use animation)
 cell.random.switchtime = 4;Time to wait before changing to another random portrait
-portrait.spr = 9000,0
-portrait.offset = 0,0
-portrait.scale = 0.5,0.5
 p1.cursor.startcell = 0,0
 p1.cursor.active.spr = 160,0
 p1.cursor.done.spr = 161,0
@@ -226,56 +223,26 @@ p2.teammenu.value.spacing = -6,0
 ;-----------------------
 ;Character select screen background
 [SelectBGdef]
+bgclearcolor = 0,0,0
 ;spr = graphics/selectbg.sff  ;Filename of sprite data
 
-[SelectBG 0] ;Scrolling background
+[SelectBG 0]
 type  = normal
 spriteno = 100,0
 layerno = 0
 start = 0,0
-tile  = 1,1
-velocity = -1, -1
+tile  = 1,0
+velocity = 0, 0
 
-[SelectBG 1] ;Dark box
+[SelectBG 2.C]
 type  = normal
 spriteno = 100,1
 layerno = 0
-start = 0, 166
+start = 0,0
 delta = 0,0
-tile  = 1,0
-trans = sub
-window = 85,0, 235,239
-velocity = -1, 0
-
-[SelectBG 2.A] ;Title background
-type  = normal
-spriteno = 102,0
-layerno = 0
-start = 0, 2
-delta = 0,0
-tile  = 1,0
-trans = sub
-velocity = -1, 0
-
-[SelectBG 2.B] ;Title background B
-type  = normal
-spriteno = 102,1
-layerno = 0
-start = 0, 2
-delta = 0,0
-tile  = 1,0
+tile  = 1,1
 trans = add
-velocity = -3, 0
-
-[SelectBG 2.C] ;Title background C
-type  = normal
-spriteno = 102,2
-layerno = 0
-start = 0, 2
-delta = 0,0
-tile  = 1,0
-trans = add
-velocity = -6, 0
+velocity = 2, -1
 
 ;-------------------------------------------------------------------
 [VS Screen]
