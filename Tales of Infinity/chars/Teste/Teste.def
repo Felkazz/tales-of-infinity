@@ -1,0 +1,26 @@
+;***************************************************************************;
+;******************* Created in Fighter Factory Ultimate *******************;
+;*******************      http://www.virtualltek.com     *******************;
+;***************************************************************************;
+
+[Info]
+name = "Teste"
+displayname = "Teste"
+versiondate = 
+mugenversion = 
+author = "Thunderbert"
+pal.defaults = 1
+
+[Files]
+sprite = Teste.sff
+anim = Teste.air
+;sound = 
+cmd = Teste.cmd
+cns = Teste.cns
+stcommon = Teste.cns
+st = Teste.cns
+pal1 = Teste.act
+
+[Arcade]
+;intro.storyboard = 
+;ending.storyboard = 
