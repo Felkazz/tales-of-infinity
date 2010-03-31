@@ -246,7 +246,7 @@ velocity = 2, -1
 
 ;-------------------------------------------------------------------
 [VS Screen]
-time = 150                ;Time to show screen
+time = 230                ;Time to show screen
 fadein.time = 15
 fadeout.time = 15
 ;Big portraits
@@ -268,46 +268,33 @@ p2.name.font =   3,0,0
 
 [VersusBG 1] 
 type  = normal
-spriteno = 100,0
+spriteno = 100,2
 start = 0,0
 tile  = 1,1
-velocity = 0,1.5
+velocity = 0,0
 
-[VersusBG 2] ;VS Screen
-type  = normal
-spriteno = 100,1
-start = 20,13
-tile  = 1,1
-trans = sub
-window = 19,30, 140,171
-velocity = -2, 0
-
-[VersusBG 3] ;VS Screen
-type  = normal
-spriteno = 100,1
-start = 20,13
-tile  = 1,1
-trans = sub
-window = 179,30, 300,171
-velocity = 2, 0
-
-[VersusBG 4] ;VS Logo
+[VersusBG 2] ;VS Logo
 type  = anim
 actionno = 200
 layerno = 1 ; Front
-start = 0,95
+start = 0,220
 
 [Begin Action 200]
-200,4, 0,0, 1
-200,3, 0,0, 2
-200,2, 0,0, 3
-200,1, 0,0, 4
-200,0, 0,0, 8
-200,5, 0,0, 3
-200,6, 0,0, 3
-200,7, 0,0, 3
-200,8, 0,0, 3
-200,0, 0,0, -1
+100,3, 0,0, 5
+100,4, 0,0, 5
+100,5, 0,0, 5
+100,6, 0,0, 5
+100,7, 0,0, 5
+100,8, 0,0, 5
+100,9, 0,0, 5
+100,10, 0,0, 5
+100,11, 0,0, 5
+100,12, 0,0, 5
+100,13, 0,0, 5
+100,3, 0,0, 15
+100,13, 0,0, 15
+100,3, 0,0, 15
+100,13, 0,0, 15
 
 ;-------------------------------------------------------------------
 ;Demo mode definition

@@ -13,6 +13,58 @@
 ;                    velocity of player just before hitting the ground.
 ;                    Used in state 5080 for storing the anim # to display.
 
+[Data]
+life = 1000
+power = 1000
+attack = 100
+defence = 100
+fall.defence_up = 50
+liedown.time = 60
+airjuggle = 15
+sparkno = 2
+guard.sparkno = 40
+KO.echo = 0
+volume = 0
+IntPersistIndex = 60
+FloatPersistIndex = 40
+
+[Size]
+xscale = 1
+yscale = 1
+ground.back = 10
+ground.front = 10
+air.back = 10
+air.front = 10
+height = 30
+attack.dist = 160
+proj.attack.dist = 90
+proj.doscale = 0
+head.pos = 0, -22
+mid.pos = -1, -11
+shadowoffset = 0
+draw.offset = 0,0
+
+[Velocity]
+walk.fwd  = 3
+walk.back = -3
+run.fwd  = 5, 0
+run.back = -5,-4
+jump.neu = 0,-8.4
+jump.back = -2.55
+jump.fwd = 2.5
+runjump.back = -2.55,-8.1
+runjump.fwd = 4,-8.1
+airjump.neu = 0,-8.1
+airjump.back = -2.55
+airjump.fwd = 2.5
+
+[Movement]
+airjump.num = 1
+airjump.height = 10
+yaccel = .44
+stand.friction = .85
+crouch.friction = .82
+
 ;---------------------------------------------------------------------------
 ; Stand
 [Statedef 0]
@@ -498,7 +550,6 @@ value = 130
 [State 130, 2];Guard Counter attempt
 type = ChangeState
 trigger1 = power >= 200
-trigger1 = command = "start"
 value = 134
 
 ;---------------------------------------------------------------------------
@@ -775,7 +826,6 @@ value = 134
 [State 130, 2];Guard Cancel A attempt
 type = ChangeState
 trigger1 = power >= 200
-trigger1 = command = "start"
 value = 135
 
 [State 151, 1]
