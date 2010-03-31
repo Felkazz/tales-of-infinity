@@ -157,7 +157,7 @@ portrait.scale = 1,1
 title.offset = 159,13     ;Position of title (Arcade Mode, etc)
 title.font = 3,0,0        ;Font of title (-1 for none)
 ;Big portraits
-p1.face.offset = 18,13    ;Position to put big portrait
+p1.face.offset = 13,10    ;Position to put big portrait
 p1.face.scale = 1,1
 p1.face.facing = 1
 p2.face.offset = 301,13
