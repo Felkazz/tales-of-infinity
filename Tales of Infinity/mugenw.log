@@ -4,7 +4,7 @@
 M.U.G.E.N ver 2003.06.14 status log
 -----------------------------------
 Parsing command line...
-Command line: E:\PROGRAMAS\etc\Minhas Criações\Tales of Infinity\Tales of Infinity\winmugen.exe
+Command line: F:\MUGEN\Tales of Infinity\Tales of Infinity\winmugen.exe
 Parse command line OK
 Initializing...
 Allocating game variables
@@ -57,8 +57,9 @@ Initializing character info...OK
 Initializing select screen...finding characters...OK
 Entering main loop.
 Playing storyboard intro.def: scene
-Storyboard playback canceled 400:0 k1C p0
+Storyboard playback canceled 80:0 k2C p0
 Finished playing storyboard intro.def: scene
+Attempting to set graphics to 640x480x32 mode 0x44584143...success
 Returned from main loop.
 Deinitializing...
 Clearing player cache...OK
@@ -69,4 +70,9 @@ Freeing system data...OK
 Freeing game variables...OK
 Deinitializing input...pad...keyboard...OK
 Removing callbacks...OK
-Deintializing timer...
+Deintializing timer...OK
+Deinitializing graphics...OK
+Deinitializing CDA...MP3...sound...OK
+Successful program termination.
+
+Log file successfully closed.
