@@ -57,9 +57,8 @@ Initializing character info...OK
 Initializing select screen...finding characters...OK
 Entering main loop.
 Playing storyboard intro.def: scene
-Storyboard playback canceled 80:0 k2C p0
+Storyboard playback finished OK
 Finished playing storyboard intro.def: scene
-Attempting to set graphics to 640x480x32 mode 0x44584143...success
 Returned from main loop.
 Deinitializing...
 Clearing player cache...OK
