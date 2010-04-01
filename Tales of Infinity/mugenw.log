@@ -57,8 +57,14 @@ Initializing character info...OK
 Initializing select screen...finding characters...OK
 Entering main loop.
 Playing storyboard intro.def: scene
-Storyboard playback finished OK
+Storyboard playback canceled 400:0 k1C p0
 Finished playing storyboard intro.def: scene
+
+Using original loader on chars/Teste/Teste.def
+
+Using original loader on chars/Teste/Teste.def
+Unloading system background data...sprite data...OK
+Reloading system sprite data...Reloading system background data...OK
 Returned from main loop.
 Deinitializing...
 Clearing player cache...OK
