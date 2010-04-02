@@ -165,10 +165,10 @@ p2.face.offset = 301,13
 p2.face.scale = 1,1
 p2.face.facing = -1
 ;Name
-p1.name.offset = 10,162   ;Position to put name
-p1.name.font = 3,4,1      ;Set to -1 for no display
-p2.name.offset = 309,162
-p2.name.font = 3,1,-1
+p1.name.offset = 75,145 ;10,162   ;Position to put name
+p1.name.font = 5,0,0 ;3,4,1      ;Set to -1 for no display
+p2.name.offset = 244,145 ;309,162
+p2.name.font = 5,0,0 ;3,1,-1
 ;Stage select
 stage.pos = 160,237
 stage.active.font = 3,0,0
