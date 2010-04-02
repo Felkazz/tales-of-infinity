@@ -384,7 +384,7 @@ type  = normal
 spriteno = 100,0
 start = 0,0
 tile  = 1,1
-velocity = -1, -1
+;velocity = -1, -1
 
 [Arcade]
 intro.storyboard=
