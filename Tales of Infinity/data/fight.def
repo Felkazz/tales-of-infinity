@@ -27,6 +27,7 @@ snd = fight.snd
 font1 = font/jg.fnt
 font2 = font/num1.fnt
 font3 = font/name1.fnt
+font4 = font/15x19.fnt
 fightfx.sff = fightfx.sff
 fightfx.air = fightfx.air
 common.snd = common.snd
@@ -117,17 +118,17 @@ p2.range.x = 0,127
 ;-----------------------------------------------------------
 [Powerbar]
 ;Player 1
-p1.pos    = 140,100
+p1.pos    = 120,215
 p1.bg0.anim = 40
 p1.bg1.spr = 41,0
 ;p1.mid.spr = 42,0
 p1.front.spr = 43,0
 p1.range.x = 0,-107
-p1.counter.offset = -108,6
-p1.counter.font = 1,0, 0
+p1.counter.offset = -17,15
+p1.counter.font = 4,0, 0
 
 ;Player 2
-p2.pos    = 178,100
+p2.pos    = 198,215
 p2.bg0.anim = 40
 p2.bg0.facing = -1
 p2.bg1.spr = 41,0
@@ -137,8 +138,8 @@ p2.bg1.facing = -1
 p2.front.spr = 43,0
 p2.front.facing = -1
 p2.range.x  = 0,107
-p2.counter.offset = 109,6
-p2.counter.font = 1,0, 0
+p2.counter.offset = 17,15
+p2.counter.font = 4,0, 0
 
 ; --level sounds---
 level1.snd = 21,0
@@ -262,7 +263,7 @@ pos = 160,23
 ;bg.spr = 
 ; Time count display
 counter.offset = 0,0
-counter.font = 2,0, 0
+counter.font = 4,0, 0
 ; Ticks for each count
 framespercount = 60
 
