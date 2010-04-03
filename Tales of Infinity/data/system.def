@@ -44,6 +44,7 @@ font2 = font/f-6x9.fnt    ;System fonts
 font3 = font/jg.fnt       ;System fonts 
 font4 = font/tales.fnt
 font5 = font/15x19.fnt
+font6 = font/name2.fnt
 sprite=
 sound=
 anim=
@@ -170,10 +171,10 @@ p1.name.font = 5,0,0 ;3,4,1      ;Set to -1 for no display
 p2.name.offset = 244,145 ;309,162
 p2.name.font = 5,0,0 ;3,1,-1
 ;Stage select
-stage.pos = 160,237
-stage.active.font = 3,0,0
-stage.active2.font = 3,2  ;Second font color for blinking
-stage.done.font = 3,0
+stage.pos = 160,238
+stage.active.font = 6,0,0
+stage.active2.font = 6,0,0  ;Second font color for blinking
+stage.done.font = 6,0,0
 ;Team menu
 teammenu.move.wrapping = 1
 p1.teammenu.pos = 20, 30
@@ -258,10 +259,10 @@ p2.pos = 317,86
 p2.facing = -1
 p2.scale = 1,1
 ;Names
-p1.name.pos  =  78,190
-p1.name.font =   3,0,0
-p2.name.pos  = 241,190
-p2.name.font =   3,0,0
+p1.name.pos  =  55,238 ;78,238
+p1.name.font =   6,0,0
+p2.name.pos  = 264,238 ;241,238
+p2.name.font =   6,0,0
 
 ;-----------------------
 ;VS Match up screen background
