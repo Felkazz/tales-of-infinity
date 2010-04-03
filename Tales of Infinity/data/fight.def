@@ -28,6 +28,7 @@ font1 = font/jg.fnt
 font2 = font/num1.fnt
 font3 = font/name1.fnt
 font4 = font/15x19.fnt
+font5 = font/name2.fnt
 fightfx.sff = fightfx.sff
 fightfx.air = fightfx.air
 common.snd = common.snd
@@ -236,22 +237,22 @@ p2.teammate.face.offset = -1,0
 
 ;-----------------------------------------------------------
 [Name]
-p1.pos = 85, 14 ; 14,10
+p1.pos = 85,14 ; 14,10
 ;p1.bg. =
-p1.name.font = 3,0, 1
+p1.name.font = 5,0, 1
 ;p2.bg. =
 p2.pos = 233,14 ; 305,10
-p2.name.font = 3,0, -1
+p2.name.font = 5,0, -1
 
 [Simul Name]
-p1.pos = 14,10 ; 14,10
-p1.name.font = 3,0, 1
-p2.pos = 305,10
-p2.name.font = 3,0, -1
-p3.pos = 138,10
-p3.name.font = 3,0, -1
-p4.pos = 181,10
-p4.name.font = 3,0, 1
+p1.pos = 85,13 ; 14,10
+p1.name.font = 5,0, 1
+p2.pos = 233,13 ;305,10
+p2.name.font = 5,0, -1
+p3.pos = 60,9 ;138,10
+p3.name.font = 5,0, -1
+p4.pos = 259,9 ;181,10
+p4.name.font = 5,0, 1
 
 [Turns Name]
 p1.pos = 14,10
