@@ -215,11 +215,11 @@ p2.teammenu.item.active.font = 6,1,0 ;3,1, -1
 p2.teammenu.item.active2.font = 6,0,0 ;3,0, -1 ;Second font color for blinking
 ;p2.teammenu.item.cursor.offset = -15,0 ;10, 0
 ;p2.teammenu.item.cursor.anim = 180 ;190
-p2.teammenu.value.icon.offset = -20,2 ;-60,1 ;Posição do escudo
+p2.teammenu.value.icon.offset = -2,2 ;-60,1 ;Posição do escudo
 p2.teammenu.value.icon.spr = 181,0 ;191,0
 ;p2.teammenu.value.empty.icon.offset = -60,1
 ;p2.teammenu.value.empty.icon.spr = 192,0
-p2.teammenu.value.spacing = 17,0 ;-6,0
+p2.teammenu.value.spacing = -17,0 ;-6,0
 ;Sounds
 
 ;-----------------------
