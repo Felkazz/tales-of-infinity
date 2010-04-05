@@ -1,0 +1,85 @@
+【餓狼MOTW】　牙刀ステージ（昼）　By.Nyankoro
+
+[Info]
+name =  "tsunade Stage"
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -152
+boundright = 152
+boundhigh = -119
+boundlow = 0
+verticalfollow = .4
+tension = 50
+
+[PlayerInfo]
+p1startx = -70
+p1starty = 0            
+p1startz = 0           
+p1facing = 1            
+
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+leftbound  = -1000
+rightbound =  1000
+topbound  =  0    
+botbound  =  0   
+
+[Scaling]
+topz     = 0      
+botz     = 50    
+topscale = 1      
+botscale = 1.2    
+
+[Bound]
+screenleft = 15
+screenright = 15  
+
+[StageInfo]
+zoffset   = 220
+autoturn  = 1 
+resetBG = 1   
+
+[Shadow]
+color = 0, 0, 0
+yscale = 0
+reflect = 1
+
+[Music]
+bgmusic = sound/02 - Daylight of Konoha.mp3
+
+
+[BGdef]
+spr = stages/novos/gato_bg.sff
+debugbg = 1   
+
+[BG 1]
+type  = anim  
+spriteno = 0, 0
+start =  15, -98
+delta = 0.74, 0.82
+mask = 1
+actionno = 2
+
+[BG 2]
+type  = anim
+start = 0, -119
+delta = 1,1
+mask = 1
+actionno = 1
+
+[Begin action 1]
+0,0,0,0, 6
+0,1,0,0, 6
+0,2,0,0, 6
+0,3,0,0, 6
+
+[Begin action 2]
+1,0,0,0, 12
+1,1,0,0, 12
+1,2,0,0, 12
+1,3,0,0, 12

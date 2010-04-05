@@ -1,0 +1,168 @@
+
+;--------------------------------------------------------
+[Info]
+name = "Little Nejis & Lees Stage";beach
+
+;--------------------------------------------------------
+[Camera]
+startx = 0
+starty = 0
+boundleft = -152
+boundright = 130
+boundhigh = -192
+boundlow = 0
+verticalfollow = .8
+floortension = 100
+tension = 50
+
+
+;--------------------------------------------------------
+[PlayerInfo]
+p1startx = -70          ;Starting x coordinates
+p1starty = 0            ;Starting y coordinates
+p1startz = 0            ;Starting z coordinates
+p1facing = 1            ;Direction player faces: 1=right, -1=left
+
+;--- Player 2 ---
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+;--- Common ---
+ ;Don't change these values.
+leftbound  = -1000 ;Left bound (x-movement)
+rightbound =  1000 ;Right bound
+topbound  =  0     ;Top bound (z-movement)
+botbound  =  0     ;Bottom bound
+
+;--------------------------------------------------------
+[Scaling]
+ ;No need to change these values
+topz     = 0       ;Top z-coordinate for scaling
+botz     = 50      ;Bottom z-coordinate for scaling
+topscale = 1       ;Scale to use at top
+botscale = 1.2     ;Scale to use at bottom
+
+;--------------------------------------------------------
+[Bound]
+screenleft = 15    ;Dist from left of screen that player can move to
+screenright = 15   ;Right edge
+
+;--------------------------------------------------------
+[StageInfo]
+zoffset = 220
+autoturn = 1
+resetBG = 1
+
+;--------------------------------------------------------
+[Shadow]
+color = 255,255,255
+yscale =  .3
+reflect = 0
+
+;--------------------------------------------------------
+[Music]
+bgmusic = sound/The Raising Fighting Spirit.mp3
+
+
+;-------------------------------------
+; Main background definition
+[BGdef]
+spr = stages/novos/funatsu.sff
+debugbg = 0
+
+
+;----------
+[BG ]
+type  = normal
+spriteno = 0, 0
+layerno = 0      
+start =  -312, -169
+delta = 0.8, 0.8
+mask  = 0   
+
+[BG Moon]
+type  = anim
+actionno = 1
+layerno = 0
+start =  -312, -169
+delta = 0.8, 0.8
+mask  = 1      
+
+[BG Waves]
+type  = anim
+actionno = 2
+layerno = 0
+start =  -312, -169
+delta = 1, 1
+mask  = 1    
+
+[BG Dark Waves]
+type  = anim
+actionno = 3
+layerno = 0
+start =  -312, -169
+delta = 1, 1
+mask  = 1    
+
+[BG Rock]
+type  = normal
+spriteno = 4, 0
+layerno = 1
+start =  -312, -169
+delta = 0.8, 1
+mask  = 1   
+
+[Begin Action 1]
+-1,0,0,0,1000
+1,0,0,0,9
+1,1,0,0,9
+1,2,0,0,252
+1,3,0,0,9
+1,4,0,0,9
+
+[Begin Action 2]
+2,0,0,0,9
+2,1,0,0,9
+2,2,0,0,9
+2,3,0,0,9
+2,4,0,0,9
+2,5,0,0,9
+2,6,0,0,9
+2,7,0,0,9
+
+[Begin Action 3]
+-1,0,0,0,1000
+3,0,0,0,9
+3,1,0,0,9
+3,2,0,0,9
+3,3,0,0,9
+3,4,0,0,9
+3,5,0,0,9
+3,6,0,0,9
+3,7,0,0,9
+3,0,0,0,9
+3,1,0,0,9
+3,2,0,0,9
+3,3,0,0,9
+3,4,0,0,9
+3,5,0,0,9
+3,6,0,0,9
+3,7,0,0,9
+3,0,0,0,9
+3,1,0,0,9
+3,2,0,0,9
+3,3,0,0,9
+3,4,0,0,9
+3,5,0,0,9
+3,6,0,0,9
+3,7,0,0,9
+3,0,0,0,9
+3,1,0,0,9
+3,2,0,0,9
+3,3,0,0,9
+3,4,0,0,9
+3,5,0,0,9
+3,6,0,0,9
+3,7,0,0,9

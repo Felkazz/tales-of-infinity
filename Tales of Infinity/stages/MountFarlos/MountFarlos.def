@@ -54,7 +54,7 @@ yscale = .67
 reflect = 0
 
 [Music]
-bgmusic = sound/MountFarlos/farlos.mp3
+bgmusic = stages/MountFarlos/farlos.mp3
 bgvolume = 255
 
 [BGdef]
@@ -68,7 +68,7 @@ debugbg = 0
 [BG ãÛ]
 type = normal
 spriteno = 0,1
-start = -100,-100
+start = -210,-210
 delta = .24,.41
 tile = 1,0
 velocity = .1,0
@@ -77,7 +77,7 @@ mask = 1
 [BG ãÛ]
 type = normal
 spriteno = 0,2
-start = -100,-100
+start = -210,-210
 delta = .24,.41
 tile = 1,0
 velocity = .1,0
@@ -86,7 +86,7 @@ mask = 1
 [BG ãÛ]
 type = normal
 spriteno = 0,3
-start = -100,-100
+start = -210,-210
 delta = .24,.41
 tile = 1,0
 velocity = .1,0
@@ -95,7 +95,7 @@ mask = 1
 [BG ãÛ]
 type = normal
 spriteno = 0,4
-start = -100,-100
+start = -210,-210
 delta = .24,.41
 tile = 1,0
 velocity = .1,0
@@ -104,7 +104,7 @@ mask = 1
 [BG ãÛ]
 type = normal
 spriteno = 0,5
-start = -100,-100
+start = -210,-210
 delta = .24,.41
 tile = 1,0
 velocity = .1,0
@@ -118,7 +118,7 @@ mask = 1
 type  = normal
 layerno = 1
 spriteno = 4, 0
-start = -100,-100
+start = -210,-210
 delta = .12,.20
 mask = 1
 trans = addalpha
@@ -131,7 +131,7 @@ alpha = 256,256
 [BG 1]
 type = normal
 spriteno = 2, 1
-start = -100,-100
+start = -210,-210
 delta = .5,.5
 ;tile = 1,1
 mask = 1
@@ -139,7 +139,7 @@ mask = 1
 [BG 2]
 type = normal
 spriteno = 2, 0
-start = -100,-100
+start = -210,-210
 delta = 1,1
 ;tile = 1,1
 mask = 1
@@ -151,7 +151,7 @@ mask = 1
 [BG ëêå¥]
 type = normal
 spriteno = 1, 0
-start = -100,-100
+start = -210,-210
 delta = 2,2
 ;tile = 1,0
 mask = 1

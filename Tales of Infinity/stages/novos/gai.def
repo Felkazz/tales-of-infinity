@@ -1,0 +1,116 @@
+[Info]
+name = "gai Stage"
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -224
+boundright = 224
+boundhigh = 0
+boundlow = 0
+verticalfollow = .5
+tension = 50
+
+[PlayerInfo]
+p1startx = -70
+p1starty = 0
+p1startz = 0
+p1facing = 1
+
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+leftbound  = -1000
+rightbound =  1000
+topbound  =  0
+botbound  =  0
+
+[Scaling]
+topz = 0
+botz = 50
+topscale = 1
+botscale = 1.2
+
+[Bound]
+screenleft = 15
+screenright = 15
+
+[StageInfo]
+zoffset = 215
+autoturn = 1
+resetBG = 0
+
+[Shadow]
+color = 128,128,128
+yscale = .1
+
+[Music]
+bgmusic = sound/11 - Gai's Theme.mp3
+bgvolume = 0
+
+[BGdef]
+spr = stages/novos/suzaku.sff
+
+[BG 0]
+type = normal
+spriteno = 0,0
+start = 0,240
+delta = 0.315,1
+
+[BG 1]
+type = normal
+spriteno = 1,0
+start = -270,240
+delta = 0.49,1
+mask = 1
+
+[BG 2]
+type = normal
+spriteno = 2,0
+start = 0,240
+delta = 0.67,1
+mask = 1
+
+[BG 3]
+type = anim
+actionno = 3
+start = 0,240
+delta = 0.67,1
+
+[BG 4]
+type = normal
+spriteno = 4,0
+start = 0,240
+delta = 0.85,1
+mask = 1
+
+[BG 5]
+type = normal
+spriteno = 5,0
+start = 366,240
+delta = 0.921,1
+mask = 1
+
+[BG 6]
+type = parallax
+spriteno = 6,0
+start = 0,201
+delta = .845,1
+xscale = .85,1.23
+
+[BG 7]
+type = normal
+spriteno = 7,0
+layerno = 1
+start = -440,240
+delta = 1.25,1
+mask = 1
+
+[Begin action 3]
+
+3,0, 0,0, 6
+3,1, 0,0, 6
+3,2, 0,0, 6
+3,3, 0,0, 6

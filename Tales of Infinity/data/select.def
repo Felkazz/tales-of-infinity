@@ -48,6 +48,15 @@ stages/Pier/Pier.def
 stages/Forest/Forest.def
 stages/ShadowsCave/ShadowsCave.def
 
+stages/novos/lee.def
+stages/novos/shikamaru.def
+stages/novos/gai.def
+stages/novos/forest.def
+stages/novos/neji vs lee.def
+stages/novos/tsunade.def
+stages/novos/kiba.def
+stages/novos/kiga.def
+
 ;---------------------------------------------------------------------
 [Options]
  ;Here you set the maximum number of matches to fight before game ends

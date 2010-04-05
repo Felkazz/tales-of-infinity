@@ -9,7 +9,7 @@ name = "Forest"
 startx = 0
 starty = 0
 boundleft = -352
-boundright = 352
+boundright =  352
 boundhigh = -350
 boundlow = 0
 tension = 50
@@ -46,7 +46,7 @@ screenright = 15
 zoffset = 200
 autoturn = 1
 resetBG = 0
-HIres = 1
+;HIres = 1
 
 [Shadow]
 color = 80,80,100
@@ -54,7 +54,7 @@ yscale = .67
 reflect = 0
 
 [Music]
-bgmusic = sound/Forest/forest.mp3
+bgmusic = stages/Forest/forest.mp3
 bgvolume = 255
 
 [BGdef]
@@ -68,7 +68,7 @@ debugbg = 0
 [BG ãÛ]
 type = normal
 spriteno = 0,1
-start = 0,0
+start = -210,-210
 delta = .24,.41
 tile = 1,0
 velocity = .1,0
@@ -77,7 +77,7 @@ mask = 1
 [BG ãÛ]
 type = normal
 spriteno = 0,2
-start = 0,0
+start = -210,-210
 delta = .24,.41
 tile = 1,0
 velocity = .1,0
@@ -86,7 +86,7 @@ mask = 1
 [BG ãÛ]
 type = normal
 spriteno = 0,3
-start = 0,0
+start = -210,-210
 delta = .24,.41
 tile = 1,0
 velocity = .1,0
@@ -95,7 +95,7 @@ mask = 1
 [BG ãÛ]
 type = normal
 spriteno = 0,4
-start = 0,0
+start = -210,-210
 delta = .24,.41
 tile = 1,0
 velocity = .1,0
@@ -104,7 +104,7 @@ mask = 1
 [BG ãÛ]
 type = normal
 spriteno = 0,5
-start = 0,0
+start = -210,-210
 delta = .24,.41
 tile = 1,0
 velocity = .1,0
@@ -117,7 +117,7 @@ mask = 1
 [BG 0]
 type = normal
 spriteno = 2, 0
-start = 0,0
+start = -210,-210
 delta = 1.5,1.5
 ;tile = 1,1
 mask = 1
@@ -129,7 +129,7 @@ mask = 1
 [BG ëêå¥]
 type = normal
 spriteno = 1, 0
-start = 0,0
+start = -210,-210
 delta = 2,2
 ;tile = 1,0
 mask = 1
@@ -141,7 +141,7 @@ mask = 1
 [BG 0]
 type = normal
 spriteno = 2, 1
-start = 0,0
+start = -210,-210
 delta = 2,2
 ;tile = 1,1
 mask = 1
