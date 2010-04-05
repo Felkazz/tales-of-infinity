@@ -1,0 +1,131 @@
+;-------------------------------------------------
+;Tales of Eternia - Shadows-Cave
+;Last Update 3.16.2010
+;-------------------------------------------------
+[Info]
+name = "Shadows Cave"
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -352
+boundright = 352
+boundhigh = -350
+boundlow = 0
+tension = 50
+verticalfollow =0
+floortension = 120
+
+[PlayerInfo]
+p1startx = -70
+p1starty = 0
+p1startz = 0
+p1facing = 1
+
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+leftbound  = -1000
+rightbound =  1000
+topbound  =  0
+botbound  =  0
+
+[Scaling]
+topz     = 0
+botz     = 50
+topscale = 1
+botscale = 1.2
+
+[Bound]
+screenleft = 15
+screenright = 15
+
+[StageInfo]
+zoffset = 200
+autoturn = 1
+resetBG = 0
+HIres = 1
+
+[Shadow]
+color = 1,1,1
+yscale = 0
+xscale = 0
+reflect = 0
+
+[Music]
+bgmusic = sound/ShadowsCave/cave.mp3
+bgvolume = 255
+
+[BGdef]
+spr = stages/ShadowsCave/Shadows-Cave.sff
+debugbg = 0
+
+;===========
+;Background
+;===========
+
+[BG ëêå¥]
+type = normal
+spriteno = 3, 0
+start = 0,0
+delta = 2,2
+;tile = 1,0
+mask = 1
+
+;===========
+;Background
+;===========
+
+[BG 0]
+type = normal
+spriteno = 2, 0
+start = 0,0
+delta = 1.85,1.85
+;tile = 1,1
+mask = 1
+
+[BG 1]
+type = normal
+spriteno = 2, 1
+start = 0,0
+delta = 1.85,1
+;tile = 1,1
+mask = 1
+
+[BG 2]
+type = normal
+spriteno = 2, 2
+start = 0,0
+delta = 1.85,1
+;tile = 1,1
+mask = 1
+
+[BG 3]
+type = normal
+spriteno = 2, 2
+start = 1350,60
+delta = 1.85,1
+;tile = 1,1
+mask = 1
+
+[BG 4]
+type = normal
+spriteno = 2, 3
+start = 0,0
+delta = 1.85,1
+;tile = 1,1
+mask = 1
+
+;===========
+;Ground
+;===========
+
+[BG ëêå¥]
+type = normal
+spriteno = 1, 0
+start = 0,0
+delta = 2,2
+;tile = 1,0
+mask = 1

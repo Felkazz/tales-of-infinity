@@ -43,6 +43,10 @@ CHEFE/CHEFE.def
 
 stages/kfm.def
 stages/stage0.def
+stages/MountFarlos/MountFarlos.def
+stages/Pier/Pier.def
+stages/Forest/Forest.def
+stages/ShadowsCave/ShadowsCave.def
 
 ;---------------------------------------------------------------------
 [Options]
