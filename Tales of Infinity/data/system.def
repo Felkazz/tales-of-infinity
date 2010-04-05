@@ -159,17 +159,17 @@ portrait.scale = 1,1
 title.offset = 159,27     ;Position of title (Arcade Mode, etc)
 title.font = 5,0,0        ;Font of title (-1 for none)
 ;Big portraits
-p1.face.offset = 13,10    ;Position to put big portrait
+p1.face.offset = 6,10    ;Position to put big portrait
 p1.face.scale = 1,1
 p1.face.facing = 1
-p2.face.offset = 301,13
+p2.face.offset = 191,-350
 p2.face.scale = 1,1
-p2.face.facing = -1
+p2.face.facing = 1
 ;Name
 p1.name.offset = 75,145 ;10,162   ;Position to put name
-p1.name.font = 5,0,0 ;3,4,1      ;Set to -1 for no display
+p1.name.font = -1,0,0 ;3,4,1      ;Set to -1 for no display
 p2.name.offset = 244,145 ;309,162
-p2.name.font = 5,0,0 ;3,1,-1
+p2.name.font = -1,0,0 ;3,1,-1
 ;Stage select
 stage.pos = 160,238
 stage.active.font = 6,0,0
@@ -255,14 +255,14 @@ fadeout.time = 15
 p1.pos =  2,86
 p1.facing = 1
 p1.scale = 1,1
-p2.pos = 317,86
-p2.facing = -1
+p2.pos = 194,-274
+p2.facing = 1
 p2.scale = 1,1
 ;Names
 p1.name.pos  =  55,238 ;78,238
-p1.name.font =   6,0,0
+p1.name.font =   -1,0,0
 p2.name.pos  = 264,238 ;241,238
-p2.name.font =   6,0,0
+p2.name.font =   -1,0,0
 
 ;-----------------------
 ;VS Match up screen background
