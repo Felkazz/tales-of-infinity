@@ -171,7 +171,7 @@ p2.face.scale = .7,.7
 
 [Simul Face]
 ;Player 1
-p1.pos    = 13,21 ; 1,20
+p1.pos    = 15,21 ; 1,20
 ;p1.bg.spr = 60,0
 p1.face.spr = 9000,0
 p1.face.scale = 0.42,0.42
@@ -188,7 +188,7 @@ p2.face.facing = -1
 p2.face.offset = 0,10
 p2.face.scale = .7,.7
 ;Player 3
-p3.pos    = 18,21; 2,20
+p3.pos    = 20,21; 2,20
 p3.face.spr = 9000,0
 p3.face.scale = 0.42,0.42
 p3.face.facing = 1
@@ -212,7 +212,7 @@ p1.face.facing = 1
 p1.face.offset = 0,10
 p1.teammate.pos = 80,0
 p1.teammate.spacing = 16,0
-p1.teammate.bg.spr = 70,0
+;p1.teammate.bg.spr = 70,0
 p1.teammate.ko.spr = 71,0
 p1.teammate.face.spr = 9000,0
 p1.teammate.face.scale = 0.42,0.42 ;0.5,0.53
@@ -227,7 +227,7 @@ p2.face.facing = -1
 p2.face.offset = 0,10
 p2.teammate.pos = 238,0 ;317,49
 p2.teammate.spacing = -16,0
-p2.teammate.bg.spr = 70,0
+;p2.teammate.bg.spr = 70,0
 p2.teammate.bg.facing = -1
 p2.teammate.ko.spr = 71,0
 p2.teammate.ko.facing = -1
