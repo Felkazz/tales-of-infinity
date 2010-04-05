@@ -1,28 +1,27 @@
 25 x 25 small portrait
 
-Cless
-Kyle
-Lloyd
-Frio Swordsman 
-Leon
+CHARS
+Cecil
 Chester
-Rid
+Cless
+Frio Swordsman 
+Judas
+Kongman
 Kratos
-Stahn
-Race
 Kyaro Valkyrie
+Kyle
+Leon
+Lloyd
 Loni
 Luke
-Guy Cecil
-Judas
+Race
+Reid
+Stahn
 
-
-Kongman (opcional)
-Dhaos (opcional)
-
+SUB-BOSS
+Shizel
 
 BOSSES
-Shizel (SUB)
+Dhaos
 Yggdrasil
-
 
