@@ -1,0 +1,19 @@
+[Info]
+name="Cless"
+displayname="Cless"
+versiondate=06/04/2010
+mugenversion=
+author="5uper / Thunderbert"
+pal.defaults=1
+[Files]
+sprite=cless.sff
+sound=
+anim=cless.air
+cmd=cless.cmd
+cns=cless.cns
+st=cless.cns
+stcommon=common1.cns
+pal1=cless.act
+[Arcade]
+intro.storyboard=
+ending.storyboard=
