@@ -9,7 +9,7 @@ name = "Forest"
 startx = 0
 starty = 0
 boundleft = -176;-352
-boundright =  176;352
+boundright = 176;352
 boundhigh = -175;-350
 boundlow = 0
 tension = 50
@@ -27,8 +27,8 @@ p2starty = 0
 p2startz = 0
 p2facing = -1
 
-leftbound  = -500;-1000
-rightbound = 500;1000
+leftbound  = -1000
+rightbound = 1000
 topbound  =  0
 botbound  =  0
 
@@ -45,8 +45,8 @@ screenright = 15
 [StageInfo]
 zoffset = 200
 autoturn = 1
-resetBG = 0
-HIres = 1
+resetBG = 1
+;HIres = 1
 
 [Shadow]
 color = 80,80,100
