@@ -31,7 +31,11 @@
 type = S
 physics = S
 sprpriority = 0
-Ctrl = 1
+
+[State 0, 0]
+Type = CtrlSet
+Trigger1 = 1
+Value = 1
 
 [State 0, 1]
 type = ChangeAnim
@@ -61,6 +65,11 @@ value = 5050
 type    = C
 physics = C
 
+[State 10, 0]
+Type = CtrlSet
+Trigger1 = 1
+Value = 1
+
 [State 10, 2]
 type = ChangeState
 trigger1 = Time = 0
@@ -73,6 +82,11 @@ type    = C
 physics = C
 sprpriority = 0
 
+[State 11, 0]
+Type = CtrlSet
+Trigger1 = 1
+Value = 1
+
 [State 11, Override]
 type = ChangeState
 trigger1 = 1
@@ -83,6 +97,11 @@ value = 20*((command = "holdfwd") || (command = "holdback"))
 [Statedef 12]
 type    = S
 physics = S
+
+[State 12, 0]
+Type = CtrlSet
+Trigger1 = 1
+Value = 1
 
 [State 12, 1]
 type = ChangeState
@@ -95,6 +114,11 @@ value = 0
 type    = S
 physics = S
 sprpriority = 0
+
+[State 20, 0]
+Type = CtrlSet
+Trigger1 = 1
+Value = 1
 
 [State 20, 1]
 type = VelSet
