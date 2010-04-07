@@ -124,7 +124,7 @@ p1.bg0.anim = 40
 p1.bg1.spr = 41,0
 ;p1.mid.spr = 42,0
 p1.front.spr = 43,0
-p1.range.x = 0,-62 ;0,-107
+p1.range.x = -47,-107 ;0,-107
 p1.counter.offset = -17,15
 p1.counter.font = 4,0, 0
 
@@ -138,7 +138,7 @@ p2.bg1.facing = -1
 ;p2.mid.facing = -1
 p2.front.spr = 43,0
 p2.front.facing = -1
-p2.range.x  = 0,62 ;0,107
+p2.range.x  = 47,107 ;0,107
 p2.counter.offset = 17,15
 p2.counter.font = 4,0, 0
 
