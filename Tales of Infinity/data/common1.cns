@@ -31,6 +31,7 @@
 type = S
 physics = S
 sprpriority = 0
+Ctrl = 1
 
 [State 0, 1]
 type = ChangeAnim
@@ -59,16 +60,10 @@ value = 5050
 [Statedef 10]
 type    = C
 physics = C
-anim = 10
-
-[State 10, 1]
-type = VelMul
-trigger1 = Time = 0
-x = .75
 
 [State 10, 2]
 type = ChangeState
-trigger1 = AnimTime = 0
+trigger1 = Time = 0
 value = 11
 
 ;---------------------------------------------------------------------------
@@ -76,24 +71,22 @@ value = 11
 [Statedef 11]
 type    = C
 physics = C
-anim = 11
 sprpriority = 0
 
-[State 11, 1] ;Change from turning animation
-type = ChangeAnim
-trigger1 = Anim = 6 && AnimTime = 0
-value = 11
+[State 11, Override]
+type = ChangeState
+trigger1 = 1
+value = 20*((command = "holdfwd") || (command = "holdback"))
 
 ;---------------------------------------------------------------------------
 ; Crouch to Stand
 [Statedef 12]
 type    = S
 physics = S
-anim = 12
 
 [State 12, 1]
 type = ChangeState
-trigger1 = AnimTime = 0
+trigger1 = Time = 0
 value = 0
 
 ;---------------------------------------------------------------------------
@@ -284,6 +277,7 @@ type    = S
 physics = S
 anim = 100
 sprpriority = 1
+ctrl = 0
 
 [State 100, 1]
 type = VelSet
@@ -304,6 +298,12 @@ flag = NoAutoTurn
 type = ChangeState
 trigger1 = command != "holdfwd"
 value = 0
+Ctrl = 1
+
+[state 100, 5]
+Type = ChangeState
+Trigger1 = Command = "up"
+Value = 40
 
 ;---------------------------------------------------------------------------
 ; RUN_BACK
@@ -483,18 +483,6 @@ type = StateTypeSet
 trigger1 = Time = 0 && statetype = A
 physics = A
 
-[State 120, Hi to Lo]
-type = StateTypeSet
-trigger1 = statetype = S && command = "holddown"
-statetype = C
-physics = C
-
-[State 120, Lo to Hi]
-type = StateTypeSet
-trigger1 = statetype = C && command != "holddown"
-statetype = S
-physics = S
-
 [State 120, 5]
 type = ChangeState
 trigger1 = AnimTime = 0
@@ -517,34 +505,7 @@ type = ChangeAnim
 trigger1 = Anim != 130
 value = 130
 
-[State 130, Hi to Lo]
-type = ChangeState
-trigger1 = command = "holddown"
-value = 131
-
 [State 130, Stop Guarding]
-type = ChangeState
-trigger1 = command != "holdback"
-trigger2 = !inguarddist
-value = 140
-
-;---------------------------------------------------------------------------
-; CROUCH GUARD (guarding)
-[Statedef 131]
-type    = C
-physics = C
-
-[State 131, 1]
-type = ChangeAnim
-trigger1 = Anim != 131
-value = 131
-
-[State 131, Lo to Hi]
-type = ChangeState
-trigger1 = command != "holddown"
-value = 130
-
-[State 131, Stop Guarding]
 type = ChangeState
 trigger1 = command != "holdback"
 trigger2 = !inguarddist
@@ -626,18 +587,6 @@ type = StateTypeSet
 trigger1 = Time = 0 && statetype = A
 physics = A
 
-[State 140, Hi to Lo]
-type = StateTypeSet
-trigger1 = statetype = S && command = "holddown"
-statetype = C
-physics = C
-
-[State 140, Lo to Hi]
-type = StateTypeSet
-trigger1 = statetype = C && command != "holddown"
-statetype = S
-physics = S
-
 ;[State 140, 5] ;Implemented within engine
 ;type = ChangeState
 ;trigger1 = AnimTime = 0
@@ -659,19 +608,7 @@ value = 150
 [State 150, 2]
 type = ChangeState
 trigger1 = HitShakeOver
-value = 151 + 2*(command = "holddown")
-
-[State 150, Hi to Lo]
-type = StateTypeSet
-trigger1 = statetype = S && command = "holddown"
-statetype = C
-physics = C
-
-[State 150, Lo to Hi]
-type = StateTypeSet
-trigger1 = statetype = C && command != "holddown"
-statetype = S
-physics = S
+value = 151 + 2
 
 [State 150, 3]
 type = ForceFeedback
@@ -703,100 +640,10 @@ type = CtrlSet
 trigger1 = Time = GetHitVar(ctrltime)
 value = 1
 
-[State 151, Hi to Lo]
-type = StateTypeSet
-trigger1 = statetype = S && command = "holddown"
-statetype = C
-physics = C
-
-[State 151, Lo to Hi]
-type = StateTypeSet
-trigger1 = statetype = C && command != "holddown"
-statetype = S
-physics = S
-
 [State 151, 4]
 type = ChangeState
 trigger1 = HitOver
 value = 130
-ctrl = 1
-
-;---------------------------------------------------------------------------
-; CGUARDHIT (shaking)
-[Statedef 152]
-type    = C
-movetype= H
-physics = N
-velset = 0,0
-
-[State 152, 1]
-type = ChangeAnim
-trigger1 = 1
-value = 151
-
-[State 152, 3]
-type = ChangeState
-trigger1 = HitShakeOver
-value = 151 + 2*(command = "holddown")
-
-[State 152, Hi to Lo]
-type = StateTypeSet
-trigger1 = statetype = S && command = "holddown"
-statetype = C
-physics = C
-
-[State 152, Lo to Hi]
-type = StateTypeSet
-trigger1 = statetype = C && command != "holddown"
-statetype = S
-physics = S
-
-[State 152, 4]
-type = ForceFeedback
-trigger1 = time = 0
-waveform = square
-time = 4
-
-;---------------------------------------------------------------------------
-; CGUARDHIT2 (knocked back)
-[Statedef 153]
-type    = C
-movetype= H
-physics = C
-anim = 151
-
-[State 153, 1]
-type = HitVelSet
-trigger1 = Time = 0
-x = 1
-
-[State 153, 2]
-type = VelSet
-trigger1 = Time = GetHitVar(slidetime)
-trigger2 = HitOver
-x = 0
-
-[State 153, 3]
-type = CtrlSet
-trigger1 = Time = GetHitVar(ctrltime)
-value = 1
-
-[State 153, Hi to Lo]
-type = StateTypeSet
-trigger1 = statetype = S && command = "holddown"
-statetype = C
-physics = C
-
-[State 153, Lo to Hi]
-type = StateTypeSet
-trigger1 = statetype = C && command != "holddown"
-statetype = S
-physics = S
-
-[State 153, 4]
-type = ChangeState
-trigger1 = HitOver
-value = 131
 ctrl = 1
 
 ;---------------------------------------------------------------------------
@@ -2013,12 +1860,6 @@ type = VelAdd
 trigger1 = Time = 4
 trigger1 = Command = "holdup"
 y = -2
-
-[State 5210, 2] ;Go down
-type = VelAdd
-trigger1 = Time = 4
-trigger1 = Command = "holddown"
-y = 1.5
 
 [State 5210, 2] ;Go fwd
 type = VelMul
