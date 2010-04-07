@@ -4,7 +4,7 @@
 
 [Data]
 life = 1000			;Amount of life to start with
-power = 3000		;Amount of maximum power
+power = 1000		;Amount of maximum power
 attack = 100		;attack power (more is stronger)
 defence = 100		;defensive power (more is stronger)
 fall.defence_up = 50	;Percentage to increase defense everytime player is knocked down
@@ -26,10 +26,10 @@ FloatPersistIndex = 40  ;reset to 0 between rounds or matches. There are 60 int 
 [Size]
 xscale = 1			;Horizontal scaling factor.
 yscale = 1			;Vertical scaling factor.
-ground.back = 15		;Player width (back, ground)
-ground.front = 16		;Player width (front, ground)
-air.back = 12		;Player width (back, air)
-air.front = 12		;Player width (front, air)
+ground.back = 11		;Player width (back, ground)
+ground.front = 11		;Player width (front, ground)
+air.back = 10		;Player width (back, air)
+air.front = 10		;Player width (front, air)
 height = 60			;Height of player (for opponent to jump over)
 attack.dist = 160		;Default attack distance
 proj.attack.dist = 90	;Default attack distance for projectiles
@@ -54,7 +54,7 @@ airjump.back = -2.55	;Air jump speeds (opt)
 airjump.fwd = 2.5		;.
 
 [Movement]
-airjump.num = 1		;Number of air jumps allowed (opt)
+airjump.num = 0		;Number of air jumps allowed (opt)
 airjump.height = 35	;Minimum distance from ground before you can air jump (opt)
 yaccel = .44		;Vertical acceleration
 stand.friction = .85	;Friction coefficient when standing
@@ -136,24 +136,6 @@ flag = Intro
 type = ChangeState
 trigger1 = AnimTime = 0
 value = 0
-
-;---------------------------------------------------------------------------
-; Taunt
-; CNS difficulty: easy
-[Statedef 195]
-type = S
-ctrl = 0
-anim = 195
-velset = 0,0
-movetype = I
-physics = S
-sprpriority = 2
-
-[State 195, 2]
-type = ChangeState
-trigger1 = AnimTime = 0
-value = 0
-ctrl = 1
 
 ;---------------------------------------------------------------------------
 ; Standing Light Punch

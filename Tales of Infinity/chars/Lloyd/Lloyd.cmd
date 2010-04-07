@@ -329,9 +329,9 @@ command = $DF
 time = 1
 
 [Command]
-name = "down" ;Required (do not remove)
+name = "down"
 command = $D
-time = 1
+Time = 1
 
 [Command]
 name = "downback"
@@ -406,9 +406,9 @@ command = /$DF
 time = 1
 
 [Command]
-name = "holddown" ;Required (do not remove)
+name = "holddown"
 command = /$D
-time = 1
+Time = 1
 
 [Command]
 name = "holddownback"
@@ -488,7 +488,7 @@ time = 1
 [State -1, Run Fwd]
 type = ChangeState
 value = 100
-trigger1 = command = "FF"
+triggerAll = command = "FF"
 trigger1 = statetype = S
 trigger1 = ctrl
 
@@ -521,21 +521,11 @@ trigger2 = p2movetype != H
 
 ;===========================================================================
 ;---------------------------------------------------------------------------
-; Taunt
-[State -1, Taunt]
-type = ChangeState
-value = 195
-triggerall = command = "s"
-trigger1 = statetype != A
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
 ; Stand Light Punch
 [State -1, Stand Light Punch]
 type = ChangeState
 value = 200
 triggerall = command = "x"
-triggerall = command != "holddown"
 trigger1 = statetype = S
 trigger1 = ctrl
 
@@ -545,7 +535,6 @@ trigger1 = ctrl
 type = ChangeState
 value = 210
 triggerall = command = "y"
-triggerall = command != "holddown"
 trigger1 = statetype = S
 trigger1 = ctrl
 
@@ -555,7 +544,6 @@ trigger1 = ctrl
 type = ChangeState
 value = 220
 triggerall = command = "z"
-triggerall = command != "holddown"
 trigger1 = statetype = S
 trigger1 = ctrl
 
@@ -565,7 +553,6 @@ trigger1 = ctrl
 type = ChangeState
 value = 230
 triggerall = command = "a"
-triggerall = command != "holddown"
 trigger1 = statetype = S
 trigger1 = ctrl
 
@@ -575,7 +562,6 @@ trigger1 = ctrl
 type = ChangeState
 value = 240
 triggerall = command = "b"
-triggerall = command != "holddown"
 trigger1 = statetype = S
 trigger1 = ctrl
 
@@ -585,68 +571,7 @@ trigger1 = ctrl
 type = ChangeState
 value = 250
 triggerall = command = "c"
-triggerall = command != "holddown"
 trigger1 = statetype = S
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Crouching Light Punch
-[State -1, Crouching Light Punch]
-type = ChangeState
-value = 400
-triggerall = command = "x"
-triggerall = command = "holddown"
-trigger1 = statetype = C
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Crouching Medium Punch
-[State -1, Crouching Medium Punch]
-type = ChangeState
-value = 410
-triggerall = command = "y"
-triggerall = command = "holddown"
-trigger1 = statetype = C
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Crouching Strong Punch
-[State -1, Crouching Strong Punch]
-type = ChangeState
-value = 420
-triggerall = command = "z"
-triggerall = command = "holddown"
-trigger1 = statetype = C
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Crouching Light Kick
-[State -1, Crouching Light Kick]
-type = ChangeState
-value = 430
-triggerall = command = "a"
-triggerall = command = "holddown"
-trigger1 = statetype = C
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Crouching Medium Kick
-[State -1, Crouching Medium Kick]
-type = ChangeState
-value = 440
-triggerall = command = "b"
-triggerall = command = "holddown"
-trigger1 = statetype = C
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Crouching Strong Kick
-[State -1, Crouching Strong Kick]
-type = ChangeState
-value = 450
-triggerall = command = "c"
-triggerall = command = "holddown"
-trigger1 = statetype = C
 trigger1 = ctrl
 
 ;---------------------------------------------------------------------------

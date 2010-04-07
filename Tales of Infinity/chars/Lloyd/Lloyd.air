@@ -16,71 +16,97 @@ Clsn2Default: 1
 
 ; Turning
 [Begin Action 5]
-0,0, 0,0, 1, 
-
-; Crouch Turning
-[Begin Action 6]
-0,0, 0,0, 1, 
-
-; Stand to crouch
-[Begin Action 10]
-0,0, 0,0, 1, 
-
-; Crouching animation
-[Begin Action 11]
-0,0, 0,0, 1, 
-
-; Crouch to Stand
-[Begin Action 12]
-0,0, 0,0, 1, 
+Clsn2Default: 1
+  Clsn2[0] = -9, -37, 8, 3
+5,0, 0,0, 5, H, 
+5,0, 0,0, 5, 
 
 ; Walking Forward
 [Begin Action 20]
-0,0, 0,0, 1, 
+Clsn2Default: 1
+  Clsn2[0] = -10, -35, 9, 2
+20,0, 0,0, 5, 
+20,1, 0,0, 5, 
+20,2, 0,0, 5, 
+20,3, 0,0, 5, 
+20,4, 0,0, 5, 
+20,5, 0,0, 5, 
 
 ; Walking Back
 [Begin Action 21]
-0,0, 0,0, 1, 
+Clsn2Default: 1
+  Clsn2[0] = -10, -35, 9, 2
+20,0, 0,0, 5, 
+20,5, 0,0, 5, 
+20,4, 0,0, 5, 
+20,3, 0,0, 5, 
+20,2, 0,0, 5, 
+20,1, 0,0, 5, 
 
 ; Jump start frame
 [Begin Action 40]
-0,0, 0,0, 1, 
+Clsn2: 1
+  Clsn2[0] = -10, -30, 12, 5
+40,0, 0,0, 5, 
 
 ; Starting Jumping up
 [Begin Action 41]
-0,0, 0,0, 1, 
+Clsn2: 1
+  Clsn2[0] = -8, -40, 8, 2
+41,0, 0,0, 5, 
 
 ; Starting Jumping forwards
 [Begin Action 42]
-0,0, 0,0, 1, 
+Clsn2: 1
+  Clsn2[0] = -8, -40, 8, 2
+41,0, 0,0, 5, 
 
 ; Starting Jumping backwards
 [Begin Action 43]
-0,0, 0,0, 1, 
+Clsn2: 1
+  Clsn2[0] = -4, -35, 9, 2
+43,0, 0,0, 5, 
 
 ; Peak and coming down from Jumping up
 [Begin Action 44]
-0,0, 0,0, 1, 
+Clsn2: 1
+  Clsn2[0] = -4, -35, 9, 2
+44,0, 0,0, 5, 
 
 ; Peak and coming down from Jumping forwards
 [Begin Action 45]
-0,0, 0,0, 1, 
+Clsn2: 1
+  Clsn2[0] = -4, -35, 9, 2
+44,0, 0,0, 5, 
 
 ; Peak and coming down from Jumping backwards
 [Begin Action 46]
-0,0, 0,0, 1, 
+Clsn2: 1
+  Clsn2[0] = -4, -35, 9, 2
+44,0, 0,0, 5, 
 
 ; Jump land frame
 [Begin Action 47]
-0,0, 0,0, 1, 
+Clsn2: 1
+  Clsn2[0] = -10, -30, 12, 5
+40,0, 0,0, 5, 
 
 ; Run forwards
 [Begin Action 100]
-0,0, 0,0, 1, 
+Clsn2Default: 1
+  Clsn2[0] = -13, -24, 12, 2
+100,0, 0,0, 5, 
+100,1, 0,0, 5, 
+100,2, 0,0, 5, 
+100,3, 0,0, 5, 
+100,4, 0,0, 5, 
+100,5, 0,0, 5, 
 
 ; Hop backwards
 [Begin Action 105]
-0,0, 0,0, 1, 
+Clsn2: 1
+  Clsn2[0] = -4, -35, 9, 2
+43,0, 0,0, 5, 
 
 ; GUARDSTART (stand)
 [Begin Action 120]
@@ -132,19 +158,26 @@ Clsn2Default: 1
 
 ; Lose
 [Begin Action 170]
-0,0, 0,0, 1, 
+170,0, 0,0, 5, 
 
 ; Win
 [Begin Action 180]
-0,0, 0,0, 1, 
+180,0, 16,0, 4, H, 
+180,1, 0,0, 4, 
+180,2, 0,0, 4, 
+180,3, 0,0, 4, 
+180,4, 0,0, 4, 
+180,5, 0,0, 4, 
+180,6, 0,0, 4, 
+180,7, 0,0, 4, 
+180,8, 0,0, 4, 
+Loopstart
+180,9, 0,0, 4, 
 
 ; INTRO
 [Begin Action 190]
-0,0, 0,0, 1, 
-
-; Taunt
-[Begin Action 195]
-0,0, 0,0, 1, 
+180,0, 0,0, 30, 
+180,9, 0,0, 5, 
 
 ; Stand Light Punch
 [Begin Action 200]

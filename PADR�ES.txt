@@ -1,0 +1,7 @@
+HitDef:
+AnimType = Light
+Ground.Type = High
+Air.Type = High
+
+Begin Actions do grupo 5000:
+5000, 5005, 5030, 5035, 5040, 5050, 5051, 5052, 5060, 5061, 5062, 5080, 5090, 5100, 5110, 5120, 5150, 5160, 5170, 5200 e 5210
