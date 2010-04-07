@@ -521,15 +521,6 @@ trigger2 = p2movetype != H
 
 ;===========================================================================
 ;---------------------------------------------------------------------------
-; Taunt
-[State -1, Taunt]
-type = ChangeState
-value = 195
-triggerall = command = "s"
-trigger1 = statetype != A
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
 ; Stand Light Punch
 [State -1, Stand Light Punch]
 type = ChangeState

@@ -138,24 +138,6 @@ trigger1 = AnimTime = 0
 value = 0
 
 ;---------------------------------------------------------------------------
-; Taunt
-; CNS difficulty: easy
-[Statedef 195]
-type = S
-ctrl = 0
-anim = 195
-velset = 0,0
-movetype = I
-physics = S
-sprpriority = 2
-
-[State 195, 2]
-type = ChangeState
-trigger1 = AnimTime = 0
-value = 0
-ctrl = 1
-
-;---------------------------------------------------------------------------
 ; Standing Light Punch
 ; CNS difficulty: easy
 [Statedef 200]
