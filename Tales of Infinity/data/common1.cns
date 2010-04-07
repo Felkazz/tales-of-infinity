@@ -34,6 +34,7 @@ sprpriority = 0
 
 [State 0, 0]
 Type = CtrlSet
+Trigger1 = RoundState = 2
 Trigger1 = 1
 Value = 1
 
