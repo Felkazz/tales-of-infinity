@@ -150,28 +150,25 @@ sprpriority = 2			;Set layering priority to 2 (in front)
 [State 200, 1]
 type = HitDef
 trigger1 = Time = 0
-attr = S, NA			;Attribute: Standing, Normal Attack
-damage = 23, 0			;Damage that move inflicts, guard damage
-animtype = Light			;Animation type: Light, Medium, Heavy, Back (def: Light)
-guardflag = MA			;Flags on how move is to be guarded against
-hitflag = MAF			;Flags of conditions that move can hit
-priority = 3, Hit			;Attack priority: 0 (least) to 7 (most), 4 default
-					;Hit/Miss/Dodge type (Def: Hit)
-pausetime = 5, 10			;Time attacker pauses, time opponent shakes
-sparkno = 0				;Spark anim no (Def: set above)
-sparkxy = -10, -76		;X-offset for the "hit spark" rel. to p2,
-					;Y-offset for the spark rel. to p1
-hitsound = 5, 0			;Sound to play on hit
-guardsound = 6, 0			;Sound to play on guard
-ground.type = High		;Type: High, Low, Trip (def: Normal)
-ground.slidetime = 5		;Time that the opponent slides back
-ground.hittime  = 12		;Time opponent is in hit state
-ground.velocity = -1.5		;Velocity at which opponent is pushed
-airguard.velocity = -0.75,-1	;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
-air.type = High			;Type: High, Low, Trip (def: same as ground.type)
-air.velocity = -1.5,-2		;X-velocity at which opponent is pushed,
-					;Y-velocity at which opponent is pushed
-air.hittime = 12			;Time before opponent regains control in air
+attr = S, NA
+damage = 15, 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 5, 10
+sparkno = 0
+sparkxy = -10, -76
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = -1.5
+airguard.velocity = -0.75,1
+air.type = High
+air.velocity = -1.5,2
+air.hittime = 12
 
 [State 200, Effect]
 Type = Explod
@@ -211,7 +208,7 @@ anim = 210
 type = HitDef
 trigger1 = Time = 0
 attr = S, NA
-damage = 23, 0
+damage = 20, 0
 animtype = Light
 guardflag = MA
 hitflag = MAF
@@ -268,7 +265,7 @@ anim = 220
 type = HitDef
 trigger1 = Time = 0
 attr = S, NA
-damage = 23, 0
+damage = 25, 0
 animtype = Light
 guardflag = MA
 hitflag = MAF
@@ -282,9 +279,9 @@ ground.type = High
 ground.slidetime = 5
 ground.hittime  = 12
 ground.velocity = -1.5
-airguard.velocity = -0.75,-1
+airguard.velocity = -0.75,-0.5
 air.type = High
-air.velocity = -1.5,-2
+air.velocity = -1.5,-1
 air.hittime = 12
 
 [State 220, Effect]
@@ -609,220 +606,6 @@ anim = 650
 type = CtrlSet
 trigger1 = Time = 20
 value = 1
-
-;---------------------------------------------------------------------------
-; Throw - Attempt
-; CNS difficulty: medium-advanced
-; Description: Throws are not difficult to make, although then can be
-;     tedious at times. Throw attempt states have a HitDef of a
-;     special format. The key parameters in a throw are p1stateno
-;     and p2stateno. If the HitDef successfully connects, then
-;     the attacker will change to the state number specified by
-;     p1stateno, and the opponent will be change to the state
-;     number assigned to p2stateno. The special thing about p2stateno
-;     is that the opponent will be temporarily brought into the
-;     attacker's state file. In this case, no matter who the
-;     opponent is, he will be taken to state 820 of this file (kfm.cns)
-;     and remain here until the end of the throw (look at his debug
-;     information when he is being thrown; the text changes to yellow
-;     to mean that he is in another player's state file).
-[Statedef 800]
-type    = S
-movetype= A
-physics = S
-juggle  = 0
-velset = 0,0
-ctrl = 0
-anim = 800
-
-; Notes: The '-' symbol in the hitflag field means that it only affects
-;   players who are not in a hit state. This prevents the player from combo-ing
-;   into the throw. The priority should be set to a low number, such as
-;   1 or 2, so that the throw does not take precedence over normal attacks.
-;   The type of priority must always be set to "Miss" or "Dodge" for throws,
-;   otherwise strange behavior can result.
-[State 800, 1]
-type = HitDef
-Trigger1 = Time = 0
-attr = S, NT          ;Attributes: Standing, Normal Throw
-hitflag = M-          ;Affect only ground people who are not being hit
-priority = 1, Miss    ;Throw has low priority, must be miss or dodge type.
-sparkno = -1          ;No spark
-sprpriority = 1       ;Draw in front of p2
-p1facing = ifelse (command = "holdfwd", -1, 1) ;Turn if holding forwards
-p2facing = 1          ;Force p2 to face player
-p1stateno = 810       ;On success, player changes to state 810
-p2stateno = 820       ;If hit, p2 changes to state 820 in player's cns
-fall = 1              ;Force p2 into falling down
-
-[State 800, 2]
-type = ChangeState
-Trigger1 = AnimTime = 0
-value = 0
-ctrl = 1
-
-;---------------------------------------------------------------------------
-; Throwing the opponent
-; Description: In this state, the player throws the opponent by binding him to
-;     various offsets based on his current frame of animation. For
-;     example, [State 810, Bind 1] binds the opponent to an offset of
-;     28 pixels in front of the player. That puts him around where the hand
-;     is at. Is is important to keep the opponent bound using a
-;     TargetBind controller at all times, until you let him go. This
-;     is especially important if your player has a Clsn2 box that
-;     allows him to get hit while throwing someone. Each time a player
-;     gets hit, all his bound targets will be set to a fall state. If
-;     the opponent is not bound, then he might get stuck in his thrown
-;     state when his attacker is knocked out of the throw halfway.
-; Notes: There is a TargetLifeAdd controller to decrease the opponent's
-;     life, and a TargetState controller to change his state to a
-;     falling state when KFM lets go of him.
-[Statedef 810]
-type    = S
-movetype= A
-physics = N
-anim = 810
-poweradd = 60
-
-[State 810, Bind 1]
-type = TargetBind
-trigger1 = AnimElemTime(2) < 0
-pos = 28, 0
-
-[State 810, Width 2-11]
-type = Width
-trigger1 = AnimElemTime(2) >= 0 && AnimElemTime(12) < 0
-edge = 60,0
-
-[State 810, Bind 2-4]
-type = TargetBind
-trigger1 = AnimElemTime(2) >= 0 && AnimElemTime(5) < 0
-pos = 58, 0
-
-[State 810, Bind 5]
-type = TargetBind
-trigger1 = AnimElemTime(5) >= 0 && AnimElemTime(6) < 0
-pos = 47, 0
-
-[State 810, Bind 6]
-type = TargetBind
-trigger1 = AnimElemTime(6) >= 0 && AnimElemTime(7) < 0
-pos = 41, -60
-
-[State 810, Bind 7]
-type = TargetBind
-trigger1 = AnimElemTime(7) >= 0 && AnimElemTime(8) < 0
-pos = 25, -75
-
-[State 810, Bind 8]
-type = TargetBind
-trigger1 = AnimElemTime(8) >= 0 && AnimElemTime(9) < 0
-pos = 15, -90
-
-[State 810, Bind 9]
-type = TargetBind
-trigger1 = AnimElemTime(9) >= 0 && AnimElemTime(10) < 0
-pos = -5, -96
-
-[State 810, Bind 10]
-type = TargetBind
-trigger1 = AnimElemTime(10) >= 0 && AnimElemTime(11) < 0
-pos = -14, -90
-
-[State 810, Bind 11]
-type = TargetBind
-trigger1 = AnimElem = 11
-pos = -50, -50
-
-[State 810, Hurt 11]
-type = TargetLifeAdd
-trigger1 = AnimElem = 11
-value = -78
-
-[State 810, Throw 11]
-type = TargetState
-trigger1 = AnimElem = 11
-value = 821
-
-[State 810, Turn 12]
-type = Turn
-trigger1 = AnimElem = 12
-
-[State 810, Pos 15]
-type = PosAdd
-trigger1 = AnimElem = 15
-x = -10
-
-[State 810, State End]
-type = ChangeState
-trigger1 = AnimTime = 0
-value = 0
-ctrl = 1
-
-;---------------------------------------------------------------------------
-; Opponent Thrown
-; (a custom gethit state)
-; Description: This is the state that the opponent changes to after being
-;     hit by the throw HitDef. The important thing here is to use a
-;     ChangeAnim2 controller. The difference between ChangeAnim2 and
-;     ChangeAnim is that ChangeAnim2 changes the player's animation to
-;     an action in the AIR file of the attacker (in this case, kfm.air),
-;     whereas ChangeAnim always changes the player to an action in his
-;     own AIR file. Look at Action 820 in kfm.air for some extra
-;     comments.
-[Statedef 820]
-type    = A
-movetype= H
-physics = N
-velset = 0,0
-
-[State 820, 1]
-type = ChangeAnim2
-Trigger1 = Time = 0
-value = 820
-
-;---------------------------------------------------------------------------
-; Opponent thrown into the air
-; (a custom gethit state)
-; Description: This state has the opponent flying through the air and
-;     falling down onto the ground. The SelfState controller sets the
-;     opponent back using to his own state file when he his the ground.
-;     Controllers 821,2 and 821,3 allow the opponent to recover by
-;     hitting his recovery command when he is falling.
-[Statedef 821]
-type    = A
-movetype= H
-physics = N
-velset = 2.8,-7
-poweradd = 40
-
-[State 821, 1] ;Gravity
-type = VelAdd
-Trigger1 = 1
-y = .4
-
-[State 821, 2] ; Recover near ground (use ChangeState)
-type = ChangeState
-triggerall = Vel Y > 0
-triggerall = Pos Y >= -20
-triggerall = alive
-triggerall = CanRecover
-trigger1 = Command = "recovery"
-value = 5200 ;HITFALL_RECOVER
-
-[State 821, 3] ; Recover in mid air (use SelfState)
-type = SelfState
-triggerall = Vel Y > 0
-triggerall = alive
-triggerall = CanRecover
-trigger1 = Command = "recovery"
-value = 5210 ;HITFALL_AIRRECOVER
-
-[State 821, 4] ;Hit ground
-type = SelfState
-trigger1 = Vel Y > 0
-trigger1 = Pos Y >= 0
-value = 5100 ;Hit ground
 
 ;---------------------------------------------------------------------------
 ; Override common states (use same number to override) :

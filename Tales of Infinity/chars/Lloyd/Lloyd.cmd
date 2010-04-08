@@ -488,7 +488,7 @@ time = 1
 [State -1, Run Fwd]
 type = ChangeState
 value = 100
-triggerAll = command = "FF"
+trigger1 = command = "FF"
 trigger1 = statetype = S
 trigger1 = ctrl
 
@@ -501,25 +501,6 @@ trigger1 = command = "BB"
 trigger1 = statetype = S
 trigger1 = ctrl
 
-;---------------------------------------------------------------------------
-; Throw
-[State -1, Throw]
-type = ChangeState
-value = 800
-triggerall = command = "y" || command = "z"
-triggerall = statetype = S
-triggerall = ctrl
-triggerall = stateno != 100
-trigger1 = command = "holdfwd"
-trigger1 = p2bodydist X < 10
-trigger1 = (p2statetype = S) || (p2statetype = C)
-trigger1 = p2movetype != H
-trigger2 = command = "holdback"
-trigger2 = p2bodydist X < 10
-trigger2 = (p2statetype = S) || (p2statetype = C)
-trigger2 = p2movetype != H
-
-;===========================================================================
 ;---------------------------------------------------------------------------
 ; Sword Hit 1
 [State -1, Sword Hit 1]

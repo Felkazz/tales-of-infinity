@@ -41,7 +41,7 @@ p1.bg0.anim = 10
 p1.bg1.spr = 11,0
 p1.mid.spr = 12,0
 p1.front.spr = 13,0
-p1.range.x  = 0,-127
+p1.range.x  = -13,-111
 ;Player 2
 p2.pos    = 177,12
 p2.bg0.anim = 10
@@ -52,7 +52,7 @@ p2.mid.spr = 12,0
 p2.mid.facing = -1
 p2.front.spr = 13,0
 p2.front.facing = -1
-p2.range.x = 0,127
+p2.range.x = 13,111
 
 [Begin Action 10] ;Darkened lifebar background 
 -1,-1, 0,0, 1, , S
@@ -66,7 +66,7 @@ p1.mid.offset = 0,-1
 p1.mid.spr = 12,0
 p1.front.offset = 0,-1
 p1.front.spr = 13,0
-p1.range.x  = 0,-127
+p1.range.x  = -13,-112
 ;Player 2
 p2.pos    = 177,13
 p2.bg0.anim = 20
@@ -79,19 +79,19 @@ p2.mid.facing = -1
 p2.front.offset = 0,-1
 p2.front.spr = 13,0
 p2.front.facing = -1
-p2.range.x = 0,127
+p2.range.x = 13,112
 ;Player 3
 p3.pos    = 129,22
 p3.mid.spr = 12,0
 p3.front.spr = 13,0
-p3.range.x  = 0,-127
+p3.range.x  = -13,-112
 ;Player 4
 p4.pos    = 191,22
 p4.mid.spr = 12,0
 p4.mid.facing = -1
 p4.front.spr = 13,0
 p4.front.facing = -1
-p4.range.x = 0,127
+p4.range.x = 13,112
 
 [Begin Action 20] ;Darkened lifebar background (team)
 -1,-1, 0,0, 1, , S
