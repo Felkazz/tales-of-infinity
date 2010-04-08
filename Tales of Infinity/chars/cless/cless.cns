@@ -291,6 +291,45 @@ ctrl = 0
 velset = 0,0
 anim = 250
 
+[State 250, 1]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 23, 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 5, 10
+sparkno = 0
+sparkxy = -10, -76
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = -1.5
+airguard.velocity = -0.75,-1
+air.type = High
+air.velocity = -1.5,-2
+air.hittime = 12
+
+[State 250, Effect]
+Type = Explod
+Trigger1 = Time = 10
+Anim = F233
+ID = 250
+Pos = 45,-20
+PosType = P1
+Facing = 1
+VFacing = 1
+BindTime = -1
+Removetime = 10
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit
+
 [State 250, 5]
 type = ChangeState
 trigger1 = AnimTime = 0
