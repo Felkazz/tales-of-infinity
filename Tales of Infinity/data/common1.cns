@@ -498,11 +498,6 @@ type = StateTypeSet
 trigger1 = Time = 0 && statetype = S
 physics = S
 
-[State 120, 3]
-type = StateTypeSet
-trigger1 = Time = 0 && statetype = C
-physics = C
-
 [State 120, 4]
 type = StateTypeSet
 trigger1 = Time = 0 && statetype = A
@@ -511,7 +506,7 @@ physics = A
 [State 120, 5]
 type = ChangeState
 trigger1 = AnimTime = 0
-value = 130 + (statetype = C) + (statetype = A)*2
+value = 130 + (statetype = A)*2
 
 [State 120, Stop Guarding]
 type = ChangeState
