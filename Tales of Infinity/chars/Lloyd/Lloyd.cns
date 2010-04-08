@@ -181,7 +181,7 @@ air.hittime = 12			;Time before opponent regains control in air
 [State 200, Effect]
 Type = Explod
 Trigger1 = Time = 10
-Anim = F206
+Anim = F230
 ID = 200
 Pos = 38,-20
 PosType = P1

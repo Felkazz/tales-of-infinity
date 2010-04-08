@@ -200,10 +200,19 @@ Clsn2: 1
   Clsn2[0] = -4, -32, 16, 2
 200,1, 0,0, 5, 
 Clsn1: 1
-  Clsn1[0] = 23, -54, 54, 10
+  Clsn1[0] = -21, -63, 35, -24
+Clsn2: 1
+  Clsn2[0] = -7, -23, 19, 4
+200,6, 0,0, 3, 
+Clsn1: 1
+  Clsn1[0] = 16, -54, 54, 10
 Clsn2: 1
   Clsn2[0] = -7, -23, 19, 4
 200,6, 0,0, 15, 
+
+; Slash Effect
+[Begin Action 201]
+6000,0, 0,0, 5, , A
 
 ; Stand Medium Punch
 [Begin Action 210]
@@ -485,7 +494,9 @@ Clsn2: 1
 
 ; 
 [Begin Action 0]
+0,0, 0,0, 1, 
 
 ; 
 [Begin Action 0]
+0,0, 0,0, 1, 
 
