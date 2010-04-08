@@ -228,15 +228,15 @@
 
 ; Circle Slash 1 (RED)
 [Begin Action 202]
-200,2, 0,0, 5, 
+200,1, 0,0, 5, , A
 
 ; Circle Slash 2 (RED)
 [Begin Action 203]
-200,3, 0,0, 5, 
+200,1, 0,0, 5, VH, A
 
 ; Circle Slash 3 (RED)
 [Begin Action 204]
-200,4, 0,0, 5, 
+200,1, 0,0, 5, V, A
 
 ; Stab (RED)
 [Begin Action 205]
@@ -252,15 +252,15 @@
 
 ; Circle Slash 1 (BLUE)
 [Begin Action 208]
-201,2, 0,0, 5, , A
+201,1, 0,0, 5, , A
 
 ; Circle Slash 2 (BLUE)
 [Begin Action 209]
-201,3, 0,0, 5, , A
+201,1, 0,0, 5, VH, A
 
 ; Circe Slash 3 (BLUE)
 [Begin Action 210]
-201,4, 0,0, 5, , A
+201,1, 0,0, 5, V, A
 
 ; Stab (BLUE)
 [Begin Action 211]
@@ -276,15 +276,15 @@
 
 ; Circle Slash 1 (GREEN)
 [Begin Action 215]
-202,2, 0,0, 5, , A
+202,1, 0,0, 5, , A
 
 ; Circle Slash 2 (GREEN)
 [Begin Action 216]
-202,3, 0,0, 5, , A
+202,1, 0,0, 5, VH, A
 
 ; Circle Slash 3 (GREEN)
 [Begin Action 217]
-202,4, 0,0, 5, , A
+202,1, 0,0, 5, V, A
 
 ; Stab (GREEN)
 [Begin Action 218]
@@ -298,6 +298,18 @@
 [Begin Action 220]
 203,0, 0,0, 5, V, A
 
+; Circle Slash 1 (YELLOW)
+[Begin Action 221]
+203,1, 0,0, 5, , A
+
+; Cicle Slash 2 (YELLOW)
+[Begin Action 222]
+203,1, 0,0, 5, VH, A
+
+; Circle Slash 3 (YELLOW)
+[Begin Action 223]
+203,1, 0,0, 5, V, A
+
 ; Down Slash (PINK)
 [Begin Action 225]
 204,0, 0,0, 5, , A
@@ -305,4 +317,16 @@
 ; Up Slash (PINK)
 [Begin Action 226]
 204,0, 0,0, 5, V, A
+
+; Circle Slash 1 (PINK)
+[Begin Action 227]
+204,1, 0,0, 5, , A
+
+; Circle Slash 2 (PINK)
+[Begin Action 228]
+204,1, 0,0, 5, VH, A
+
+; Circle Slash 3 (PINK)
+[Begin Action 229]
+204,1, 0,0, 5, V, A
 
