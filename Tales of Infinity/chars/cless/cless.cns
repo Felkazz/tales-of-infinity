@@ -233,7 +233,42 @@ airguard.velocity = -5,0
 air.type = High
 air.velocity = -10,0
 air.hittime = 12
-fall=0
+
+
+[State 220, Effect]
+Type = Explod
+Trigger1 = Time = 5
+Anim = F223
+ID = 223
+Pos = 20,-15
+PosType = P1
+Facing = -1
+VFacing = 1
+BindTime = -1
+Removetime = 3
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit = 1
+Scale = 0.7,0.7
+
+[State 220, ModifyEffect]
+Type = Explod
+Trigger1 = Time = 8
+Anim = F223
+ID = 224
+Pos = 45,-15
+PosType = P1
+Facing = -1
+VFacing = 1
+BindTime = -1
+Removetime = 7
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit = 1
+Scale = 0.7,0.7
+
 
 [State 240, 5]
 type = ChangeState
