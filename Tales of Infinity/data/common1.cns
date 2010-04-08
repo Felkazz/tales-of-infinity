@@ -506,7 +506,7 @@ physics = A
 [State 120, 5]
 type = ChangeState
 trigger1 = AnimTime = 0
-value = 130 + (statetype = A)*2
+value = ifelse(StateType = A, 132,130)
 
 [State 120, Stop Guarding]
 type = ChangeState
