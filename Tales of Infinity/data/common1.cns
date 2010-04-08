@@ -623,7 +623,7 @@ value = 150
 [State 150, 2]
 type = ChangeState
 trigger1 = HitShakeOver
-value = 151 + 2
+value = 0 ;value = 151 + 2
 
 [State 150, 3]
 type = ForceFeedback
