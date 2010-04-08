@@ -138,91 +138,6 @@ trigger1 = AnimTime = 0
 value = 0
 
 ;---------------------------------------------------------------------------
-; Standing Light Punch
-; CNS difficulty: easy
-[Statedef 200]
-type    = S				;State-type: S-stand, C-crouch, A-air, L-liedown
-movetype= A				;Move-type: A-attack, I-idle, H-gethit
-physics = S				;Physics: S-stand, C-crouch, A-air
-juggle  = 1				;Number of air juggle points move takes
-;Commonly-used controllers:
-velset = 0,0			;Set velocity (x,y) (Def: no change)
-ctrl = 0				;Set ctrl (Def: no change)
-anim = 200				;Change animation (Def: no change)
-poweradd = 20			;Power to add (Def: 0)
-sprpriority = 2			;Set layering priority to 2 (in front)
-
-[State 200, 1]
-type = HitDef
-trigger1 = Time = 0
-attr = S, NA			;Attribute: Standing, Normal Attack
-damage = 23, 0			;Damage that move inflicts, guard damage
-animtype = Light			;Animation type: Light, Medium, Heavy, Back (def: Light)
-guardflag = MA			;Flags on how move is to be guarded against
-hitflag = MAF			;Flags of conditions that move can hit
-priority = 3, Hit			;Attack priority: 0 (least) to 7 (most), 4 default
-					;Hit/Miss/Dodge type (Def: Hit)
-pausetime = 8, 8			;Time attacker pauses, time opponent shakes
-sparkno = 0				;Spark anim no (Def: set above)
-sparkxy = -10, -76		;X-offset for the "hit spark" rel. to p2,
-					;Y-offset for the spark rel. to p1
-hitsound = 5, 0			;Sound to play on hit
-guardsound = 6, 0			;Sound to play on guard
-ground.type = High		;Type: High, Low, Trip (def: Normal)
-ground.slidetime = 5		;Time that the opponent slides back
-ground.hittime  = 12		;Time opponent is in hit state
-ground.velocity = -4		;Velocity at which opponent is pushed
-airguard.velocity = -1.9,-.8	;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
-air.type = High			;Type: High, Low, Trip (def: same as ground.type)
-air.velocity = -1.4,-3		;X-velocity at which opponent is pushed,
-					;Y-velocity at which opponent is pushed
-air.hittime = 12			;Time before opponent regains control in air
-
-[State 200, 5]
-type = ChangeState
-trigger1 = AnimTime = 0
-value = 0
-ctrl = 1
-
-;---------------------------------------------------------------------------
-; Standing Medium Punch
-; CNS difficulty: easy
-[Statedef 210]
-type    = S
-movetype= A
-physics = S
-juggle  = 4
-poweradd= 65
-ctrl = 0
-velset = 0,0
-anim = 210
-
-[State 210, 5]
-type = ChangeState
-trigger1 = AnimTime = 0
-value = 0
-ctrl = 1
-
-;---------------------------------------------------------------------------
-; Standing Strong Punch
-; CNS difficulty: easy
-[Statedef 220]
-type    = S
-movetype= A
-physics = S
-juggle  = 4
-poweradd= 65
-ctrl = 0
-velset = 0,0
-anim = 220
-
-[State 220, 5]
-type = ChangeState
-trigger1 = AnimTime = 0
-value = 0
-ctrl = 1
-
-;---------------------------------------------------------------------------
 ; Standing Light Kick
 ; CNS difficulty: easy
 [Statedef 230]
@@ -234,6 +149,36 @@ poweradd= 22
 ctrl = 0
 velset = 0,0
 anim = 230
+
+
+
+[State 200, 1]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 30, 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 8, 0
+sparkno = -1
+sparkxy = -10, -76
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = 0,30
+airguard.velocity = -1.9,-.8
+air.type = High
+air.velocity = -10,30
+air.hittime = 12
+fall=0
+
+
+
+
 
 [State 230, 5]
 type = ChangeState
@@ -279,180 +224,6 @@ trigger1 = AnimTime = 0
 value = 0
 ctrl = 1
 
-;---------------------------------------------------------------------------
-; Crouching Light Punch
-; CNS difficulty: easy
-; Description: Simple crouching attack. The HitDef's guardflag parameter
-;     is set to "L", meaning that the move can only be guarded low
-;     (crouching), and not by standing or jumping opponents.
-;     Like for all light attacks, it's a good idea to keep the slidetime
-;     and hittime parameters at a smaller number, so the opponent isn't
-;     stunned for too long. For all crouching attacks you have to
-;     remember to set the attr parameter to indicate that it is crouching
-;     attack. In this case, "C, NA" stands for "crouching, normal attack".
-;     The HitDef's priority is set at 3, instead of the default of 4,
-;     so this attack has a lower priority than most others, meaning the
-;     player will get hit instead of trading hits with the opponent if
-;     their attack collision boxes (Clsn1) intersect each other's Clsn2
-;     boxes at the same time.
-[Statedef 400]
-type    = C
-movetype= A
-physics = C
-juggle  = 5
-poweradd= 15
-ctrl = 0
-anim = 400
-
-[State 400, 5]
-type = ChangeState
-trigger1 = AnimTime = 0
-value = 11
-ctrl = 1
-
-;---------------------------------------------------------------------------
-; Crouching Medium Punch
-[Statedef 410]
-type    = C
-movetype= A
-physics = C
-juggle  = 6
-poweradd= 50
-ctrl = 0
-anim = 410
-
-[State 410, 5]
-type = ChangeState
-trigger1 = AnimTime = 0
-value = 11
-ctrl = 1
-
-;---------------------------------------------------------------------------
-; Crouching Strong Punch
-[Statedef 420]
-type    = C
-movetype= A
-physics = C
-juggle  = 6
-poweradd= 50
-ctrl = 0
-anim = 420
-
-[State 420, 5]
-type = ChangeState
-trigger1 = AnimTime = 0
-value = 11
-ctrl = 1
-
-;---------------------------------------------------------------------------
-; Crouching Light Kick
-; CNS difficulty: easy
-[Statedef 430]
-type    = C
-movetype= A
-physics = C
-juggle  = 5
-poweradd= 22
-ctrl = 0
-anim = 430
-
-[State 430, 5]
-type = ChangeState
-trigger1 = AnimTime = 0
-value = 11
-ctrl = 1
-
-;---------------------------------------------------------------------------
-; Crouching Medium Kick
-; CNS difficulty: easy
-[Statedef 440]
-type    = C
-movetype= A
-physics = C
-juggle  = 5
-poweradd= 22
-ctrl = 0
-anim = 440
-
-[State 440, 5]
-type = ChangeState
-trigger1 = AnimTime = 0
-value = 11
-ctrl = 1
-
-;---------------------------------------------------------------------------
-; Crouch Strong Kick
-; CNS difficulty: easy
-; Description: This move uses "Trip" for the "ground.type" parameter in
-;     its HitDef. It's a special type that puts the opponent in a tripped
-;     animation as he falls. Also, the hitflag parameter in the HitDef
-;     is set to "MAFD". The "D" indicates that a downed opponent can be
-;     hit by the attack.
-[Statedef 450]
-type    = C
-movetype= A
-physics = C
-juggle  = 7
-poweradd= 70
-ctrl = 0
-anim = 450
-
-[State 450, 5]
-type = ChangeState
-trigger1 = AnimTime = 0
-value = 11
-ctrl = 1
-
-;---------------------------------------------------------------------------
-; Jump Light Punch
-; CNS difficulty: easy
-[Statedef 600]
-type    = A
-movetype= A
-physics = A
-juggle  = 2
-poweradd= 11
-ctrl = 0
-anim = 600
-
-[State 600, 5]
-type = CtrlSet
-trigger1 = Time = 20
-value = 1
-
-;---------------------------------------------------------------------------
-; Jump Medium Punch
-; CNS difficulty: easy
-[Statedef 610]
-type    = A
-movetype= A
-physics = A
-juggle  = 4
-poweradd= 65
-ctrl = 0
-anim = 610
-
-[State 610, 5]
-type = CtrlSet
-trigger1 = Time = 20
-value = 1
-
-;---------------------------------------------------------------------------
-; Jump Strong Punch
-; CNS difficulty: easy
-[Statedef 620]
-type    = A
-movetype= A
-physics = A
-juggle  = 4
-poweradd= 70
-ctrl = 0
-anim = 620
-
-[State 620, 5]
-type = CtrlSet
-trigger1 = Time = 20
-value = 1
 
 ;---------------------------------------------------------------------------
 ; Jump Light Kick

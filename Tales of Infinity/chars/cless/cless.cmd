@@ -521,36 +521,6 @@ trigger2 = p2movetype != H
 
 ;===========================================================================
 ;---------------------------------------------------------------------------
-; Stand Light Punch
-[State -1, Stand Light Punch]
-type = ChangeState
-value = 200
-triggerall = command = "x"
-triggerall = command != "holddown"
-trigger1 = statetype = S
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Stand Medium Punch
-[State -1, Stand Medium Punch]
-type = ChangeState
-value = 210
-triggerall = command = "y"
-triggerall = command != "holddown"
-trigger1 = statetype = S
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Stand Strong Punch
-[State -1, Stand Strong Punch]
-type = ChangeState
-value = 220
-triggerall = command = "z"
-triggerall = command != "holddown"
-trigger1 = statetype = S
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
 ; Stand Light Kick
 [State -1, Stand Light Kick]
 type = ChangeState
@@ -578,93 +548,6 @@ value = 250
 triggerall = command = "c"
 triggerall = command != "holddown"
 trigger1 = statetype = S
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Crouching Light Punch
-[State -1, Crouching Light Punch]
-type = ChangeState
-value = 400
-triggerall = command = "x"
-triggerall = command = "holddown"
-trigger1 = statetype = C
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Crouching Medium Punch
-[State -1, Crouching Medium Punch]
-type = ChangeState
-value = 410
-triggerall = command = "y"
-triggerall = command = "holddown"
-trigger1 = statetype = C
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Crouching Strong Punch
-[State -1, Crouching Strong Punch]
-type = ChangeState
-value = 420
-triggerall = command = "z"
-triggerall = command = "holddown"
-trigger1 = statetype = C
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Crouching Light Kick
-[State -1, Crouching Light Kick]
-type = ChangeState
-value = 430
-triggerall = command = "a"
-triggerall = command = "holddown"
-trigger1 = statetype = C
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Crouching Medium Kick
-[State -1, Crouching Medium Kick]
-type = ChangeState
-value = 440
-triggerall = command = "b"
-triggerall = command = "holddown"
-trigger1 = statetype = C
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Crouching Strong Kick
-[State -1, Crouching Strong Kick]
-type = ChangeState
-value = 450
-triggerall = command = "c"
-triggerall = command = "holddown"
-trigger1 = statetype = C
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Jump Light Punch
-[State -1, Jump Light Punch]
-type = ChangeState
-value = 600
-triggerall = command = "x"
-trigger1 = statetype = A
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Jump Medium Punch
-[State -1, Jump Medium Punch]
-type = ChangeState
-value = 610
-triggerall = command = "y"
-trigger1 = statetype = A
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Jump Strong Punch
-[State -1, Jump Strong Punch]
-type = ChangeState
-value = 620
-triggerall = command = "z"
-trigger1 = statetype = A
 trigger1 = ctrl
 
 ;---------------------------------------------------------------------------
