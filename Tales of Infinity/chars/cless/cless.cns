@@ -215,27 +215,27 @@ anim = 240
 type = HitDef
 trigger1 = Time = 0
 attr = S, NA
-damage = 45, 0
+damage = 27, 0
 animtype = Light
 guardflag = MA
 hitflag = MAF
 priority = 3, Hit
-pausetime = 8, 0
-sparkno = -1
+pausetime = 5,10 ;8, 0
+sparkno = 0
 sparkxy = -10, -76
 hitsound = 5, 0
 guardsound = 6, 0
 ground.type = High
 ground.slidetime = 5
 ground.hittime  = 12
-ground.velocity = -10,0
-airguard.velocity = -5,0
+ground.velocity = -1.5
+airguard.velocity = -0.75,-1
 air.type = High
-air.velocity = -10,0
+air.velocity = -1.5,-2
 air.hittime = 12
 
 
-[State 220, Effect]
+[State 240, Effect]
 Type = Explod
 Trigger1 = Time = 5
 Anim = F223
@@ -250,9 +250,10 @@ SprPriority = 3
 OnTop = 1
 OwnPal = 1
 RemoveOnGetHit = 1
-Scale = 0.7,0.7
+ignorehitpause = 0
+Scale = 0.6,0.6
 
-[State 220, ModifyEffect]
+[State 240, ModifyEffect]
 Type = Explod
 Trigger1 = Time = 8
 Anim = F223
@@ -267,7 +268,8 @@ SprPriority = 3
 OnTop = 1
 OwnPal = 1
 RemoveOnGetHit = 1
-Scale = 0.7,0.7
+ignorehitpause = 0
+Scale = 0.6,0.6
 
 
 [State 240, 5]
