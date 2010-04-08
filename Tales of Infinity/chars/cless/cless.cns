@@ -167,18 +167,18 @@ guardsound = 6, 0
 ground.type = High
 ground.slidetime = 5
 ground.hittime  = 12
-ground.velocity = -10,0
-airguard.velocity = -5,0
+ground.velocity = -3,0
+airguard.velocity = -1.5,-.6
 air.type = High
-air.velocity = -10,0
+air.velocity = -1.2,-1
 air.hittime = 12
-fall=0
+
 
 ;30,-20;45,-25 ;38,-20
 
 [State 230, Effect]
 Type = Explod
-Trigger1 = Time = 10
+Trigger1 = Time = 6
 Anim = F231
 ID = 230
 Pos = 50,-30 ;38,-20
