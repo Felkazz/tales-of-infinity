@@ -521,8 +521,8 @@ trigger2 = p2movetype != H
 
 ;===========================================================================
 ;---------------------------------------------------------------------------
-; Stand Light Punch
-[State -1, Stand Light Punch]
+; Sword Hit 1
+[State -1, Sword Hit 1]
 type = ChangeState
 value = 200
 triggerall = command = "a"
@@ -530,22 +530,28 @@ trigger1 = statetype = S
 trigger1 = ctrl
 
 ;---------------------------------------------------------------------------
-; Stand Medium Punch
-[State -1, Stand Medium Punch]
+; Sword Hit 2
+[State -1, Sword Hit 2]
 type = ChangeState
 value = 210
-triggerall = command = "y"
+triggerall = command = "b"
 trigger1 = statetype = S
 trigger1 = ctrl
+trigger2 = StateNo = 200
+Trigger2 = MoveContact || Time >= 14
 
 ;---------------------------------------------------------------------------
-; Stand Strong Punch
-[State -1, Stand Strong Punch]
+; Sword Hit 3
+[State -1, Sword Hit 3]
 type = ChangeState
 value = 220
-triggerall = command = "z"
+triggerall = command = "c"
 trigger1 = statetype = S
 trigger1 = ctrl
+trigger2 = StateNo = 200
+Trigger2 = MoveContact || Time >= 14
+trigger3 = StateNo = 210
+Trigger3 = MoveContact || Time >= 17
 
 ;---------------------------------------------------------------------------
 ; Stand Light Kick
@@ -561,7 +567,7 @@ trigger1 = ctrl
 [State -1, Standing Medium Kick]
 type = ChangeState
 value = 240
-triggerall = command = "b"
+triggerall = command = "y"
 trigger1 = statetype = S
 trigger1 = ctrl
 
@@ -570,7 +576,7 @@ trigger1 = ctrl
 [State -1, Standing Strong Kick]
 type = ChangeState
 value = 250
-triggerall = command = "c"
+triggerall = command = "z"
 trigger1 = statetype = S
 trigger1 = ctrl
 

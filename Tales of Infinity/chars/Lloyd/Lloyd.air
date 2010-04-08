@@ -122,51 +122,75 @@ Clsn2: 1
 
 ; GUARDSTART (stand)
 [Begin Action 120]
-0,0, 0,0, 1, 
+Clsn2: 2
+  Clsn2[0] = -11, -31, 13, 2
+  Clsn2[1] = 11, -30, 26, -4
+120,0, 0,0, 1, 
 
-; GUARDSTART (crouch)
+; NO DEBUG
 [Begin Action 121]
-0,0, 0,0, 1, 
+-1,-1, 0,0, 1, 
 
 ; GUARDSTART (air)
 [Begin Action 122]
-0,0, 0,0, 1, 
+Clsn2: 2
+  Clsn2[0] = -11, -31, 13, 2
+  Clsn2[1] = 11, -30, 26, -4
+120,0, 0,0, 1, 
 
 ; GUARD (stand)
 [Begin Action 130]
-0,0, 0,0, 1, 
+Clsn2: 2
+  Clsn2[0] = -11, -31, 13, 2
+  Clsn2[1] = 11, -30, 26, -4
+120,0, 0,0, 1, 
 
-; GUARD (crouch)
+; NO DEBUG
 [Begin Action 131]
-0,0, 0,0, 1, 
+-1,-1, 0,0, 1, 
 
 ; GUARD (air)
 [Begin Action 132]
-0,0, 0,0, 1, 
+Clsn2: 2
+  Clsn2[0] = -11, -31, 13, 2
+  Clsn2[1] = 11, -30, 26, -4
+120,0, 0,0, 1, 
 
 ; GUARDEND (stand)
 [Begin Action 140]
-0,0, 0,0, 1, 
+Clsn2: 2
+  Clsn2[0] = -11, -31, 13, 2
+  Clsn2[1] = 11, -30, 26, -4
+120,0, 0,0, 1, 
 
-; GUARDEND (crouch)
+; NO DEBUG
 [Begin Action 141]
-0,0, 0,0, 1, 
+-1,-1, 0,0, 1, 
 
 ; GUARDEND (air)
 [Begin Action 142]
-0,0, 0,0, 1, 
+Clsn2: 2
+  Clsn2[0] = -11, -31, 13, 2
+  Clsn2[1] = 11, -30, 26, -4
+120,0, 0,0, 1, 
 
 ; Hit back while guarding (stand)
 [Begin Action 150]
-0,0, 0,0, 1, 
+Clsn2: 2
+  Clsn2[0] = -11, -31, 13, 2
+  Clsn2[1] = 11, -30, 26, -4
+120,0, 0,0, 1, 
 
-; Hit back while guarding (crouch)
+; NO DEBUG
 [Begin Action 151]
-0,0, 0,0, 1, 
+-1,-1, 0,0, 1, 
 
 ; Hit back while guarding (air)
 [Begin Action 152]
-0,0, 0,0, 1, 
+Clsn2: 2
+  Clsn2[0] = -11, -31, 13, 2
+  Clsn2[1] = 11, -30, 26, -4
+120,0, 0,0, 1, 
 
 ; Lose
 [Begin Action 170]
@@ -191,7 +215,7 @@ Loopstart
 180,0, 0,0, 30, 
 180,9, 0,0, 5, 
 
-; Stand Light Punch
+; Sword Hit 1
 [Begin Action 200]
 Clsn2: 1
   Clsn2[0] = -8, -32, 16, 4
@@ -200,27 +224,70 @@ Clsn2: 1
   Clsn2[0] = -4, -32, 16, 2
 200,1, 0,0, 5, 
 Clsn1: 1
-  Clsn1[0] = -21, -63, 35, -24
+  Clsn1[0] = -13, -58, 34, -27
 Clsn2: 1
   Clsn2[0] = -7, -23, 19, 4
-200,6, 0,0, 3, 
+200,7, 0,0, 3, 
 Clsn1: 1
-  Clsn1[0] = 16, -54, 54, 10
+  Clsn1[0] = 23, -48, 54, -2
 Clsn2: 1
   Clsn2[0] = -7, -23, 19, 4
-200,6, 0,0, 15, 
+200,8, 0,0, 7, 
+Clsn2: 1
+  Clsn2[0] = -7, -23, 19, 4
+200,6, 0,0, 5, 
 
-; Slash Effect
-[Begin Action 201]
-6000,0, 0,0, 5, , A
-
-; Stand Medium Punch
+; Sword Hit 2
 [Begin Action 210]
-0,0, 0,0, 1, 
+Clsn2: 1
+  Clsn2[0] = -7, -24, 14, 5
+210,0, 0,0, 5, 
+Clsn2: 1
+  Clsn2[0] = -7, -25, 14, 5
+210,1, 0,0, 5, 
+Clsn1: 1
+  Clsn1[0] = 12, -54, 47, -9
+Clsn2: 1
+  Clsn2[0] = -3, -26, 17, 9
+210,6, 0,0, 3, 
+Clsn1: 1
+  Clsn1[0] = -33, -65, 12, -30
+Clsn2: 1
+  Clsn2[0] = -11, -31, 12, 6
+210,7, 0,0, 3, 
+Clsn1: 1
+  Clsn1[0] = -46, -42, -15, -6
+Clsn2: 1
+  Clsn2[0] = -10, -33, 11, 5
+210,8, 0,0, 4, 
+Clsn2: 1
+  Clsn2[0] = -9, -35, 11, 3
+210,5, 0,0, 5, 
 
-; Stand Strong Punch
+; Sword Hit 3
 [Begin Action 220]
-0,0, 0,0, 1, 
+Clsn2: 1
+  Clsn2[0] = -11, -30, 11, 5
+220,0, 0,0, 5, 
+Clsn1: 1
+  Clsn1[0] = 8, -23, 39, -11
+Clsn2: 1
+  Clsn2[0] = -11, -30, 14, 5
+220,7, 0,0, 3, 
+Clsn1: 1
+  Clsn1[0] = 17, -23, 57, -10
+Clsn2: 1
+  Clsn2[0] = -11, -30, 18, 5
+220,3, 0,0, 7, 
+Clsn2: 1
+  Clsn2[0] = -11, -30, 8, 5
+220,4, 0,0, 3, 
+Clsn2: 1
+  Clsn2[0] = -11, -30, 9, 5
+220,5, 0,0, 3, 
+Clsn2: 1
+  Clsn2[0] = -11, -33, 9, 6
+220,6, 0,0, 3, 
 
 ; Standing Light Kick
 [Begin Action 230]

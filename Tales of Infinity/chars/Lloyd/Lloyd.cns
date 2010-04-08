@@ -74,7 +74,6 @@ crouch.friction = .82	;Friction coefficient when crouching
 
 ;---------------------------------------------------------------------------
 ; Lose by Time Over
-; CNS difficulty: basic
 [Statedef 170]
 type = S
 ctrl = 0
@@ -89,7 +88,6 @@ time = 1
 
 ;---------------------------------------------------------------------------
 ; Win state decider
-; CNS difficulty: basic
 [Statedef 180]
 type = S
 
@@ -99,8 +97,7 @@ trigger1 = Time = 0
 value = 181
 
 ;---------------------------------------------------------------------------
-; Win pose 1
-; CNS difficulty: basic
+; Win pose
 [Statedef 181]
 type = S
 ctrl = 0
@@ -114,8 +111,7 @@ value = SCA
 time = 1
 
 ;---------------------------------------------------------------------------
-; Introduction
-; CNS difficulty: basic
+; INTRO
 [Statedef 190]
 type = S
 ctrl = 0
@@ -138,8 +134,7 @@ trigger1 = AnimTime = 0
 value = 0
 
 ;---------------------------------------------------------------------------
-; Standing Light Punch
-; CNS difficulty: easy
+; Sword Hit 1
 [Statedef 200]
 type    = S				;State-type: S-stand, C-crouch, A-air, L-liedown
 movetype= A				;Move-type: A-attack, I-idle, H-gethit
@@ -171,10 +166,10 @@ guardsound = 6, 0			;Sound to play on guard
 ground.type = High		;Type: High, Low, Trip (def: Normal)
 ground.slidetime = 5		;Time that the opponent slides back
 ground.hittime  = 12		;Time opponent is in hit state
-ground.velocity = -4		;Velocity at which opponent is pushed
-airguard.velocity = -1.9,-.8	;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
+ground.velocity = -1.5		;Velocity at which opponent is pushed
+airguard.velocity = -0.75,-1	;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
 air.type = High			;Type: High, Low, Trip (def: same as ground.type)
-air.velocity = -1.4,-3		;X-velocity at which opponent is pushed,
+air.velocity = -1.5,-2		;X-velocity at which opponent is pushed,
 					;Y-velocity at which opponent is pushed
 air.hittime = 12			;Time before opponent regains control in air
 
@@ -183,7 +178,7 @@ Type = Explod
 Trigger1 = Time = 10
 Anim = F230
 ID = 200
-Pos = 38,-20
+Pos = 50,-20
 PosType = P1
 Facing = 1
 VFacing = 1
@@ -201,8 +196,7 @@ value = 0
 ctrl = 1
 
 ;---------------------------------------------------------------------------
-; Standing Medium Punch
-; CNS difficulty: easy
+; Sword Hit 2
 [Statedef 210]
 type    = S
 movetype= A
@@ -213,6 +207,45 @@ ctrl = 0
 velset = 0,0
 anim = 210
 
+[State 210, 1]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 23, 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 5, 10
+sparkno = 0
+sparkxy = -10, -76
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = -1.5
+airguard.velocity = -0.75,-1
+air.type = High
+air.velocity = -1.5,-2
+air.hittime = 12
+
+[State 210, Effect]
+Type = Explod
+Trigger1 = Time = 10
+Anim = F232
+ID = 210
+Pos = 45,-20
+PosType = P1
+Facing = 1
+VFacing = 1
+BindTime = -1
+Removetime = 10
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit = 1
+
 [State 210, 5]
 type = ChangeState
 trigger1 = AnimTime = 0
@@ -220,8 +253,7 @@ value = 0
 ctrl = 1
 
 ;---------------------------------------------------------------------------
-; Standing Strong Punch
-; CNS difficulty: easy
+; Sword Hit 3
 [Statedef 220]
 type    = S
 movetype= A
@@ -231,6 +263,63 @@ poweradd= 65
 ctrl = 0
 velset = 0,0
 anim = 220
+
+[State 220, 1]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 23, 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 5, 10
+sparkno = 0
+sparkxy = -10, -76
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = -1.5
+airguard.velocity = -0.75,-1
+air.type = High
+air.velocity = -1.5,-2
+air.hittime = 12
+
+[State 220, Effect]
+Type = Explod
+Trigger1 = Time = 5
+Anim = F205
+ID = 220
+Pos = 20,-15
+PosType = P1
+Facing = -1
+VFacing = 1
+BindTime = -1
+Removetime = 3
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit = 1
+Scale = 0.6,0.6
+
+[State 220, ModifyEffect]
+Type = Explod
+Trigger1 = Time = 8
+Anim = F205
+ID = 221
+Pos = 45,-15
+PosType = P1
+Facing = -1
+VFacing = 1
+BindTime = -1
+Removetime = 7
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit = 1
+Scale = 0.6,0.6
 
 [State 220, 5]
 type = ChangeState
