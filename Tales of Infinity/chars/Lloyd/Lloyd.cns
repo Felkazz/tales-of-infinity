@@ -162,7 +162,7 @@ guardflag = MA			;Flags on how move is to be guarded against
 hitflag = MAF			;Flags of conditions that move can hit
 priority = 3, Hit			;Attack priority: 0 (least) to 7 (most), 4 default
 					;Hit/Miss/Dodge type (Def: Hit)
-pausetime = 8, 8			;Time attacker pauses, time opponent shakes
+pausetime = 5, 10			;Time attacker pauses, time opponent shakes
 sparkno = 0				;Spark anim no (Def: set above)
 sparkxy = -10, -76		;X-offset for the "hit spark" rel. to p2,
 					;Y-offset for the spark rel. to p1
@@ -177,6 +177,22 @@ air.type = High			;Type: High, Low, Trip (def: same as ground.type)
 air.velocity = -1.4,-3		;X-velocity at which opponent is pushed,
 					;Y-velocity at which opponent is pushed
 air.hittime = 12			;Time before opponent regains control in air
+
+[State 200, Effect]
+Type = Explod
+Trigger1 = MoveHit = 1
+Trigger1 = Time >= 0
+Anim = F206
+ID = 200
+Pos = 38,-20
+PosType = P1
+Facing = 1
+BindTime = -1
+Removetime = 10
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit = 1
 
 [State 200, 5]
 type = ChangeState

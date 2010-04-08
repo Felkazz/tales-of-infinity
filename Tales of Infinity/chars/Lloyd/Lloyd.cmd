@@ -525,7 +525,7 @@ trigger2 = p2movetype != H
 [State -1, Stand Light Punch]
 type = ChangeState
 value = 200
-triggerall = command = "x"
+triggerall = command = "a"
 trigger1 = statetype = S
 trigger1 = ctrl
 
@@ -552,7 +552,7 @@ trigger1 = ctrl
 [State -1, Stand Light Kick]
 type = ChangeState
 value = 230
-triggerall = command = "a"
+triggerall = command = "x"
 trigger1 = statetype = S
 trigger1 = ctrl
 
