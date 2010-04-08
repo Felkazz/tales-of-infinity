@@ -1,0 +1,42 @@
+OBS: As imagens referidas são em relação as que estão nas pastas, não no fightfx.sff
+OBS2: Todas as animações estão com efeito de cor A
+
+VERMELHO
+Begin Action 200 = Imagem 200
+Begin Action 201 = Imagem 200, Inversão V
+Begin Action 202 = Imagem 202
+Begin Action 203 = Imagem 202, Inversão HV
+Begin Action 204 = Imagem 202, Inversão V
+Begin Action 205 = Imagem 205
+
+AZUL
+Begin Action 206 = Imagem 206
+Begin Action 207 = Imagem 206, Inversão V
+Begin Action 208 = Imagem 208
+Begin Action 209 = Imagem 208, Inversão HV
+Begin Action 210 = Imagem 208, Inversão V
+Begin Action 211 = Imagem 211
+
+VERDE
+Begin Action 212 = Imagem 212
+Begin Action 213 = Imagem 212, Inversão V
+Begin Action 214 = Imagem 214
+Begin Action 215 = Imagem 214, Inversão HV
+Begin Action 216 = Imagem 214, Inversão V
+Begin Action 217 = Imagem 217
+
+AMARELO
+Begin Action 218 = Imagem 218
+Begin Action 219 = Imagem 218, Inversão V
+Begin Action 220 = Imagem 220
+Begin Action 221 = Imagem 220, Inversão HV
+Begin Action 222 = Imagem 220, Inversão V
+Begin Action 223 = Imagem 223
+
+ROSA
+Begin Action 224 = Imagem 224
+Begin Action 225 = Imagem 224, Inversão V
+Begin Action 226 = Imagem 226
+Begin Action 227 = Imagem 226, Inversão HV
+Begin Action 228 = Imagem 226, Inversão V
+Begin Action 229 = Imagem 229
