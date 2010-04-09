@@ -501,54 +501,39 @@ trigger1 = command = "BB"
 trigger1 = statetype = S
 trigger1 = ctrl
 
-;---------------------------------------------------------------------------
-; Throw
-[State -1, Throw]
-type = ChangeState
-value = 800
-triggerall = command = "y" || command = "z"
-triggerall = statetype = S
-triggerall = ctrl
-triggerall = stateno != 100
-trigger1 = command = "holdfwd"
-trigger1 = p2bodydist X < 10
-trigger1 = (p2statetype = S) || (p2statetype = C)
-trigger1 = p2movetype != H
-trigger2 = command = "holdback"
-trigger2 = p2bodydist X < 10
-trigger2 = (p2statetype = S) || (p2statetype = C)
-trigger2 = p2movetype != H
-
 ;===========================================================================
 ;---------------------------------------------------------------------------
-; Stand Light Kick
-[State -1, Stand Light Kick]
+; Sword Hit 1
+[State -1, Sword Hit 1]
 type = ChangeState
 value = 230
 triggerall = command = "a"
-triggerall = command != "holddown"
 trigger1 = statetype = S
 trigger1 = ctrl
 
 ;---------------------------------------------------------------------------
-; Standing Medium Kick
-[State -1, Standing Medium Kick]
+; Sword Hit 2
+[State -1, Sword Hit 2]
 type = ChangeState
 value = 240
 triggerall = command = "b"
-triggerall = command != "holddown"
 trigger1 = statetype = S
 trigger1 = ctrl
+trigger2 = StateNo = 230
+Trigger2 = MoveContact || Time >= 14
 
 ;---------------------------------------------------------------------------
-; Standing Strong Kick
-[State -1, Standing Strong Kick]
+; Sword Hit 3
+[State -1, Sword Hit 3]
 type = ChangeState
 value = 250
 triggerall = command = "c"
-triggerall = command != "holddown"
 trigger1 = statetype = S
 trigger1 = ctrl
+trigger2 = StateNo = 230
+Trigger2 = MoveContact || Time >= 14
+trigger3 = StateNo = 240
+Trigger3 = MoveContact || Time >= 17
 
 ;---------------------------------------------------------------------------
 ; Jump Light Kick
