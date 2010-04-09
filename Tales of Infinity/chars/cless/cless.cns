@@ -339,16 +339,53 @@ ctrl = 1
 
 
 ;---------------------------------------------------------------------------
-; Jump Light Kick
-; CNS difficulty: easy
+; Air Sword Hit
 [Statedef 630]
 type    = A
 movetype= A
 physics = A
-juggle  = 3
-poweradd= 20
+poweradd= 25
 ctrl = 0
 anim = 630
+
+[State 630, 1]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 25, 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 5, 10
+sparkno = 0
+sparkxy = -10, -76
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = -1.5
+airguard.velocity = -0.75,-1
+air.type = High
+air.velocity = -1.5,-2
+air.hittime = 12
+
+[State 630, Effect]
+Type = Explod
+Trigger1 = Time = 5
+Anim = F231
+ID = 630
+Pos = 52,-10;45,-25
+PosType = P1
+Facing = 1
+VFacing = 1
+BindTime = -1
+Removetime = 10
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit = 1
 
 [State 630, 5]
 type = CtrlSet

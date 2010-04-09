@@ -548,7 +548,7 @@ trigger1 = ctrl
 ; Jump Medium Kick
 [State -1, Jump Medium Kick]
 type = ChangeState
-value = 640
+value = 630
 triggerall = command = "b"
 trigger1 = statetype = A
 trigger1 = ctrl
@@ -557,7 +557,7 @@ trigger1 = ctrl
 ; Jump Strong Kick
 [State -1, Jump Strong Kick]
 type = ChangeState
-value = 650
+value = 630
 triggerall = command = "c"
 trigger1 = statetype = A
 trigger1 = ctrl
