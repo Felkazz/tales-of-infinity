@@ -1,0 +1,28 @@
+; Para definir a classe do char, coloque o código abaixo no
+; [Statedef -2]
+
+[State -2, Class]
+Type = VarSet
+Trigger1 = Var(0) = 0
+V = 0
+Value = X
+
+; Trocar X por um dos seguintes valores:
+; 1 = Arco e Flecha
+;	Chester
+; 2 = Duas Espadas
+;	Judas, Lloyd
+; 3 = Espada e Melee
+;	Luke
+; 4 = Melee
+;	Kongman
+; 5 = Uma Espada
+;	Cecil, Cless, Frio, Kyaro, Kyle, Race, Reid
+; 6 = Espada e Magia
+;	Kratos, Leon
+; 7 = Machado
+;	Loni
+; 8 = Shizel
+;	Shizel
+; 9 = Dhaos ou Yggdrasil
+;	Dhaos, Yggdrasil
