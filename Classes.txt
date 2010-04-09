@@ -10,18 +10,27 @@ Value = X
 ; Trocar X por um dos seguintes valores:
 ; 1 = Arco e Flecha
 ;	Chester
+;	Danos: a = 12, b = 17, c = 22
 ; 2 = Duas Espadas
 ;	Judas, Lloyd
-; 3 = Espada e Melee
-;	Luke
-; 4 = Melee
+;	Danos: a = 15, b = 20, c = 25
+; 3 = Melee
 ;	Kongman
+;	Danos: a = 18, b = 23, c = 28
+; 4 = Espada e Melee
+;	Luke
+;	Danos Melee: a = 18, b = 23, c = 28
+;	Danos Espada: a = 20, b = 25, c = 30
 ; 5 = Uma Espada
 ;	Cecil, Cless, Frio, Kyaro, Kyle, Race, Reid
+;	Danos: a = 20, b = 25, c = 30
 ; 6 = Espada e Magia
 ;	Kratos, Leon
+;	Danos Espada: a = 20, b = 25, c = 30
+;	Danos Magias: 20% a mais de dano
 ; 7 = Machado
 ;	Loni
+;	Danos: a = 25, b = 30, c = 35
 ; 8 = Shizel
 ;	Shizel
 ; 9 = Dhaos ou Yggdrasil
