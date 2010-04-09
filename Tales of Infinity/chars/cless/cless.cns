@@ -393,38 +393,7 @@ trigger1 = Time = 20
 value = 1
 
 ;---------------------------------------------------------------------------
-; Jump Medium Kick
-; CNS difficulty: easy
-[Statedef 640]
-type    = A
-movetype= A
-physics = A
-juggle  = 4
-poweradd= 65
-ctrl = 0
-anim = 640
 
-[State 640, 5]
-type = CtrlSet
-trigger1 = Time = 20
-value = 1
-
-;---------------------------------------------------------------------------
-; Jump Strong Kick
-; CNS difficulty: easy
-[Statedef 650]
-type    = A
-movetype= A
-physics = A
-juggle  = 4
-poweradd= 70
-ctrl = 0
-anim = 650
-
-[State 650, 5]
-type = CtrlSet
-trigger1 = Time = 20
-value = 1
 
 ;---------------------------------------------------------------------------
 ; Override common states (use same number to override) :

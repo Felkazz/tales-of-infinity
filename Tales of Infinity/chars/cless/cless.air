@@ -502,12 +502,12 @@ Clsn2: 4
 630,20, 0,0, 15
 
 
-; Jump Medium Kick
+;NO DEBUG
 [Begin Action 640]
 0,0, 0,0, 1
 
 
-; Jump Strong Kick
+;NO DEBUG
 [Begin Action 650]
 0,0, 0,0, 1
 

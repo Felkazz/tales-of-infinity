@@ -536,29 +536,11 @@ trigger3 = StateNo = 240
 Trigger3 = MoveContact || Time >= 17
 
 ;---------------------------------------------------------------------------
-; Jump Light Kick
-[State -1, Jump Light Kick]
+; Jump Sword Hit
+[State -1, Jump Sword Hit]
 type = ChangeState
 value = 630
-triggerall = command = "a"
-trigger1 = statetype = A
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Jump Medium Kick
-[State -1, Jump Medium Kick]
-type = ChangeState
-value = 630
-triggerall = command = "b"
-trigger1 = statetype = A
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Jump Strong Kick
-[State -1, Jump Strong Kick]
-type = ChangeState
-value = 630
-triggerall = command = "c"
+triggerall = (command = "a" || command = "b" || command = "c")
 trigger1 = statetype = A
 trigger1 = ctrl
 
