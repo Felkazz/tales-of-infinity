@@ -535,13 +535,15 @@ trigger3 = StateNo = 210
 Trigger3 = MoveContact || Time >= 17
 
 ;---------------------------------------------------------------------------
-; Stand Light Kick
-[State -1, Stand Light Kick]
+; Air Sword Hit
+[State -1, Air Sword Hit]
 type = ChangeState
 value = 230
-triggerall = command = "x"
-trigger1 = statetype = S
-trigger1 = ctrl
+triggerAll = statetype = A
+triggerAll = ctrl
+trigger1 = command = "a"
+trigger2 = command = "b"
+trigger3 = command = "c"
 
 ;---------------------------------------------------------------------------
 ; Standing Medium Kick

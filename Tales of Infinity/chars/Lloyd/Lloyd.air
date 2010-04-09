@@ -289,9 +289,30 @@ Clsn2: 1
   Clsn2[0] = -11, -33, 9, 6
 220,6, 0,0, 3, 
 
-; Standing Light Kick
+; Air Sword Hit
 [Begin Action 230]
-0,0, 0,0, 1, 
+Clsn2: 1
+  Clsn2[0] = -6, -35, 15, 2
+230,0, 0,0, 5, 
+Clsn1: 1
+  Clsn1[0] = 3, -65, 44, -30
+Clsn2: 1
+  Clsn2[0] = -6, -30, 21, 2
+230,6, 0,0, 3, 
+Clsn1: 1
+  Clsn1[0] = 32, -37, 64, 8
+Clsn2: 1
+  Clsn2[0] = -4, -26, 30, 2
+230,7, 0,0, 3, 
+Clsn1: 1
+  Clsn1[0] = -3, -6, 46, 26
+Clsn2: 1
+  Clsn2[0] = -4, -16, 33, 2
+230,5, 0,0, 4, 
+Clsn2: 1
+  Clsn2[0] = -4, -16, 33, 2
+Loopstart
+230,5, 0,0, 5, 
 
 ; Standing Medium Kick
 [Begin Action 240]

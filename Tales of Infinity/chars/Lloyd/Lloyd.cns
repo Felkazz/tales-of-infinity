@@ -325,23 +325,53 @@ value = 0
 ctrl = 1
 
 ;---------------------------------------------------------------------------
-; Standing Light Kick
-; CNS difficulty: easy
+; Air Sword Hit
 [Statedef 230]
-type    = S
+type    = A
 movetype= A
-physics = S
-juggle  = 4
+physics = A
 poweradd= 22
 ctrl = 0
-velset = 0,0
 anim = 230
 
-[State 230, 5]
-type = ChangeState
-trigger1 = AnimTime = 0
-value = 0
-ctrl = 1
+[State 230, 1]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 20, 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 5, 10
+sparkno = 0
+sparkxy = -10, -76
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = -1.5
+airguard.velocity = -0.75,-1
+air.type = High
+air.velocity = -1.5,-2
+air.hittime = 12
+
+[State 230, Effect]
+Type = Explod
+Trigger1 = Time = 5
+Anim = F234
+ID = 230
+Pos = 25,25
+PosType = P1
+Facing = 1
+VFacing = 1
+BindTime = -1
+Removetime = 10
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit = 1
 
 ;---------------------------------------------------------------------------
 ; Standing Medium Kick
