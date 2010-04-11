@@ -1,0 +1,19 @@
+[Info]
+name="Leon"
+displayname="Leon"
+versiondate=11/04/2010
+mugenversion=
+author="5uper / Thunderbert"
+pal.defaults=1
+[Files]
+sprite=Leon.sff
+sound=
+anim=Leon.air
+cmd=Leon.cmd
+cns=Leon.cns
+st=Leon.cns
+stcommon=common1.cns
+pal1=Leon.act
+[Arcade]
+intro.storyboard=
+ending.storyboard=
