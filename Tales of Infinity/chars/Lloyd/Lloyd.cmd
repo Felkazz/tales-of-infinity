@@ -117,6 +117,15 @@ command.buffer.time = 1
 ;-| Super Motions |--------------------------------------------------------
 
 ;-| Special Motions |------------------------------------------------------
+[Command]
+Name = "Majinken"
+Command = D,F,a
+Time = 20
+
+[Command]
+Name = "Majinken"
+Command = D,DF,F,a
+Time = 20
 
 ;-| Double Tap |-----------------------------------------------------------
 [Command]
@@ -507,6 +516,7 @@ trigger1 = ctrl
 type = ChangeState
 value = 200
 triggerall = command = "a"
+triggerall = command != "Majinken"
 trigger1 = statetype = S
 trigger1 = ctrl
 
@@ -546,13 +556,20 @@ trigger2 = command = "b"
 trigger3 = command = "c"
 
 ;---------------------------------------------------------------------------
-; Standing Medium Kick
-[State -1, Standing Medium Kick]
+; Majinken
+[State -1, Majinken]
 type = ChangeState
 value = 240
-triggerall = command = "y"
+triggerall = command = "Majinken"
+triggerall = NumHelper(6000) = 0
 trigger1 = statetype = S
 trigger1 = ctrl
+trigger2 = StateNo = 200
+Trigger2 = MoveContact || Time >= 14
+trigger3 = StateNo = 210
+Trigger3 = MoveContact || Time >= 17
+trigger4 = StateNo = 220
+Trigger4 = MoveContact || Time >= 9
 
 ;---------------------------------------------------------------------------
 ; Standing Strong Kick

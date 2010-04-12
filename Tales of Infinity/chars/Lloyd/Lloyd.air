@@ -314,9 +314,36 @@ Clsn2: 1
 Loopstart
 230,5, 0,0, 5, 
 
-; Standing Medium Kick
+; Majinken
 [Begin Action 240]
-0,0, 0,0, 1, 
+Clsn2: 1
+  Clsn2[0] = -8, -33, 15, 3
+240,0, 0,0, 5, 
+Clsn2: 1
+  Clsn2[0] = -8, -28, 15, 3
+240,1, 0,0, 5, 
+Clsn2: 1
+  Clsn2[0] = -8, -28, 15, 3
+240,2, 0,0, 5, 
+Clsn1: 1
+  Clsn1[0] = -8, -18, 39, 16
+Clsn2: 1
+  Clsn2[0] = -8, -28, 15, 3
+240,9, 0,0, 3, 
+Clsn1: 1
+  Clsn1[0] = -3, -52, 35, -9
+Clsn2: 1
+  Clsn2[0] = -8, -28, 21, 3
+240,6, 0,0, 5, 
+Clsn2: 1
+  Clsn2[0] = -8, -28, 21, 3
+240,6, 0,0, 5, 
+Clsn2: 1
+  Clsn2[0] = -6, -28, 12, 6
+240,7, 0,0, 5, 
+Clsn2: 1
+  Clsn2[0] = -5, -28, 14, 6
+240,8, 0,0, 5, 
 
 ; Standing Strong Kick
 [Begin Action 250]
@@ -582,5 +609,18 @@ Clsn2: 1
 
 ; NO DEBUG
 [Begin Action 5300]
+-1,-1, 0,0, 1, 
+
+; Majinken
+[Begin Action 6000]
+Clsn1: 1
+  Clsn1[0] = -17, -30, 20, 4
+-1,-1, 0,0, 3, 
+Clsn1: 1
+  Clsn1[0] = -14, -27, 20, 4
+-1,-1, 0,0, 3, 
+
+; Majinken (END)
+[Begin Action 6001]
 -1,-1, 0,0, 1, 
 

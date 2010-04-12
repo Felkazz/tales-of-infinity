@@ -365,10 +365,15 @@
 200,0, 35,-30, 3, , A
 200,3, 5,0, 4, VH, A
 
+; Efeito
+[Begin Action 235]
+200,3, 0,0, 3, V, A
+200,0, 30,-30, 5, V, A
+
 ; Majiken
 [Begin Action 6000]
-6000,0, 0,0, 5, H, A
-6000,1, 0,0, 5, H, A
+6000,0, 0,0, 3, H, A
+6000,1, 0,0, 3, H, A
 
 ; Majiken (HIT)
 [Begin Action 6001]

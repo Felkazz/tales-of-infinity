@@ -1,0 +1,121 @@
+;Fazendo o Majinken:
+
+;----- AIR -----
+;Será necessário criar dois Begin Actions para o Majinken (não é o do char lançando, é só para o Majinken poder dar hit)
+
+; Majinken
+[Begin Action 6000]
+Clsn1: 1
+  Clsn1[0] = -17, -30, 20, 4
+-1,-1, 0,0, 3, 
+Clsn1: 1
+  Clsn1[0] = -14, -27, 20, 4
+-1,-1, 0,0, 3, 
+
+; Majinken (END)
+[Begin Action 6001]
+-1,-1, 0,0, 1, 
+
+;----- CMD -----
+;Comandos (OBS: coloquei qualquer comando, depois a gente muda ou sei lá, só pro projeto não ficar tão parado)
+
+;-| Special Motions |------------------------------------------------------
+[Command]
+Name = "Majinken"
+Command = D,F,a
+Time = 20
+
+[Command]
+Name = "Majinken"
+Command = D,DF,F,a
+Time = 20
+
+
+;No Statedef -1
+; Majinken
+[State -1, Majinken]
+type = ChangeState
+value = 240 ;<-- Statedef do char lançando o Majinken
+triggerall = command = "Majinken"
+triggerall = NumHelper(6000) = 0 ;<-- Não vai poder soltar de novo se já tiver um Majinken na tela
+trigger1 = statetype = S
+trigger1 = ctrl
+trigger2 = StateNo = 200 ;<-- Do trigger 2 em diante é só se quiser colocar no combo
+Trigger2 = MoveContact || Time >= 14
+trigger3 = StateNo = 210
+Trigger3 = MoveContact || Time >= 17
+trigger4 = StateNo = 220
+Trigger4 = MoveContact || Time >= 9
+
+;----- CNS -----
+
+; Majinken
+[Statedef 240] ;<-- lembrando q o statedef pode ser qual vc quiser
+type    = S
+movetype= A
+physics = S
+juggle  = 5
+poweradd= 65
+ctrl = 0
+anim = 240 ;<-- a animação tb pode ser qual vc quiser
+
+[State 240, 1]
+type = HitDef ;<-- esse hitdef é pq o char movimenta a espada pra lançar o Majinken, então, nesse movimento pode acertar o inimigo
+trigger1 = Time = 0
+attr = S, NA
+damage = 20, 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 0, 10
+sparkno = 0
+sparkxy = -10, -76
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = -1.5
+airguard.velocity = -0.75,-1
+air.type = High
+air.velocity = -1.5,-2
+air.hittime = 12
+
+[State 240, Helper]
+type = Helper ;<-- Helper do Majinken já foi programado no Common1.cns
+trigger1 = Time = 19 ;<-- o tempo vai de acordo com cada char
+helpertype = normal
+name = "Majinken"
+ID = 6000 ;<-- Não mude o ID do helper
+stateno = 6000 ;<-- não mude o statedef do helper
+pos = 20,0 ;<-- a posição pode variar dependendo de cada char, mas não altere o Y
+postype = p1
+facing = 1
+keyctrl = 0
+ownpal = 1
+
+[State 240, Effect]
+Type = Explod ;<-- Efeito do Slash
+Trigger1 = Time = 15
+Anim = F235
+ID = 240
+Pos = 8,10
+PosType = P1
+Facing = 1
+VFacing = 1
+BindTime = -1
+Removetime = 8
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit = 1
+
+[State 240, 5]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+
+;O Majinken está programado para ter 50 de dano para todas as classes por enquanto, depois a gente muda e arruma tudo certinho, eu fiz o Majinken correndo aqui só para o projeto não ficar parado

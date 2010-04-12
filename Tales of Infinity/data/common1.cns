@@ -1945,3 +1945,98 @@ type = ChangeState
 trigger1 = roundno = 1
 value = 190
 
+;---------------------------------------------------------------------------
+; Majinken
+[Statedef 6000]
+Type = S
+MoveType = A
+Physics = S
+Anim = 6000
+
+[State 6000, 1]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 50, 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 5, 10
+sparkno = 0
+sparkxy = -10, -76
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = -1.5
+airguard.velocity = -0.75,1
+air.type = High
+air.velocity = -1.5,2
+air.hittime = 12
+
+[State 6000, Majinken]
+Type = Explod
+Trigger1 = Time = 0
+Anim = F6000
+ID = 6000
+Pos = 0,0
+PosType = P1
+Facing = 1
+VFacing = 1
+BindTime = -1
+Removetime = -1
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit = 0
+
+[State 6000, Speed]
+Type = VelSet
+Trigger1 = 1
+X = 5
+
+[State 6000, End]
+Type = ChangeState
+Trigger1 = MoveContact
+Trigger2 = FrontEdgeBodyDist <= -30
+Value = 6001
+
+; Majinkend (END)
+[Statedef 6001]
+Type = S
+MoveType = A
+Physics = S
+Anim = 6001
+
+
+[State 6001, Stop]
+Type = VelSet
+Trigger1 = Time = 0
+X = 0
+
+[State 6001, Remove Majinken]
+Type = RemoveExplod
+Trigger1 = Time = 0
+ID = 6000
+
+[State 6001, Majinken (END)]
+Type = Explod
+Trigger1 = Time = 0
+Anim = F6001
+ID = 6001
+Pos = 0,0
+PosType = P1
+Facing = 1
+VFacing = 1
+BindTime = -1
+Removetime = 15
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit = 0
+
+[State 6001, Destroy]
+Type = DestroySelf
+Trigger1 = Time = 15
