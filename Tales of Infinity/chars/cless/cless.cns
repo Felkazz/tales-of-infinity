@@ -337,6 +337,74 @@ trigger1 = AnimTime = 0
 value = 0
 ctrl = 1
 
+;---------------------------------------------------------------------------
+; Majinken
+[Statedef 260] ;<-- lembrando q o statedef pode ser qual vc quiser
+type    = S
+movetype= A
+physics = S
+juggle  = 5
+poweradd= 65
+ctrl = 0
+anim = 260 ;<-- a animação tb pode ser qual vc quiser
+
+[State 260, 1]
+type = HitDef ;<-- esse hitdef é pq o char movimenta a espada pra lançar o Majinken, então, nesse movimento pode acertar o inimigo
+trigger1 = Time = 0
+attr = S, NA
+damage = 20, 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 0, 10
+sparkno = 0
+sparkxy = -10, -76
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = -1.5
+airguard.velocity = -0.75,-1
+air.type = High
+air.velocity = -1.5,-2
+air.hittime = 12
+
+[State 260, Helper]
+type = Helper ;<-- Helper do Majinken já foi programado no Common1.cns
+trigger1 = Time = 19 ;<-- o tempo vai de acordo com cada char
+helpertype = normal
+name = "Majinken"
+ID = 6000 ;<-- Não mude o ID do helper
+stateno = 6000 ;<-- não mude o statedef do helper
+pos = 20,0 ;<-- a posição pode variar dependendo de cada char, mas não altere o Y
+postype = p1
+facing = 1
+keyctrl = 0
+ownpal = 1
+
+[State 260, Effect]
+Type = Explod ;<-- Efeito do Slash
+Trigger1 = Time = 6
+Anim = F236
+ID = 260
+Pos = 8,9
+PosType = P1
+Facing = 1
+VFacing = 1
+BindTime = -1
+Removetime = 8
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit = 1
+
+[State 260, 5]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
 
 ;---------------------------------------------------------------------------
 ; Air Sword Hit

@@ -117,6 +117,15 @@ command.buffer.time = 1
 ;-| Super Motions |--------------------------------------------------------
 
 ;-| Special Motions |------------------------------------------------------
+[Command]
+Name = "Majinken"
+Command = D,F,a
+Time = 20
+
+[Command]
+Name = "Majinken"
+Command = D,DF,F,a
+Time = 20
 
 ;-| Double Tap |-----------------------------------------------------------
 [Command]
@@ -483,6 +492,22 @@ time = 1
 ;---------------------------------------------------------------------------
 
 ;===========================================================================
+;---------------------------------------------------------------------------
+; Majinken
+[State -1, Majinken]
+type = ChangeState
+value = 260 ;<-- Statedef do char lançando o Majinken
+triggerall = command = "Majinken"
+triggerall = NumHelper(6000) = 0 ;<-- Não vai poder soltar de novo se já tiver um Majinken na tela
+trigger1 = statetype = S
+trigger1 = ctrl
+trigger2 = StateNo = 230 ;<-- Do trigger 2 em diante é só se quiser colocar no combo
+Trigger2 = MoveContact || Time >= 14
+trigger3 = StateNo = 240
+Trigger3 = MoveContact || Time >= 17
+trigger4 = StateNo = 250
+Trigger4 = MoveContact || Time >= 9
+
 ;---------------------------------------------------------------------------
 ; Run Fwd
 [State -1, Run Fwd]
