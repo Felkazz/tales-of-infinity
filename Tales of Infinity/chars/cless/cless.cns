@@ -155,7 +155,7 @@ sprpriority = 2
 type = HitDef
 trigger1 = Time = 0
 attr = S, NA
-damage = 20, 0
+damage = Var(1),0
 animtype = Light
 guardflag = MA
 hitflag = MAF
@@ -216,7 +216,7 @@ anim = 240
 type = HitDef
 trigger1 = Time = 0
 attr = S, NA
-damage = 25, 0
+damage = Var(1)+5, 0
 animtype = Light
 guardflag = MA
 hitflag = MAF
@@ -296,7 +296,7 @@ anim = 250
 type = HitDef
 trigger1 = Time = 0
 attr = S, NA
-damage = 30, 0
+damage = Var(1)+10, 0
 animtype = Light
 guardflag = MA
 hitflag = MAF
@@ -352,7 +352,7 @@ anim = 260 ;<-- a animação tb pode ser qual vc quiser
 type = HitDef ;<-- esse hitdef é pq o char movimenta a espada pra lançar o Majinken, então, nesse movimento pode acertar o inimigo
 trigger1 = Time = 0
 attr = S, NA
-damage = 20, 0
+damage = Var(1)+5, 0
 animtype = Light
 guardflag = MA
 hitflag = MAF
@@ -373,7 +373,7 @@ air.hittime = 12
 
 [State 260, Helper]
 type = Helper ;<-- Helper do Majinken já foi programado no Common1.cns
-trigger1 = Time = 19 ;<-- o tempo vai de acordo com cada char
+trigger1 = Time = 9 ;<-- o tempo vai de acordo com cada char
 helpertype = normal
 name = "Majinken"
 ID = 6000 ;<-- Não mude o ID do helper
@@ -420,7 +420,7 @@ anim = 630
 type = HitDef
 trigger1 = Time = 0
 attr = S, NA
-damage = 25, 0
+damage = Var(1)+5, 0
 animtype = Light
 guardflag = MA
 hitflag = MAF
@@ -470,6 +470,13 @@ value = 1
 ;---------------------------------------------------------------------------
 ; States that are always executed (use statedef -2)
 ;---------------------------------------------------------------------------
+[Statedef -2]
+
+[State -2, Class]
+Type = VarSet
+Trigger1 = Var(0) = 0
+V = 0
+Value = 5
 
 ;---------------------------------------------------------------------------
 ; States that are executed when in self's state file (use statedef -3)
