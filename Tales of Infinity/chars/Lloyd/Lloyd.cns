@@ -151,7 +151,7 @@ sprpriority = 2			;Set layering priority to 2 (in front)
 type = HitDef
 trigger1 = Time = 0
 attr = S, NA
-damage = 15, 0
+damage = Var(1), 0
 animtype = Light
 guardflag = MA
 hitflag = MAF
@@ -208,7 +208,7 @@ anim = 210
 type = HitDef
 trigger1 = Time = 0
 attr = S, NA
-damage = 20, 0
+damage = Var(1)+5, 0
 animtype = Light
 guardflag = MA
 hitflag = MAF
@@ -222,26 +222,44 @@ ground.type = High
 ground.slidetime = 5
 ground.hittime  = 12
 ground.velocity = -1.5
-airguard.velocity = -0.75,-1
+airguard.velocity = -0.75,-0.5
 air.type = High
-air.velocity = -1.5,-2
+air.velocity = -1.5,-1
 air.hittime = 12
 
 [State 210, Effect]
 Type = Explod
-Trigger1 = Time = 10
-Anim = F232
+Trigger1 = Time = 5
+Anim = F205
 ID = 210
-Pos = 45,-20
+Pos = 20,-15
 PosType = P1
-Facing = 1
+Facing = -1
 VFacing = 1
 BindTime = -1
-Removetime = 10
+Removetime = 3
 SprPriority = 3
 OnTop = 1
 OwnPal = 1
 RemoveOnGetHit = 1
+Scale = 0.6,0.6
+
+[State 210, ModifyEffect]
+Type = Explod
+Trigger1 = Time = 8
+Anim = F205
+ID = 221
+Pos = 45,-15
+PosType = P1
+Facing = -1
+VFacing = 1
+BindTime = -1
+Removetime = 7
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit = 1
+Scale = 0.6,0.6
 
 [State 210, 5]
 type = ChangeState
@@ -265,12 +283,12 @@ anim = 220
 type = HitDef
 trigger1 = Time = 0
 attr = S, NA
-damage = 25, 0
+damage = Var(1)+10, 0
 animtype = Light
 guardflag = MA
 hitflag = MAF
 priority = 3, Hit
-pausetime = 5, 10
+pausetime = 5, 15
 sparkno = 0
 sparkxy = -10, -76
 hitsound = 5, 0
@@ -279,44 +297,26 @@ ground.type = High
 ground.slidetime = 5
 ground.hittime  = 12
 ground.velocity = -1.5
-airguard.velocity = -0.75,-0.5
+airguard.velocity = -0.75,-1
 air.type = High
-air.velocity = -1.5,-1
+air.velocity = -1.5,-2
 air.hittime = 12
 
 [State 220, Effect]
 Type = Explod
-Trigger1 = Time = 5
-Anim = F205
+Trigger1 = Time = 10
+Anim = F232
 ID = 220
-Pos = 20,-15
+Pos = 45,-20
 PosType = P1
-Facing = -1
+Facing = 1
 VFacing = 1
 BindTime = -1
-Removetime = 3
+Removetime = 10
 SprPriority = 3
 OnTop = 1
 OwnPal = 1
 RemoveOnGetHit = 1
-Scale = 0.6,0.6
-
-[State 220, ModifyEffect]
-Type = Explod
-Trigger1 = Time = 8
-Anim = F205
-ID = 221
-Pos = 45,-15
-PosType = P1
-Facing = -1
-VFacing = 1
-BindTime = -1
-Removetime = 7
-SprPriority = 3
-OnTop = 1
-OwnPal = 1
-RemoveOnGetHit = 1
-Scale = 0.6,0.6
 
 [State 220, 5]
 type = ChangeState
@@ -338,7 +338,7 @@ anim = 230
 type = HitDef
 trigger1 = Time = 0
 attr = S, NA
-damage = 20, 0
+damage = Var(1)+5, 0
 animtype = Light
 guardflag = MA
 hitflag = MAF
@@ -388,7 +388,7 @@ anim = 240
 type = HitDef
 trigger1 = Time = 0
 attr = S, NA
-damage = 20, 0
+damage = Var(1)+5, 0
 animtype = Light
 guardflag = MA
 hitflag = MAF
@@ -716,3 +716,9 @@ triggerall = Time = 1
 trigger1 = stateno = 52 ;Jump land
 trigger2 = stateno = 106 ;Run-back land
 value = 40, 0
+
+[State -3, Display VAR]
+Type = DisplayToClipBoard
+Trigger1 = 1
+Text = "Var(0) = %d || Var(1) = %d || Var(2) = %d"
+Params = Var(0), Var(1), Var(2)

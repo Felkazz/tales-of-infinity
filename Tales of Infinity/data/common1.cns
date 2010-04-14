@@ -60,6 +60,20 @@ type = ChangeState
 trigger1 = !alive
 value = 5050
 
+[State 0, Golpe 1 Damage]
+Type = VarSet
+Trigger1 = Var(0) > 0
+Trigger1 = Var(1) = 0
+V = 1
+Value = (ifelse(Var(0) = 1,12,(ifelse(var(0) = 2,15,(ifelse(var(0) = 3 || var(0) = 4,18,(ifelse(var(0) = 5 || var(0) = 6,20,(ifelse(Var(0) = 7,25,0))))))))))
+
+[State 0, Majinken Damage]
+Type = VarSet
+Trigger1 = Var(0) > 0
+Trigger1 = Var(2) = 0
+V = 2
+Value = (ifelse(Var(0) = 3 || Var(0) = 4,27,(ifelse(Var(0) = 6,33,30))))
+
 ;---------------------------------------------------------------------------
 ; Stand to Crouch
 [Statedef 10]
@@ -1957,7 +1971,7 @@ Anim = 6000
 type = HitDef
 trigger1 = Time = 0
 attr = S, NA
-damage = 50, 0
+damage = (Root,Var(2)), 0
 animtype = Light
 guardflag = MA
 hitflag = MAF

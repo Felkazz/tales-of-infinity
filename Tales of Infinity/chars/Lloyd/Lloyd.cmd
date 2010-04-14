@@ -542,7 +542,7 @@ trigger1 = ctrl
 trigger2 = StateNo = 200
 Trigger2 = MoveContact || Time >= 14
 trigger3 = StateNo = 210
-Trigger3 = MoveContact || Time >= 17
+Trigger3 = MoveContact || Time >= 9
 
 ;---------------------------------------------------------------------------
 ; Air Sword Hit
@@ -567,9 +567,9 @@ trigger1 = ctrl
 trigger2 = StateNo = 200
 Trigger2 = MoveContact || Time >= 14
 trigger3 = StateNo = 210
-Trigger3 = MoveContact || Time >= 17
+Trigger3 = MoveContact || Time >= 9
 trigger4 = StateNo = 220
-Trigger4 = MoveContact || Time >= 9
+Trigger4 = MoveContact || Time >= 17
 
 ;---------------------------------------------------------------------------
 ; Standing Strong Kick
