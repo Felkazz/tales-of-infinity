@@ -460,6 +460,127 @@ type = CtrlSet
 trigger1 = Time = 20
 value = 1
 
+
+;---------------------------------------------------------------------------
+; Akisazame
+[Statedef 1000]
+type    = S
+movetype= A
+physics = S
+juggle  = 4
+poweradd= 65
+ctrl = 0
+velset = 0,0
+anim = 1000
+
+[State 1000, 1]
+type = HitDef
+trigger1 = Animelem = 3
+trigger2 = Animelem = 5
+trigger3 = Animelem = 7
+trigger4 = Animelem = 9
+attr = S, NA
+damage = Var(1)/2, 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 5,10 ;8, 0
+sparkno = 0
+sparkxy = -10, -76
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = -1.5
+airguard.velocity = -0.75,-1
+air.type = High
+air.velocity = -1.5,-2
+air.hittime = 12
+
+[State 1000, 5]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+
+
+
+; Akisazame (PARTE 2)
+[Statedef 1001]
+type    = S
+movetype= A
+physics = S
+juggle  = 5
+poweradd= 15
+ctrl = 0
+anim = 1001
+
+[State 1001, 1]
+type = HitDef
+trigger1 = AnimElem = 2
+attr = S, NA
+damage = Var(1)+5, 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 5, 10
+sparkno = 0
+sparkxy = -10, -76
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = -1.5, -2
+airguard.velocity = -0.75,-2
+air.type = High
+air.velocity = -1.5,-2
+air.hittime = 12
+
+[State 1001, Change to Air]
+Type = StateTypeSet
+Trigger1 = Time = 9
+StateType = A
+Physics = A
+
+[State 1001, Go Up]
+Type = VelSet
+Trigger1 = AnimElem = 3
+Y = -8
+X = 2
+
+[State 1001, 2]
+type = HitDef
+trigger1 = AnimElem = 3
+attr = S, NA
+damage = Var(1)+5, 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 0, 0
+sparkno = 0
+sparkxy = -10, -76
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = -1.5, -8
+airguard.velocity = -1.5,-8
+air.type = High
+air.velocity = -1.5,-8
+air.hittime = 12
+
+[State 1001, 5]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 50
+ctrl = 1
 ;---------------------------------------------------------------------------
 
 

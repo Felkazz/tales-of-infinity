@@ -118,6 +118,11 @@ command.buffer.time = 1
 
 ;-| Special Motions |------------------------------------------------------
 [Command]
+Name = "Akisazame"
+Command = b,b,b,b,b
+Time = 50
+
+[Command]
 Name = "Majinken"
 Command = D,F,a
 Time = 20
@@ -493,6 +498,27 @@ time = 1
 
 ;===========================================================================
 ;---------------------------------------------------------------------------
+; Akisazame
+[State -1, Akisazame]
+type = ChangeState
+value = 1000
+TriggerAll = Command = "Akisazame"
+TriggerAll = StateType = S
+Trigger1 = StateNo = 240
+Trigger2 = Ctrl
+;onde X é o statedef do golpe "a" normal
+
+; Akisazame parte 2
+[State -1, Akisazame Parte 2]
+type = ChangeState
+value = 1001
+Trigger1 = Command = "a"
+Trigger1 = StateNo = 1000
+Trigger1 = Time >= 30
+;onde X é o statedef do Akisazame e Y é o tempo depois q ele dá o último golpe
+
+
+;---------------------------------------------------------------------------
 ; Majinken
 [State -1, Majinken]
 type = ChangeState
@@ -541,6 +567,7 @@ trigger1 = ctrl
 [State -1, Sword Hit 2]
 type = ChangeState
 value = 240
+TriggerAll = Command != "Akisazame"
 triggerall = command = "b"
 trigger1 = statetype = S
 trigger1 = ctrl
