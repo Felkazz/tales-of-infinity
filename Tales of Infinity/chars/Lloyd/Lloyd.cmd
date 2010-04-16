@@ -127,6 +127,11 @@ Name = "Majinken"
 Command = D,DF,F,a
 Time = 20
 
+[Command]
+Name = "Akisazame"
+Command = b,b,b,b,b
+Time = 50
+
 ;-| Double Tap |-----------------------------------------------------------
 [Command]
 name = "FF"     ;Required (do not remove)
@@ -526,6 +531,7 @@ trigger1 = ctrl
 type = ChangeState
 value = 210
 triggerall = command = "b"
+TriggerAll = Command != "Akisazame"
 trigger1 = statetype = S
 trigger1 = ctrl
 trigger2 = StateNo = 200
@@ -572,31 +578,32 @@ trigger4 = StateNo = 220
 Trigger4 = MoveContact || Time >= 17
 
 ;---------------------------------------------------------------------------
-; Standing Strong Kick
-[State -1, Standing Strong Kick]
+; Akisazame (PARTE 1)
+[State -1, Akisazame (PARTE 1)]
 type = ChangeState
-value = 250
-triggerall = command = "z"
-trigger1 = statetype = S
-trigger1 = ctrl
+value = 1000
+TriggerAll = Command = "Akisazame"
+TriggerAll = StateType = S
+Trigger1 = StateNo = 210
+Trigger2 = Ctrl
 
 ;---------------------------------------------------------------------------
-; Jump Light Punch
-[State -1, Jump Light Punch]
+; Akisazame (PARTE 2)
+[State -1, Akisazame (PARTE 2)]
 type = ChangeState
-value = 600
-triggerall = command = "x"
-trigger1 = statetype = A
-trigger1 = ctrl
+value = 1001
+Trigger1 = Command = "a"
+Trigger1 = StateNo = 1000
+Trigger1 = Time >= 29
 
 ;---------------------------------------------------------------------------
-; Jump Medium Punch
-[State -1, Jump Medium Punch]
+; Akisazame (PARTE 3)
+[State -1, Akisazame (PARTE 3)]
 type = ChangeState
-value = 610
-triggerall = command = "y"
-trigger1 = statetype = A
-trigger1 = ctrl
+value = 1002
+triggerAll = command = "c"
+trigger1 = StateNo = 1001
+trigger1 = Time >= 16
 
 ;---------------------------------------------------------------------------
 ; Jump Strong Punch

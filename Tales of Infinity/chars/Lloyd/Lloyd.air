@@ -289,7 +289,7 @@ Clsn2: 1
   Clsn2[0] = -9, -35, 11, 3
 210,5, 0,0, 5, 
 
-; Air Sword Hit
+; Air Sword Hit / Kogahazan (PARTE 2)
 [Begin Action 230]
 Clsn2: 1
   Clsn2[0] = -6, -35, 15, 2
@@ -345,13 +345,45 @@ Clsn2: 1
   Clsn2[0] = -5, -28, 14, 6
 240,8, 0,0, 5, 
 
-; Standing Strong Kick
-[Begin Action 250]
-0,0, 0,0, 1, 
+; Akisazame (PARTE 1)
+[Begin Action 1000]
+Clsn2Default: 1
+  Clsn2[0] = -12, -26, 10, 8
+1000,0, 0,0, 5, 
+1000,1, 0,0, 5, 
+Clsn1: 1
+  Clsn1[0] = 9, -18, 48, -5
+1000,7, 0,0, 3, 
+1000,3, 0,0, 5, 
+Clsn1: 1
+  Clsn1[0] = 12, -32, 44, -9
+1000,8, 0,0, 3, 
+1000,5, 0,0, 5, 
+Clsn1: 1
+  Clsn1[0] = 9, -13, 44, 8
+1000,9, 0,0, 3, 
+1000,5, 0,0, 5, 
+1000,0, 0,0, 5, 
 
-; Crouching Light Punch
-[Begin Action 400]
-0,0, 0,0, 1, 
+; Akisazame (PARTE 2) / Kogahazan (PARTE 1)
+[Begin Action 1001]
+Clsn2: 1
+  Clsn2[0] = -8, -29, 10, 3
+1001,0, 0,0, 5, 
+Clsn1: 1
+  Clsn1[0] = 1, -24, 39, 13
+Clsn2: 1
+  Clsn2[0] = -8, -33, 10, 2
+1001,5, 0,0, 3, 
+Clsn1: 1
+  Clsn1[0] = 2, -62, 39, -16
+Clsn2: 1
+  Clsn2[0] = -10, -39, 9, 2
+1001,3, 0,0, 8, 
+Clsn2: 1
+  Clsn2[0] = -11, -37, 8, 2
+Loopstart
+1001,4, 0,0, 5, 
 
 ; Crouching Medium Punch
 [Begin Action 410]

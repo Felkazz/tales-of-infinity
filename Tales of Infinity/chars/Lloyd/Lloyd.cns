@@ -242,7 +242,7 @@ SprPriority = 3
 OnTop = 1
 OwnPal = 1
 RemoveOnGetHit = 1
-Scale = 0.6,0.6
+Scale = 0.6, 0.6
 
 [State 210, ModifyEffect]
 Type = Explod
@@ -259,7 +259,7 @@ SprPriority = 3
 OnTop = 1
 OwnPal = 1
 RemoveOnGetHit = 1
-Scale = 0.6,0.6
+Scale = 0.6, 0.6
 
 [State 210, 5]
 type = ChangeState
@@ -443,9 +443,8 @@ value = 0
 ctrl = 1
 
 ;---------------------------------------------------------------------------
-; Standing Strong Kick
-; CNS difficulty: easy
-[Statedef 250]
+; Akisazame (PARTE 1)
+[Statedef 1000]
 type    = S
 movetype= A
 physics = S
@@ -453,61 +452,247 @@ juggle  = 5
 poweradd= 65
 ctrl = 0
 velset = 0,0
-anim = 250
+anim = 1000
 
-[State 250, 5]
+[State 1000, Remove Effect]
+Type = RemoveExplod
+Trigger1 = Time = 0
+ID = 200
+
+[State 1000, 1]
+type = HitDef
+trigger1 = AnimElem = 3
+Trigger2 = AnimElem = 5
+Trigger3 = AnimElem = 7
+attr = S, NA
+damage = (Var(1)/2)+4, 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = (ifelse((AnimElem = 7), 5, 0)), 10
+sparkno = 0
+sparkxy = -10, -76
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = -1.5
+airguard.velocity = -0.75,-1
+air.type = High
+air.velocity = -1.5,-2
+air.hittime = 12
+
+[State 1000, Effect]
+Type = Explod
+Trigger1 = Time = 10
+Anim = F240
+ID = 1000
+Pos = 35,-12
+PosType = P1
+Facing = 1
+VFacing = 1
+BindTime = -1
+Removetime = 19
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit = 1
+Scale = 0.6, 0.6
+
+[State 1000, ModifyEffect]
+type = ModifyExplod
+trigger1 = Time = 18
+ID = 1000
+pos = 24,-20
+postype = p1
+facing = 1
+vfacing = 1
+bindtime = -1
+removetime = 19
+scale = 0.6,0.6
+sprpriority = 3
+ontop = 1
+ownpal = 1
+removeongethit = 1
+
+[State 1000, ModifyEffect]
+type = ModifyExplod
+trigger1 = Time = 26
+ID = 1000
+pos = 24, 3
+postype = p1
+facing = 1
+vfacing = 1
+bindtime = -1
+removetime = 19
+scale = 0.6,0.6
+sprpriority = 3
+ontop = 1
+ownpal = 1
+removeongethit = 1
+
+[State 1000, 5]
 type = ChangeState
 trigger1 = AnimTime = 0
 value = 0
 ctrl = 1
 
 ;---------------------------------------------------------------------------
-; Crouching Light Punch
-; CNS difficulty: easy
-; Description: Simple crouching attack. The HitDef's guardflag parameter
-;     is set to "L", meaning that the move can only be guarded low
-;     (crouching), and not by standing or jumping opponents.
-;     Like for all light attacks, it's a good idea to keep the slidetime
-;     and hittime parameters at a smaller number, so the opponent isn't
-;     stunned for too long. For all crouching attacks you have to
-;     remember to set the attr parameter to indicate that it is crouching
-;     attack. In this case, "C, NA" stands for "crouching, normal attack".
-;     The HitDef's priority is set at 3, instead of the default of 4,
-;     so this attack has a lower priority than most others, meaning the
-;     player will get hit instead of trading hits with the opponent if
-;     their attack collision boxes (Clsn1) intersect each other's Clsn2
-;     boxes at the same time.
-[Statedef 400]
-type    = C
+; Akisazame (PARTE 2)
+[Statedef 1001]
+type    = S
 movetype= A
-physics = C
+physics = S
 juggle  = 5
 poweradd= 15
 ctrl = 0
-anim = 400
+anim = 1001
 
-[State 400, 5]
-type = ChangeState
-trigger1 = AnimTime = 0
-value = 11
-ctrl = 1
+[State 1001, 1]
+type = HitDef
+trigger1 = AnimElem = 2
+attr = S, NA
+damage = Var(1), 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 0, 0
+sparkno = 0
+sparkxy = -10, -76
+hitsound = -1, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = 0.5, -2
+airguard.velocity = 0.5,-2
+air.type = High
+air.velocity = 0.5,-2
+air.hittime = 12
+
+[State 1001, Effect]
+Type = Explod
+Trigger1 = Time = 5
+Anim = F501
+ID = 1001
+Pos = 8,2
+PosType = P1
+Facing = 1
+VFacing = 1
+BindTime = -1
+Removetime = 3
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit = 1
+
+[State 1001, Change to Air]
+Type = StateTypeSet
+Trigger1 = AnimElem = 3
+StateType = A
+Physics = A
+
+[State 1001, Go Up]
+Type = VelSet
+Trigger1 = AnimElem = 3
+Y = -8
+X = 2
+
+[State 1001, 2]
+type = HitDef
+trigger1 = AnimElem = 3
+attr = S, NA
+damage = Var(1), 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 0, 0
+sparkno = 0
+sparkxy = -10, -76
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = -1.5, -7
+airguard.velocity = -1.5,-7
+air.type = High
+air.velocity = -1.5,-7
+air.hittime = 12
+Fall = 1
+Air.Fall = 1
+
+[State 1001, Effect]
+Type = Explod
+Trigger1 = Time = 8
+Anim = F500
+ID = 1001
+Pos = 25,-59
+PosType = P1
+Facing = 1
+VFacing = 1
+BindTime = -1
+Removetime = 8
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit = 1
 
 ;---------------------------------------------------------------------------
-; Crouching Medium Punch
-[Statedef 410]
-type    = C
+; Akisazame (PARTE 3)
+[Statedef 1002]
+type    = A
 movetype= A
-physics = C
+physics = A
 juggle  = 6
 poweradd= 50
 ctrl = 0
-anim = 410
+anim = 230
 
-[State 410, 5]
-type = ChangeState
-trigger1 = AnimTime = 0
-value = 11
-ctrl = 1
+[State 1002, 1]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = Var(1)+5, 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 5, 5
+sparkno = 0
+sparkxy = -10, -76
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = -3, 10
+airguard.velocity = -3, 10
+air.type = High
+air.velocity = -3, 10
+air.hittime = 12
+Fall = 1
+Air.Fall = 1
+
+[State 1002, Effect]
+Type = Explod
+Trigger1 = Time = 5
+Anim = F234
+ID = 1002
+Pos = 25,25
+PosType = P1
+Facing = 1
+VFacing = 1
+BindTime = -1
+Removetime = 10
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit = 1
 
 ;---------------------------------------------------------------------------
 ; Crouching Strong Punch
