@@ -1462,9 +1462,9 @@ value = 5110 ;HIT_LIEDOWN
 [State 5100, 8]
 type = GameMakeAnim
 trigger1 = Time = 1
-value = 60 + (sysvar(1) > 5) + (sysvar(1) > 14)
+value = 60 + (sysvar(1) > 5) + (sysvar(1) > 9)
 pos = 0, 0
-under = sysvar(1) <= 14
+under = sysvar(1) <= 9
 
 [State 5100, 9]
 type = HitFallDamage
@@ -1473,7 +1473,7 @@ trigger1 = Time = 3
 [State 5100, 10]
 type = PlaySnd
 trigger1 = Time = 1
-value = F7, (sysvar(1) > 5) + (sysvar(1) > 14)
+value = F7, (sysvar(1) > 5) + (sysvar(1) > 9)
 
 [State 5100, 11]
 type = PosFreeze
