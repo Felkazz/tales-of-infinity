@@ -467,7 +467,7 @@ value = 1
 type    = S
 movetype= A
 physics = S
-juggle  = 4
+juggle  = 5
 poweradd= 65
 ctrl = 0
 velset = 0,0
@@ -554,11 +554,60 @@ air.type = High
 air.velocity = -1.5,-8
 air.hittime = 12
 
-[State 1001, 5]
-type = ChangeState
-trigger1 = AnimTime = 0
-value = 50
-ctrl = 1
+
+
+
+; Akisazame (PARTE 3)
+[Statedef 1002]
+type    = A
+movetype= A
+physics = A
+juggle  = 6
+poweradd= 50
+ctrl = 0
+anim = 630
+
+[State 1002, 1]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = Var(1)+5, 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 5, 5
+sparkno = 0
+sparkxy = -10, -76
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = -3, 10
+airguard.velocity = -3, 15
+air.type = High
+air.velocity = -3, 15
+air.hittime = 12
+Fall = 1
+Air.Fall = 1
+
+[State 1002, Effect]
+Type = Explod
+Trigger1 = Time = 5
+Anim = F231
+ID = 630
+Pos = 52,-10;45,-25
+PosType = P1
+Facing = 1
+VFacing = 1
+BindTime = -1
+Removetime = 10
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit = 1
+
 ;---------------------------------------------------------------------------
 
 

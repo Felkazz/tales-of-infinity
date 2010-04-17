@@ -517,6 +517,13 @@ Trigger1 = StateNo = 1000
 Trigger1 = Time >= 30
 ;onde X é o statedef do Akisazame e Y é o tempo depois q ele dá o último golpe
 
+; Akisazame parte 3)
+[State -1, Akisazame Parte 3]
+type = ChangeState
+value = 1002
+triggerAll = command = "c"
+trigger1 = StateNo = 1001
+trigger1 = Time >= 16
 
 ;---------------------------------------------------------------------------
 ; Majinken
