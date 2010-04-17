@@ -473,6 +473,11 @@ ctrl = 0
 velset = 0,0
 anim = 1000
 
+[State 1000, Remove Effect]
+Type = RemoveExplod
+Trigger1 = Time = 0
+ID = 200
+
 [State 1000, 1]
 type = HitDef
 trigger1 = Animelem = 3
@@ -498,6 +503,71 @@ airguard.velocity = -0.75,-1
 air.type = High
 air.velocity = -1.5,-2
 air.hittime = 12
+
+[State 1000, Effect]
+Type = Explod
+Trigger1 = Animelem = 3; Time = 10
+Anim = F241
+ID = 1000
+Pos = 43,-26;35,-12
+PosType = P1
+Facing = 1
+VFacing = 1
+BindTime = -1
+Removetime = 19
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit = 1
+Scale = 0.6, 0.6
+
+[State 1000, ModifyEffect]
+type = ModifyExplod
+trigger1 = Animelem = 5; Time = 18
+ID = 1000
+pos = 43,-8;24,-20
+postype = p1
+facing = 1
+vfacing = 1
+bindtime = -1
+removetime = 19
+scale = 0.6,0.6
+sprpriority = 3
+ontop = 1
+ownpal = 1
+removeongethit = 1
+
+[State 1000, ModifyEffect]
+type = ModifyExplod
+trigger1 = Animelem = 7;Time = 26
+ID = 1000
+pos = 43,-15;24, 3
+postype = p1
+facing = 1
+vfacing = 1
+bindtime = -1
+removetime = 19
+scale = 0.6,0.6
+sprpriority = 3
+ontop = 1
+ownpal = 1
+removeongethit = 1
+
+[State 1000, ModifyEffect]
+type = ModifyExplod
+trigger1 = Animelem = 9;Time = 26
+ID = 1000
+pos = 43,-26 ;24, 3
+postype = p1
+facing = 1
+vfacing = 1
+bindtime = -1
+removetime = 19
+scale = 0.6,0.6
+sprpriority = 3
+ontop = 1
+ownpal = 1
+removeongethit = 1
 
 [State 1000, 5]
 type = ChangeState
