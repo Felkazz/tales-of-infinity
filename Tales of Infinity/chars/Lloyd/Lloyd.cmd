@@ -114,9 +114,270 @@ command.time = 30
 ; maximum 30.
 command.buffer.time = 1
 
+;-| AI Commands |----------------------------------------------------------
+[command]
+name = "AI_1"
+command = D,D,D,D,D,D,D,D,D,D,D,D
+time = 1
+
+[command]
+name = "AI_2"
+command = U,U,U,U,U,U,U,U,U,U,U,U
+time = 1
+
+[command]
+name = "AI_3"
+command = F,F,F,F,F,F,F,F,F,F,F,F
+time = 1
+
+[command]
+name = "AI_4"
+command = B,B,B,B,B,B,B,B,B,B,B,B
+time = 1
+
+[command]
+name = "AI_5"
+command = a,a,a,a,a,a,a,a,a,a,a,a
+time = 1
+
+[command]
+name = "AI_6"
+command = b,b,b,b,b,b,b,b,b,b,b,b
+time = 1
+
+[command]
+name = "AI_7"
+command = c,c,c,c,c,c,c,c,c,c,c,c
+time = 1
+
+[command]
+name = "AI_8"
+command = x,x,x,x,x,x,x,x,x,x,x,x
+time = 1
+
+[command]
+name = "AI_9"
+command = y,y,y,y,y,y,y,y,y,y,y,y
+time = 1
+
+[command]
+name = "AI_10"
+command = z,z,z,z,z,z,z,z,z,z,z,z
+time = 1
+
+[command]
+name = "AI_11"
+command = s,s,s,s,s,s,s,s,s,s,s,s
+time = 1
+
+[command]
+name = "AI_12"
+command = D,F,D,F,D,F,D,F,D,F,D,F
+time = 1
+
+[command]
+name = "AI_13"
+command = D,B,D,B,D,B,D,B,D,B,D,B
+time = 1
+
+[command]
+name = "AI_14"
+command = D,U,D,U,D,U,D,U,D,U,D,U
+time = 1
+
+[command]
+name = "AI_15"
+command = U,F,U,F,U,F,U,F,U,F,U,F
+time = 1
+
+[command]
+name = "AI_16"
+command = U,B,U,B,U,B,U,B,U,B,U,B
+time = 1
+
+[command]
+name = "AI_17"
+command = U,D,U,D,U,D,U,D,U,D,U,D
+time = 1
+
+[command]
+name = "AI_18"
+command = F,D,F,D,F,D,F,D,F,D,F,D
+time = 1
+
+[command]
+name = "AI_19"
+command = F,U,F,U,F,U,F,U,F,U,F,U
+time = 1
+
+[command]
+name = "AI_20"
+command = F,B,F,B,F,B,F,B,F,B,F,B
+time = 1
+
+[command]
+name = "AI_21"
+command = B,D,B,D,B,D,B,D,B,D,B,D
+time = 1
+
+[command]
+name = "AI_22"
+command = B,U,B,U,B,U,B,U,B,U,B,U
+time = 1
+
+[command]
+name = "AI_23"
+command = B,F,B,F,B,F,B,F,B,F,B,F
+time = 1
+
+[command]
+name = "AI_24"
+command = DF,DF,DF,DF,DF,DF,DF,DF,DF,DF,DF,DF
+time = 1
+
+[command]
+name = "AI_25"
+command = DB,DB,DB,DB,DB,DB,DB,DB,DB,DB,DB,DB
+time = 1
+
+[command]
+name = "AI_26"
+command = UF,UF,UF,UF,UF,UF,UF,UF,UF,UF,UF,UF
+time = 1
+
+[command]
+name = "AI_27"
+command = UB,UB,UB,UB,UB,UB,UB,UB,UB,UB,UB,UB
+time = 1
+
+[command]
+name = "AI_28"
+command = D,F,U,B,D,F,U,B,D,F,U,B
+time = 1
+
+[command]
+name = "AI_29"
+command = F,U,B,D,F,U,B,D,F,U,B,D
+time = 1
+
+[command]
+name = "AI_30"
+command = U,B,D,F,U,B,D,F,U,B,D,F
+time = 1
+
+[command]
+name = "AI_31"
+command = B,D,F,U,B,D,F,U,B,D,F,U
+time = 1
+
+[command]
+name = "AI_32"
+command = a,b,c,x,y,z,a,b,c,x,y,z
+time = 1
+
+[command]
+name = "AI_33"
+command = b,c,x,y,z,a,b,c,x,y,z,a
+time = 1
+
+[command]
+name = "AI_34"
+command = c,x,y,z,a,b,c,x,y,z,a,b
+time = 1
+
+[command]
+name = "AI_35"
+command = x,y,z,a,b,c,x,y,z,a,b,c
+time = 1
+
+[command]
+name = "AI_36"
+command = y,z,a,b,c,x,y,z,a,b,c,x
+time = 1
+
+[command]
+name = "AI_37"
+command = z,a,b,c,x,y,z,a,b,c,x,y
+time = 1
+
+[command]
+name = "AI_38"
+command = a+b,a+b,a+b,a+b,a+b,a+b,a+b,a+b,a+b,a+b,a+b,a+b
+time = 1
+
+[command]
+name = "AI_39"
+command = a+c,a+c,a+c,a+c,a+c,a+c,a+c,a+c,a+c,a+c,a+c,a+c
+time = 1
+
+[command]
+name = "AI_40"
+command = a+x,a+x,a+x,a+x,a+x,a+x,a+x,a+x,a+x,a+x,a+x,a+x
+time = 1
+
+[command]
+name = "AI_41"
+command = a+y,a+y,a+y,a+y,a+y,a+y,a+y,a+y,a+y,a+y,a+y,a+y
+time = 1
+
+[command]
+name = "AI_42"
+command = a+z,a+z,a+z,a+z,a+z,a+z,a+z,a+z,a+z,a+z,a+z,a+z
+time = 1
+
+[command]
+name = "AI_43"
+command = a+s,a+s,a+s,a+s,a+s,a+s,a+s,a+s,a+s,a+s,a+s,a+s
+time = 1
+
+[command]
+name = "AI_44"
+command = b+c,b+c,b+c,b+c,b+c,b+c,b+c,b+c,b+c,b+c,b+c,b+c
+time = 1
+
+[command]
+name = "AI_45"
+command = b+x,b+x,b+x,b+x,b+x,b+x,b+x,b+x,b+x,b+x,b+x,b+x
+time = 1
+
+[command]
+name = "AI_46"
+command = b+y,b+y,b+y,b+y,b+y,b+y,b+y,b+y,b+y,b+y,b+y,b+y
+time = 1
+
+[command]
+name = "AI_47"
+command = b+z,b+z,b+z,b+z,b+z,b+z,b+z,b+z,b+z,b+z,b+z,b+z
+time = 1
+
+[command]
+name = "AI_48"
+command = b+s,b+s,b+s,b+s,b+s,b+s,b+s,b+s,b+s,b+s,b+s,b+s
+time = 1
+
+[command]
+name = "AI_49"
+command = c+x,c+x,c+x,c+x,c+x,c+x,c+x,c+x,c+x,c+x,c+x,c+x
+time = 1
+
+[command]
+name = "AI_50"
+command = c+y,c+y,c+y,c+y,c+y,c+y,c+y,c+y,c+y,c+y,c+y,c+y
+time = 1
+
 ;-| Super Motions |--------------------------------------------------------
 
 ;-| Special Motions |------------------------------------------------------
+[Command]
+Name = "Kogahazan"
+Command = F,D,DF,b
+Time = 20
+
+[Command]
+Name = "Kogahazan"
+Command = F,DF,D,DF,b
+Time = 20
+
 [Command]
 Name = "Majinken"
 Command = D,F,a
@@ -495,6 +756,195 @@ time = 1
 
 ;===========================================================================
 ;---------------------------------------------------------------------------
+;-------------------------------------AI------------------------------------
+;---------------------------------------------------------------------------
+[State -1, AI VarSet]
+type = VarSet
+trigger1 = command = "AI_1"
+trigger2 = command = "AI_2"
+trigger3 = command = "AI_3"
+trigger4 = command = "AI_4"
+trigger5 = command = "AI_5"
+trigger6 = command = "AI_6"
+trigger7 = command = "AI_7"
+trigger8 = command = "AI_8"
+trigger9 = command = "AI_9"
+trigger10 = command = "AI_10"
+trigger11 = command = "AI_11"
+trigger12 = command = "AI_12"
+trigger13 = command = "AI_13"
+trigger14 = command = "AI_14"
+trigger15 = command = "AI_15"
+trigger16 = command = "AI_16"
+trigger17 = command = "AI_17"
+trigger18 = command = "AI_18"
+trigger19 = command = "AI_19"
+trigger20 = command = "AI_20"
+trigger21 = command = "AI_21"
+trigger22 = command = "AI_22"
+trigger23 = command = "AI_23"
+trigger24 = command = "AI_24"
+trigger25 = command = "AI_25"
+trigger26 = command = "AI_26"
+trigger27 = command = "AI_27"
+trigger28 = command = "AI_28"
+trigger29 = command = "AI_29"
+trigger30 = command = "AI_30"
+trigger31 = command = "AI_31"
+trigger32 = command = "AI_32"
+trigger33 = command = "AI_33"
+trigger34 = command = "AI_34"
+trigger35 = command = "AI_35"
+trigger36 = command = "AI_36"
+trigger37 = command = "AI_37"
+trigger38 = command = "AI_38"
+trigger39 = command = "AI_39"
+trigger40 = command = "AI_40"
+trigger41 = command = "AI_41"
+trigger42 = command = "AI_42"
+trigger43 = command = "AI_43"
+trigger44 = command = "AI_44"
+trigger45 = command = "AI_45"
+trigger46 = command = "AI_46"
+trigger47 = command = "AI_47"
+trigger48 = command = "AI_48"
+trigger49 = command = "AI_49"
+trigger50 = command = "AI_50"
+v = 40
+value = 1
+
+[State -1, AI Hop Backwards]
+Type = ChangeState
+Trigger1 = Ctrl
+Trigger1 = RoundState = 2
+Trigger1 = Var(4) != 0
+Trigger1 = Random <= 499
+Trigger1 = P2BodyDist X <= 75
+Trigger1 = StateType = S
+Trigger1 = P2MoveType = A
+Value = 105
+
+[State -1, AI Stand Guard]
+type = ChangeState
+trigger1 = Ctrl
+trigger1 = RoundState = 2
+trigger1 = var(40) != 0
+trigger1 = Random <= 499
+trigger1 = P2BodyDist X <= 50
+trigger1 = StateType = S
+trigger1 = P2MoveType = A
+value = 130
+
+[State -1, AI Air Guard]
+type = ChangeState
+trigger1 = Ctrl
+trigger1 = RoundState = 2
+trigger1 = var(40) != 0
+trigger1 = Random <= 499
+trigger1 = P2BodyDist X <= 50
+trigger1 = StateType = A
+trigger1 = P2MoveType = A
+value = 132
+
+[State -1, AI Sword Hit 1]
+Type = ChangeState
+Trigger1 = StateType = S
+Trigger1 = Ctrl
+Trigger1 = RoundState = 2
+Trigger1 = Var(40) != 0
+Trigger1 = Random <= 199
+Trigger1 = P2BodyDist X <= 35
+Value = 200
+
+[State -1, AI Sword Hit 2]
+Type = ChangeState
+TriggerAll = StateType = S
+TriggerAll = RoundState = 2
+TriggerAll = Var(40) != 0
+Trigger1 = Ctrl
+Trigger1 = Random <= 199
+Trigger1 = P2BodyDist X <= 35
+Trigger2 = StateNo = 200
+Trigger2 = MoveContact && Time >= 14
+Value = 210
+
+[State -1, AI Sword Hit 3]
+Type = ChangeState
+TriggerAll = StateType = S
+TriggerAll = RoundState = 2
+TriggerAll = Var(40) != 0
+Trigger1 = Ctrl
+Trigger1 = Random <= 199
+Trigger1 = P2BodyDist X <= 35
+Trigger2 = StateNo = 200
+Trigger2 = MoveContact && Time >= 14
+Trigger3 = StateNo = 210
+Trigger3 = MoveContact && Time >= 9
+Value = 220
+
+[State -1, AI Air Sword Hit]
+Type = ChangeState
+Trigger1 = StateType = A
+Trigger1 = Ctrl
+Trigger1 = RoundState = 2
+Trigger1 = Var(40) != 0
+Trigger1 = Random <= 799
+Trigger1 = P2BodyDist X <= 35
+Value = 230
+
+[State -1, AI Majinken]
+Type = ChangeState
+TriggerAll = StateType = S
+TriggerAll = RoundState = 2
+TriggerAll = Var(40) != 0
+Trigger1 = Ctrl
+Trigger1 = Random <= 9
+Trigger1 = P2BodyDist X > 50
+Trigger2 = StateNo = 220
+Trigger2 = MoveContact && Time >= 17
+Trigger2 = Random <= 299
+Value = 240
+
+[State -1, AI Akisazame (PARTE 1)]
+Type = ChangeState
+Trigger1 = StateType = S
+Trigger1 = Ctrl
+Trigger1 = RoundState = 2
+Trigger1 = Var(40) != 0
+Trigger1 = Random <= 199
+Trigger1 = P2BodyDist X <= 35
+Trigger2 = StateNo = 220
+Trigger2 = MoveContact
+Trigger2 = Time >= 17
+Trigger2 = Random <= 299
+Value = 1000
+
+[State -1, AI Akisazame (PARTE 2) / Kogahazan (PARTE 1)]
+Type = ChangeState
+TriggerAll = StateType = S
+TriggerAll = RoundState = 2
+TriggerAll = Var(40) != 0
+Trigger1 = StateNo = 1000
+Trigger1 = MoveContact
+Trigger1 = Time >= 29
+Trigger2 = Random <= 199
+Trigger2 = P2BodyDist X <= 35
+Trigger2 = Ctrl
+Trigger3 = StateNo = 220
+Trigger3 = MoveContact
+Trigger3 = Time >= 17
+Trigger3 = Random <= 299
+Value = 1001
+
+[State -1, AI Akisazame (PARTE 3) / Kogahazan (PARTE 2)]
+Type = ChangeState
+Trigger1 = StateType = A
+Trigger1 = RoundState = 2
+Trigger1 = Var(40) != 0
+Trigger1 = StateNo = 1001
+Trigger1 = MoveContact
+Trigger1 = Time >= 16
+Value = 1002
 
 ;===========================================================================
 ;---------------------------------------------------------------------------
@@ -532,6 +982,7 @@ type = ChangeState
 value = 210
 triggerall = command = "b"
 TriggerAll = Command != "Akisazame"
+TriggerAll = Command != "Kogahazan"
 trigger1 = statetype = S
 trigger1 = ctrl
 trigger2 = StateNo = 200
@@ -584,8 +1035,10 @@ type = ChangeState
 value = 1000
 TriggerAll = Command = "Akisazame"
 TriggerAll = StateType = S
-Trigger1 = StateNo = 210
+Trigger1 = StateNo = 210 && MoveContact
 Trigger2 = Ctrl
+Trigger3 = StateNo = 200 && MoveContact
+Trigger4 = StateNo = 220 && MoveContact
 
 ;---------------------------------------------------------------------------
 ; Akisazame (PARTE 2)
@@ -596,9 +1049,10 @@ Trigger1 = Command = "a"
 Trigger1 = StateNo = 1000
 Trigger1 = Time >= 29
 
+
 ;---------------------------------------------------------------------------
 ; Akisazame (PARTE 3)
-[State -1, Akisazame (PARTE 3)]
+[State -1, Akisazame (PARTE 3) / Kogahazan (PARTE 2)]
 type = ChangeState
 value = 1002
 triggerAll = command = "c"
@@ -606,39 +1060,16 @@ trigger1 = StateNo = 1001
 trigger1 = Time >= 16
 
 ;---------------------------------------------------------------------------
-; Jump Strong Punch
-[State -1, Jump Strong Punch]
+; Akisazame (PARTE 2)
+[State -1, Kogahazan (PARTE 1)]
 type = ChangeState
-value = 620
-triggerall = command = "z"
-trigger1 = statetype = A
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Jump Light Kick
-[State -1, Jump Light Kick]
-type = ChangeState
-value = 630
-triggerall = command = "a"
-trigger1 = statetype = A
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Jump Medium Kick
-[State -1, Jump Medium Kick]
-type = ChangeState
-value = 640
-triggerall = command = "b"
-trigger1 = statetype = A
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
-; Jump Strong Kick
-[State -1, Jump Strong Kick]
-type = ChangeState
-value = 650
-triggerall = command = "c"
-trigger1 = statetype = A
-trigger1 = ctrl
-
-;---------------------------------------------------------------------------
+value = 1001
+TriggerAll = Command = "Kogahazan"
+Trigger1 = Ctrl
+Trigger1 = StateType = S
+Trigger2 = StateNo = 200
+Trigger2 = MoveContact || Time >= 14
+Trigger3 = StateNo = 210
+Trigger3 = MoveContact || Time >= 9
+Trigger4 = StateNo = 220
+Trigger4 = MoveContact || Time >= 17

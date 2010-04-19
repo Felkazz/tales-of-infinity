@@ -104,6 +104,13 @@ ctrl = 0
 anim = 180
 velset = 0,0
 
+[State 181, Sound]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S180, 0
+Volume = 0
+Channel = 0
+
 [State 181, 1]
 type = NotHitBy
 trigger1 = 1
@@ -127,6 +134,13 @@ value = 190
 type = AssertSpecial
 trigger1 = 1
 flag = Intro
+
+[State 190, Sound]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S190, 0
+Volume = 0
+Channel = 0
 
 [State 190, 4] ;Change to stand state
 type = ChangeState
@@ -582,7 +596,7 @@ value = 0
 ctrl = 1
 
 ;---------------------------------------------------------------------------
-; Akisazame (PARTE 2)
+; Akisazame (PARTE 2) / Kogahazan (PARTE 1)
 [Statedef 1001]
 type    = S
 movetype= A
@@ -684,8 +698,23 @@ OnTop = 1
 OwnPal = 1
 RemoveOnGetHit = 1
 
+[State 1001, Sound]
+Type = PlaySnd
+Trigger1 = PrevStateNo != 1000
+Trigger1 = Time = 0
+Value = S1001, 0
+Volume = 0
+Channel = 0
+
+[State 1001, Var]
+Type = VarSet
+Trigger1 = PrevStateNo != 1000
+Trigger1 = Time = 0
+V = 59
+Value = 1
+
 ;---------------------------------------------------------------------------
-; Akisazame (PARTE 3)
+; Akisazame (PARTE 3) / Kogahazan (PARTE 2)
 [Statedef 1002]
 type    = A
 movetype= A
@@ -739,6 +768,7 @@ RemoveOnGetHit = 1
 [State 1002, Sound]
 Type = PlaySnd
 Trigger1 = Time = 0
+Trigger1 = Var(59) = 0
 Value = S200, (0+(random%3))
 Volume = 0
 Channel = 0
@@ -936,6 +966,13 @@ Trigger1 = Var(0) = 0
 V = 0
 Value = 2
 
+[State 1000/1001, Reset Var]
+Type = VarSet
+Trigger1 = Var(59) = 1
+Trigger1 = StateNo != [1000,1001]
+V = 59
+Value = 0
+
 ;---------------------------------------------------------------------------
 ; States that are executed when in self's state file (use statedef -3)
 ;---------------------------------------------------------------------------
@@ -950,9 +987,3 @@ triggerall = Time = 1
 trigger1 = stateno = 52 ;Jump land
 trigger2 = stateno = 106 ;Run-back land
 value = 40, 0
-
-[State -3, Display VAR]
-Type = DisplayToClipBoard
-Trigger1 = 1
-Text = "Var(0) = %d || Var(1) = %d || Var(2) = %d"
-Params = Var(0), Var(1), Var(2)
