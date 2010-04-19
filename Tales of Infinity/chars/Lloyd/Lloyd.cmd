@@ -817,7 +817,7 @@ value = 1
 Type = ChangeState
 Trigger1 = Ctrl
 Trigger1 = RoundState = 2
-Trigger1 = Var(4) != 0
+Trigger1 = Var(40) != 0
 Trigger1 = Random <= 499
 Trigger1 = P2BodyDist X <= 75
 Trigger1 = StateType = S
