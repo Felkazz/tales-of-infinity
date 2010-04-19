@@ -14,7 +14,7 @@ pal.defaults = 1
 [Files]
 sprite = Lloyd.sff
 anim = Lloyd.air
-;sound = Lloyd.snd
+sound = Lloyd.snd
 cmd = Lloyd.cmd
 cns = Lloyd.cns
 stcommon = common1.cns
