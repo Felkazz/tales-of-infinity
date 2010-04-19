@@ -866,7 +866,7 @@ TriggerAll = Var(40) != 0
 Trigger1 = Ctrl
 Trigger1 = Random <= 199
 Trigger1 = P2BodyDist X <= 35
-Trigger2 = StateNo = 200
+Trigger2 = StateNo = 230
 Trigger2 = MoveContact && Time >= 14
 Value = 240
 
@@ -878,9 +878,9 @@ TriggerAll = Var(40) != 0
 Trigger1 = Ctrl
 Trigger1 = Random <= 199
 Trigger1 = P2BodyDist X <= 35
-Trigger2 = StateNo = 200
+Trigger2 = StateNo = 230
 Trigger2 = MoveContact && Time >= 14
-Trigger3 = StateNo = 210
+Trigger3 = StateNo = 240
 Trigger3 = MoveContact && Time >= 9
 Value = 250
 
@@ -903,7 +903,7 @@ Trigger1 = Ctrl
 Trigger1 = Random <= 9
 Trigger1 = P2BodyDist X > 50
 Trigger2 = StateNo = 250
-Trigger2 = MoveContact && Time >= 17
+Trigger2 = MoveContact && Time >= 15
 Trigger2 = Random <= 299
 Value = 260
 
@@ -917,7 +917,7 @@ Trigger1 = Random <= 199
 Trigger1 = P2BodyDist X <= 35
 Trigger2 = StateNo = 250
 Trigger2 = MoveContact
-Trigger2 = Time >= 17
+Trigger2 = Time >= 15
 Trigger2 = Random <= 299
 Value = 1000
 
@@ -928,7 +928,7 @@ TriggerAll = RoundState = 2
 TriggerAll = Var(40) != 0
 Trigger1 = StateNo = 1000
 Trigger1 = MoveContact
-Trigger1 = Time >= 29
+Trigger1 = Time >= 36
 Trigger2 = Random <= 199
 Trigger2 = P2BodyDist X <= 35
 Trigger2 = Ctrl
@@ -945,7 +945,7 @@ Trigger1 = RoundState = 2
 Trigger1 = Var(40) != 0
 Trigger1 = StateNo = 1001
 Trigger1 = MoveContact
-Trigger1 = Time >= 16
+Trigger1 = Time >= 25
 Value = 1002
 
 
