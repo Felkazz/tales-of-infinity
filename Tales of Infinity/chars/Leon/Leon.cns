@@ -589,7 +589,7 @@ fall = 1
 [State 1000, 5]
 type = ChangeState
 trigger1 = AnimTime = 0
-value = 44
+value = 50
 ctrl = 1
 
 
