@@ -462,6 +462,132 @@ trigger1 = Time = 20
 value = 1
 
 ;---------------------------------------------------------------------------
+; Kuushuuken
+[statedef 1000]
+type    = S
+movetype= A
+physics = S
+juggle  = 5
+poweradd= 65
+ctrl = 0
+anim = 1000
+
+[State 1000, Go Right]
+Type = VelSet
+Trigger1 = AnimElem = 3
+Y = 0
+X = 8
+
+
+[State 1000, 1]
+type = HitDef
+trigger1 = Animelem = 3
+attr = S, NA
+damage = Var(1)/2, 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 0,10 ;8, 0
+sparkno = 0
+sparkxy = -10, -76
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = 0
+airguard.velocity = 0,0
+air.type = High
+air.velocity = 0,0
+air.hittime = 12
+
+
+[State 1000, PlayerPush]
+type = PlayerPush
+trigger1 = 1
+value = 0 ;1 = naum pode ser atravessado, 0 = pode ser atravessado
+
+
+[State 1000, Turn]
+Type = Turn
+Trigger1 = Time = 10 && HitCount = 1
+
+[State 1000, Count]
+Type = VarAdd
+Trigger1 = Time = 10
+Trigger1 = HitCount = 1
+V = 59
+Value = 1
+
+
+[State 1000, 5]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+
+
+; Kuushuuken (PARTE 2)
+[Statedef 1001]
+type    = S
+movetype= A
+physics = S
+juggle  = 5
+poweradd= 15
+ctrl = 0
+anim = 1001
+
+[State 1000, Turn]
+Type = Turn
+Trigger1 = Time = 1
+
+[State 1001, Change to Air]
+Type = StateTypeSet
+Trigger1 = AnimElem = 2
+StateType = A
+Physics = A
+
+[State 1001, Go Up]
+Type = VelSet
+Trigger1 = AnimElem = 2
+Y = -8
+X = 1
+
+[State 1001, 2]
+type = HitDef
+trigger1 = animelem = 1
+attr = S, NA
+damage = Var(1)+5, 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 0, 0
+sparkno = 0
+sparkxy = -10, -76
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = 1,-8
+airguard.velocity = 1,-8
+air.type = High
+air.velocity = 1,-8
+air.hittime = 12
+fall = 1
+
+
+[State 1000, 5]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 44
+ctrl = 1
+
+
+;---------------------------------------------------------------------------
 
 
 ;---------------------------------------------------------------------------
@@ -478,6 +604,13 @@ Type = VarSet
 Trigger1 = Var(0) = 0
 V = 0
 Value = 6
+
+[State -2, Count Reset]
+Type = VarSet
+Trigger1 = StateNo != 1000
+Trigger1 = Var (59) > 0
+V = 59
+Value = 0
 
 
 ;---------------------------------------------------------------------------

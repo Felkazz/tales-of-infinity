@@ -4,22 +4,22 @@
 ;***************************************************************************;
 
 [Info]
-name = "Cless"
-displayname = "Cless"
-versiondate = 06/04/2010
+name ="Cless"
+displayname ="Cless"
+versiondate =06/04/2010
 mugenversion = 
-author = "5uper / Thunderbert"
-pal.defaults = 1
+author ="5uper / Thunderbert"
+pal.defaults =1
 
 [Files]
-sprite = cless.sff
-anim = cless.air
+sprite =cless.sff
+anim =cless.air
 sound = 
-cmd = cless.cmd
-cns = cless.cns
-stcommon = common1.cns
-st = cless.cns
-pal1 = cless.act
+cmd =cless.cmd
+cns =cless.cns
+stcommon =common1.cns
+st =cless.cns
+pal1=cless.act
 
 [Arcade]
 intro.storyboard = 

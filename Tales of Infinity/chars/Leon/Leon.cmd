@@ -118,6 +118,11 @@ command.buffer.time = 1
 
 ;-| Special Motions |------------------------------------------------------
 [Command]
+Name = "Kuushuuken"
+Command = B,D,F,b
+Time = 20
+
+[Command]
 Name = "Majinken"
 Command = D,F,a
 Time = 20
@@ -492,6 +497,35 @@ time = 1
 ;---------------------------------------------------------------------------
 
 ;===========================================================================
+;---------------------------------------------------------------------------
+; Kuushuuken
+[State -1, Kuushuuken]
+type = ChangeState
+value = 1000
+triggerall = command = "Kuushuuken"
+trigger1 = statetype = S
+trigger1 = ctrl
+
+; Kuushuuken parte 2
+[State -1, Kuushuuken Parte 2]
+type = ChangeState
+value = 1000
+Trigger1 = Command = "b"
+Trigger1 = StateNo = 1000
+Trigger1 = Movecontact
+Trigger1 = Time >= 10
+trigger1 = Var(59) < 2
+
+; Kuushuuken parte 3
+[State -1, Kuushuuken Parte 3]
+type = ChangeState
+value = 1001
+triggerAll = command = "c"
+trigger1 = StateNo = 1000
+Trigger1 = Movecontact
+trigger1 = Time >= 10
+
+
 ;---------------------------------------------------------------------------
 ; Majinken
 [State -1, Majinken]
