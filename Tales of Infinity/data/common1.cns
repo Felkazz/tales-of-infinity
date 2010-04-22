@@ -2000,7 +2000,7 @@ PosType = P1
 Facing = 1
 VFacing = 1
 BindTime = -1
-Removetime = -1
+Removetime =-1
 SprPriority = 3
 OnTop = 1
 OwnPal = 1
@@ -2028,7 +2028,7 @@ time = 1
 [State 6000, End]
 Type = ChangeState
 Trigger1 = MoveContact
-Trigger2 = FrontEdgeBodyDist <= -30
+Trigger2 = FrontEdgeBodyDist <= -40
 Value = 6001
 
 ; Majinkend (END)
@@ -2038,6 +2038,9 @@ MoveType = A
 Physics = S
 Anim = 6001
 
+[State 6001, After the screen]
+Type = DestroySelf
+Trigger1 = FrontEdgeBodyDist <= -40
 
 [State 6001, Stop]
 Type = VelSet
