@@ -502,7 +502,7 @@ value = 0
 ctrl = 1
 
 ;---------------------------------------------------------------------------
-; Chimisazami
+; Kirisazami
 [Statedef 990]
 type    = S
 movetype= A

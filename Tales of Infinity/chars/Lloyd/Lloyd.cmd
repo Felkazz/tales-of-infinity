@@ -384,7 +384,7 @@ Command = D,DF,F,a
 Time = 20
 
 [Command]
-Name = "Chimisazame"
+Name = "Kirisazame"
 Command = F,B,F,a
 Time = 20
 
@@ -905,7 +905,7 @@ Trigger2 = MoveContact && Time >= 17
 Trigger2 = Random <= 299
 Value = 240
 
-[State -1, AI Chimisazame]
+[State -1, AI Kirisazame]
 Type = ChangeState
 TriggerAll = Var(40) != 0
 TriggerAll = StateType = S
@@ -1039,11 +1039,11 @@ trigger4 = StateNo = 220
 Trigger4 = MoveContact || Time >= 17
 
 ;---------------------------------------------------------------------------
-; Chimisazame (PARTE 1)
-[State -1, Chimisazame]
+; Kirisazame (PARTE 1)
+[State -1, Kirisazame]
 type = ChangeState
 value = 990
-TriggerAll = Command = "Chimisazame"
+TriggerAll = Command = "Kirisazame"
 TriggerAll = StateType = S
 Trigger1 = StateNo = 210 && MoveContact
 Trigger2 = Ctrl
