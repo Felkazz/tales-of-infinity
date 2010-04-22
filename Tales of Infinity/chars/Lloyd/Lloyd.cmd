@@ -977,7 +977,7 @@ value = 200
 triggerall = command = "a"
 triggerall = command != "Majinken"
 TriggerAll = Command != "holddown"
-TriggerAll = Command != "Chimisazame"
+TriggerAll = Command != "Kirisazame"
 trigger1 = statetype = S
 trigger1 = ctrl
 
