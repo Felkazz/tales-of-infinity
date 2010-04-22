@@ -1970,7 +1970,7 @@ Anim = 6000
 [State 6000, 1]
 type = HitDef
 trigger1 = Time = 0
-attr = S, NA
+attr = S, NP
 damage = (Root,Var(2)), 0
 animtype = Light
 guardflag = MA
@@ -2004,12 +2004,26 @@ Removetime = -1
 SprPriority = 3
 OnTop = 1
 OwnPal = 1
-RemoveOnGetHit = 0
+RemoveOnGetHit = 1
 
 [State 6000, Speed]
 Type = VelSet
 Trigger1 = 1
 X = 5
+
+[State 6000, HitBy]
+type = HitBy
+trigger1 = 1
+value = SCA,NP,SP,HP
+time = 1
+
+[State 6000, GetHit]
+type = HitOverride
+trigger1 = 1
+attr = SCA,NP,SP,HP
+slot = 1
+stateno = 6001
+time = 1
 
 [State 6000, End]
 Type = ChangeState
@@ -2045,12 +2059,69 @@ PosType = P1
 Facing = 1
 VFacing = 1
 BindTime = -1
-Removetime = 15
+Removetime = 10
 SprPriority = 3
 OnTop = 1
 OwnPal = 1
 RemoveOnGetHit = 0
 
+[State 6001, 4]
+type = ModifyExplod
+trigger1 = 1
+ID = 6001
+scale = .8-time/48.0,.7
+
+[State 6001, 5]
+type = Explod
+trigger1 = time = 0
+anim = F6004
+ID = 6004
+removetime = 14
+
+[State 6001, 6]
+type = ModifyExplod
+trigger1 = 1
+ID = 6004
+scale = .1+time/32.0,.1+time/32.0
+
 [State 6001, Destroy]
 Type = DestroySelf
-Trigger1 = Time = 15
+Trigger1 = Time = 10
+
+;Majinken (Effect)
+[Statedef 6002]
+type    = S
+movetype= I
+physics = N
+juggle  = 1
+poweradd= 0
+ctrl = 0
+velset = .6,0
+anim = 6001
+sprpriority = 8
+
+[State 6002, Majinken (Effect)]
+Type = Explod
+Trigger1 = Time = 0
+Anim = F6002
+ID = 6002
+Pos = 0,0
+PosType = P1
+Facing = 1
+VFacing = 1
+BindTime = -1
+Removetime = 40
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit = 0
+
+[State 6002, 5]
+type = ModifyExplod
+trigger1 = 1
+ID = 6002
+scale = 1-0.025*(Time-10),1-0.025*(Time-10)
+
+[State 6002, 5]
+type = DestroySelf
+trigger1 = time = 40

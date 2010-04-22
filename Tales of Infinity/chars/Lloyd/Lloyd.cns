@@ -449,6 +449,16 @@ air.type = High
 air.velocity = -1.5,-2
 air.hittime = 12
 
+[State 240, Effect]
+type = Helper
+trigger1 = Time = 19
+name = "Effect"
+stateno = 6002
+ID = 6002
+pos = 30, 0
+ownpal = 1
+keyctrl = 0
+
 [State 240, Helper]
 type = Helper
 trigger1 = Time = 19
