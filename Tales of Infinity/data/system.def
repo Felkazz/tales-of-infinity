@@ -69,11 +69,11 @@ stcommon=
 title.bgm = 
 title.bgm.loop = 1        ;Set to 0 to prevent looping
   ;Music to play at char select screen.
-select.bgm = 
-select.bgm.loop = 0
+select.bgm = sound/select.mp3
+select.bgm.loop = 1
   ;Music to play at versus screen.
-vs.bgm = sound/RB Custom_ Sixto Sounds - Tales of Symphonia _Go the Distance_ (Guitar Bass).mp3
-vs.bgm.loop = 1
+vs.bgm = 
+vs.bgm.loop = 0
 
 ;-------------------------------------------------------------------
 ;Title screen definition
