@@ -813,6 +813,7 @@ airguard.velocity = -1.5,-8
 air.type = High
 air.velocity = -1.5,-8
 air.hittime = 12
+fall = 1
 
 
 [State 980, 5]
