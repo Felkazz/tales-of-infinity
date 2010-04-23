@@ -886,6 +886,7 @@ Value = 630
 [State -1, AI Majinken]
 Type = ChangeState
 TriggerAll = StateType = S
+triggerall = NumHelper(6000) = 0
 TriggerAll = RoundState = 2
 TriggerAll = Var(40) != 0
 Trigger1 = Ctrl
@@ -896,6 +897,19 @@ Trigger2 = MoveContact && Time >= 15
 Trigger2 = Random <= 299
 Value = 260
 
+[State -1, AI Kuushuuken]
+Type = ChangeState
+TriggerAll = Var(40) != 0
+TriggerAll = StateType = S
+TriggerAll = RoundState = 2
+Trigger1 = Ctrl
+Trigger1 = Random <= 299
+Trigger1 = P2BodyDist X < 40
+Trigger2 = StateNo = 250
+Trigger2 = MoveContact
+Trigger2 = Time >= 15
+Trigger2 = Random <= 299
+Value = 1000
 
 ;===========================================================================
 ;---------------------------------------------------------------------------
@@ -911,20 +925,20 @@ trigger1 = ctrl
 [State -1, Kuushuuken Parte 2]
 type = ChangeState
 value = 1000
-Trigger1 = Command = "b"
+
 Trigger1 = StateNo = 1000
 Trigger1 = Movecontact
-Trigger1 = Time >= 10
+Trigger1 = Time >= 20
 trigger1 = Var(59) < 2
 
 ; Kuushuuken parte 3
 [State -1, Kuushuuken Parte 3]
 type = ChangeState
 value = 1001
-triggerAll = command = "c"
 trigger1 = StateNo = 1000
 Trigger1 = Movecontact
 trigger1 = Time >= 10
+trigger1 = Var(59) = 2
 
 
 ;---------------------------------------------------------------------------

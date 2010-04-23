@@ -174,8 +174,19 @@ air.type = High
 air.velocity = -1.2,2
 air.hittime = 12
 
+[State 230, Sound]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S200,3
+Volume = 0
+Channel = 0
 
-;30,-20;45,-25 ;38,-20
+[State 230, Sound Sword]
+Type = PlaySnd
+Trigger1 = Time = 3
+Value = S201,0
+Volume = 0
+Channel = 1
 
 [State 230, Effect]
 Type = Explod
@@ -272,6 +283,19 @@ RemoveOnGetHit = 1
 ignorehitpause = 0
 Scale = 0.6,0.6
 
+[State 240, Sound]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S200,1
+Volume = 0
+Channel = 0
+
+[State 240, Sound Sword]
+Type = PlaySnd
+Trigger1 = Time = 3
+Value = S201,0
+Volume = 0
+Channel = 1
 
 [State 240, 5]
 type = ChangeState
@@ -330,6 +354,21 @@ SprPriority = 3
 OnTop = 1
 OwnPal = 1
 RemoveOnGetHit
+
+[State 250, Sound]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S200,0
+Volume = 0
+Channel = 0
+
+
+[State 250, Sound Sword]
+Type = PlaySnd
+Trigger1 = Time = 3
+Value = S201,0
+Volume = 0
+Channel = 1
 
 [State 250, 5]
 type = ChangeState
@@ -400,6 +439,23 @@ OnTop = 1
 OwnPal = 1
 RemoveOnGetHit = 1
 
+[State 260, Effect]
+type = Helper
+trigger1 = Time = 9
+name = "Effect"
+stateno = 6002
+ID = 6002
+pos = 30, 0
+ownpal = 1
+keyctrl = 0
+
+[State 260, Sound]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S260,0
+Volume = 0
+Channel = 0
+
 [State 260, 5]
 type = ChangeState
 trigger1 = AnimTime = 0
@@ -455,10 +511,139 @@ OnTop = 1
 OwnPal = 1
 RemoveOnGetHit = 1
 
+[State 630, Sound]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S630,0
+Volume = 0
+Channel = 0
+
+
+[State 630, Sound Sword]
+Type = PlaySnd
+Trigger1 = Time = 3
+Value = S201,0
+Volume = 0
+Channel = 1
+
 [State 630, 5]
 type = CtrlSet
 trigger1 = Time = 20
 value = 1
+
+;---------------------------------------------------------------------------
+; Kirisazame
+[Statedef 990]
+type    = S
+movetype= A
+physics = S
+juggle  = 5
+poweradd= 65
+ctrl = 0
+velset = 0,0
+anim = 1000
+
+[State 990, Remove Effect]
+Type = RemoveExplod
+Trigger1 = Time = 0
+ID = 200
+
+[State 990, 1]
+type = HitDef
+trigger1 = Animelem = 3
+trigger2 = Animelem = 5
+trigger3 = Animelem = 7
+trigger4 = Animelem = 9
+attr = S, NA
+damage = Var(1)/2, 0
+animtype = Light
+guardflag = MA
+hitflag = MAF
+priority = 3, Hit
+pausetime = 0,10 ;8, 0
+sparkno = 0
+sparkxy = -10, -76
+hitsound = 5, 0
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 12
+ground.velocity = -1.5
+airguard.velocity = -0.75,-1
+air.type = High
+air.velocity = -1.5,-2
+air.hittime = 12
+
+[State 990, Effect]
+Type = Explod
+Trigger1 = Animelem = 3; Time = 10
+Anim = F241
+ID = 990
+Pos = 43,-26;35,-12
+PosType = P1
+Facing = 1
+VFacing = 1
+BindTime = -1
+Removetime = 28
+SprPriority = 3
+OnTop = 1
+OwnPal = 1
+RemoveOnGetHit = 1
+Scale = 0.6, 0.6
+
+[State 990, ModifyEffect]
+type = ModifyExplod
+trigger1 = Animelem = 5; Time = 18
+ID = 990
+pos = 43,-8;24,-20
+postype = p1
+facing = 1
+vfacing = 1
+bindtime = -1
+removetime = 28
+scale = 0.6,0.6
+sprpriority = 3
+ontop = 1
+ownpal = 1
+removeongethit = 1
+
+[State 990, ModifyEffect]
+type = ModifyExplod
+trigger1 = Animelem = 7;Time = 26
+ID = 990
+pos = 43,-15;24, 3
+postype = p1
+facing = 1
+vfacing = 1
+bindtime = -1
+removetime = 28
+scale = 0.6,0.6
+sprpriority = 3
+ontop = 1
+ownpal = 1
+removeongethit = 1
+
+[State 990, ModifyEffect]
+type = ModifyExplod
+trigger1 = Animelem = 9;Time = 26
+ID = 990
+pos = 43,-26 ;24, 3
+postype = p1
+facing = 1
+vfacing = 1
+bindtime = -1
+removetime = 28
+scale = 0.6,0.6
+sprpriority = 3
+ontop = 1
+ownpal = 1
+removeongethit = 1
+
+[State 990, 5]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
 
 
 ;---------------------------------------------------------------------------
@@ -472,6 +657,13 @@ poweradd= 65
 ctrl = 0
 velset = 0,0
 anim = 1000
+
+[State 1000, Sound]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S1000,0
+Volume = 0
+Channel = 0
 
 [State 1000, Remove Effect]
 Type = RemoveExplod
@@ -572,10 +764,8 @@ removeongethit = 1
 [State 1000, 5]
 type = ChangeState
 trigger1 = AnimTime = 0
-value = 0
+value = 1001
 ctrl = 1
-
-
 
 
 ; Akisazame (PARTE 2)
@@ -625,58 +815,12 @@ air.velocity = -1.5,-8
 air.hittime = 12
 
 
+[State 980, 5]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 50
+ctrl = 1
 
-
-; Akisazame (PARTE 3)
-[Statedef 1002]
-type    = A
-movetype= A
-physics = A
-juggle  = 6
-poweradd= 50
-ctrl = 0
-anim = 630
-
-[State 1002, 1]
-type = HitDef
-trigger1 = Time = 0
-attr = S, NA
-damage = Var(1)+5, 0
-animtype = Light
-guardflag = MA
-hitflag = MAF
-priority = 3, Hit
-pausetime = 5, 5
-sparkno = 0
-sparkxy = -10, -76
-hitsound = 5, 0
-guardsound = 6, 0
-ground.type = High
-ground.slidetime = 5
-ground.hittime  = 12
-ground.velocity = -3, 10
-airguard.velocity = -3, 10
-air.type = High
-air.velocity = -3, 10
-air.hittime = 12
-Fall = 1
-Air.Fall = 1
-
-[State 1002, Effect]
-Type = Explod
-Trigger1 = Time = 5
-Anim = F231
-ID = 630
-Pos = 52,-10;45,-25
-PosType = P1
-Facing = 1
-VFacing = 1
-BindTime = -1
-Removetime = 10
-SprPriority = 3
-OnTop = 1
-OwnPal = 1
-RemoveOnGetHit = 1
 
 ;---------------------------------------------------------------------------
 ; Kogahazan
@@ -688,6 +832,13 @@ juggle  = 5
 poweradd= 15
 ctrl = 0
 anim = 1010
+
+[State 1010, Sound]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = S1010,0
+Volume = 0
+Channel = 0
 
 [State 1010, Change to Air]
 Type = StateTypeSet
@@ -711,7 +862,7 @@ animtype = Light
 guardflag = MA
 hitflag = MAF
 priority = 3, Hit
-pausetime = 0, 0
+pausetime = 0, 10
 sparkno = 0
 sparkxy = -10, -76
 hitsound = 5, 0
@@ -726,7 +877,11 @@ air.velocity = -1.5,-8
 air.hittime = 12
 
 
-
+[State 1010, 5]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 1011
+ctrl = 1
 
 ; Kogahazan (PARTE 2)
 [Statedef 1011]

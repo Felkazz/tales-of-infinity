@@ -7,7 +7,7 @@ author="5uper / Thunderbert"
 pal.defaults=1
 [Files]
 sprite=Leon.sff
-sound=
+sound=Leon.snd
 anim=Leon.air
 cmd=Leon.cmd
 cns=Leon.cns

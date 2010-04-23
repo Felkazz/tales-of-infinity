@@ -4,22 +4,22 @@
 ;***************************************************************************;
 
 [Info]
-name = "Lloyd"
-displayname = "Lloyd"
+name ="Lloyd"
+displayname ="Lloyd"
 versiondate = 
 mugenversion = 
-author = "5uper / Thunderbert"
-pal.defaults = 1
+author ="5uper / Thunderbert"
+pal.defaults =1
 
 [Files]
-sprite = Lloyd.sff
-anim = Lloyd.air
-sound = Lloyd.snd
-cmd = Lloyd.cmd
-cns = Lloyd.cns
-stcommon = common1.cns
-st = Lloyd.cns
-pal1 = Lloyd.act
+sprite =Lloyd.sff
+anim =Lloyd.air
+sound =Lloyd.snd
+cmd =Lloyd.cmd
+cns =Lloyd.cns
+stcommon =common1.cns
+st =Lloyd.cns
+pal1=Lloyd.act
 
 [Arcade]
 intro.storyboard = 

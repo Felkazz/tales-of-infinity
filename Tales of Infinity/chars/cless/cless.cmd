@@ -370,18 +370,8 @@ time = 1
 ;-| Special Motions |------------------------------------------------------
 [Command]
 Name = "Kogahazan"
-Command = F,D,DF,b
+Command = D+a
 Time = 20
-
-[Command]
-Name = "Kogahazan"
-Command = F,DF,D,DF,b
-Time = 20
-
-[Command]
-Name = "Akisazame"
-Command = b,b,b,b,b
-Time = 50
 
 [Command]
 Name = "Majinken"
@@ -392,6 +382,17 @@ Time = 20
 Name = "Majinken"
 Command = D,DF,F,a
 Time = 20
+
+[Command]
+Name = "Kirisazame"
+Command = F,B,F,a
+Time = 20
+
+[Command]
+Name = "Akisazame"
+Command = F,B,F,b
+Time = 50
+
 
 ;-| Double Tap |-----------------------------------------------------------
 [Command]
@@ -899,6 +900,7 @@ Type = ChangeState
 TriggerAll = StateType = S
 TriggerAll = RoundState = 2
 TriggerAll = Var(40) != 0
+TriggerAll = NumHelper(6000) = 0
 Trigger1 = Ctrl
 Trigger1 = Random <= 9
 Trigger1 = P2BodyDist X > 50
@@ -907,46 +909,51 @@ Trigger2 = MoveContact && Time >= 15
 Trigger2 = Random <= 299
 Value = 260
 
-[State -1, AI Akisazame (PARTE 1)]
+[State -1, AI Kirisazame]
 Type = ChangeState
-Trigger1 = StateType = S
+TriggerAll = Var(40) != 0
+TriggerAll = StateType = S
+TriggerAll = RoundState = 2
 Trigger1 = Ctrl
-Trigger1 = RoundState = 2
-Trigger1 = Var(40) != 0
-Trigger1 = Random <= 199
+Trigger1 = Random <= 299
 Trigger1 = P2BodyDist X <= 35
 Trigger2 = StateNo = 250
 Trigger2 = MoveContact
 Trigger2 = Time >= 15
 Trigger2 = Random <= 299
+Value = 990
+
+[State -1, AI Akisazame]
+Type = ChangeState
+TriggerAll = Var(40) != 0
+TriggerAll = StateType = S
+TriggerAll = RoundState = 2
+Trigger1 = Ctrl
+Trigger1 = Random <= 99
+Trigger1 = P2BodyDist X <= 35
+Trigger2 = StateNo = 250
+Trigger2 = MoveContact
+Trigger2 = Time >= 15
+Trigger2 = Random <= 99
+Trigger3 = StateNo = 990
+Trigger3 = Time >= 42
+Trigger3 = MoveContact
 Value = 1000
 
-[State -1, AI Akisazame (PARTE 2)]
+[State -1, Kogahazan]
 Type = ChangeState
 TriggerAll = StateType = S
 TriggerAll = RoundState = 2
 TriggerAll = Var(40) != 0
-Trigger1 = StateNo = 1000
-Trigger1 = MoveContact
-Trigger1 = Time >= 36
-Trigger2 = Random <= 199
-Trigger2 = P2BodyDist X <= 35
-Trigger2 = Ctrl
-Trigger3 = StateNo = 250
-Trigger3 = MoveContact
-Trigger3 = Time >= 17
-Trigger3 = Random <= 299
-Value = 1001
+Trigger1 = Random <= 199
+Trigger1 = P2BodyDist X <= 35
+Trigger1 = Ctrl
+Trigger2 = StateNo = 250
+Trigger2 = MoveContact
+Trigger2 = Time >= 15
+Trigger2 = Random <= 299
+Value = 1010
 
-[State -1, AI Akisazame (PARTE 3)]
-Type = ChangeState
-Trigger1 = StateType = A
-Trigger1 = RoundState = 2
-Trigger1 = Var(40) != 0
-Trigger1 = StateNo = 1001
-Trigger1 = MoveContact
-Trigger1 = Time >= 25
-Value = 1002
 
 
 ;===========================================================================
@@ -955,17 +962,27 @@ Value = 1002
 [State -1, Kogahazan]
 type = ChangeState
 value = 1010
-TriggerAll = Command = "Kogahazan"
-TriggerAll = StateType = S
+TriggerAll = Command = "holddown"
+TriggerAll = Command = "a"
+Trigger1 = StateType = S
 Trigger1 = Ctrl
+Trigger2 = StateNo = 230
+Trigger2 = MoveContact || Time >= 14
+Trigger3 = StateNo = 240
+Trigger3 = MoveContact || Time >= 9
+Trigger4 = StateNo = 250
+Trigger4 = MoveContact || Time >= 15
 
-; Kogahazan parte 2
-[State -1, Kogahazan parte 2]
+
+;---------------------------------------------------------------------------
+; Kirisazame
+[State -1, Kirisazame]
 type = ChangeState
-value = 1011
-TriggerAll = Command = "c"
-trigger1 = StateNo = 1010
-trigger1 = Time >= 1
+value = 990
+TriggerAll = Command = "Kirisazame"
+TriggerAll = StateType = S
+Trigger1 = StateNo = 240
+Trigger2 = Ctrl
 
 ;---------------------------------------------------------------------------
 ; Akisazame
@@ -974,26 +991,13 @@ type = ChangeState
 value = 1000
 TriggerAll = Command = "Akisazame"
 TriggerAll = StateType = S
-Trigger1 = StateNo = 240
+Trigger1 = StateNo = 240 && MoveContact
 Trigger2 = Ctrl
-;onde X é o statedef do golpe "a" normal
+Trigger3 = StateNo = 230 && MoveContact
+Trigger4 = StateNo = 250 && MoveContact
+trigger5 = StateNo = 990
+Trigger5 = Time >= 42
 
-; Akisazame parte 2
-[State -1, Akisazame Parte 2]
-type = ChangeState
-value = 1001
-Trigger1 = Command = "a"
-Trigger1 = StateNo = 1000
-Trigger1 = Time >= 30
-;onde X é o statedef do Akisazame e Y é o tempo depois q ele dá o último golpe
-
-; Akisazame parte 3)
-[State -1, Akisazame Parte 3]
-type = ChangeState
-value = 1002
-triggerAll = command = "c"
-trigger1 = StateNo = 1001
-trigger1 = Time >= 16
 
 ;---------------------------------------------------------------------------
 ; Majinken
@@ -1036,6 +1040,9 @@ trigger1 = ctrl
 type = ChangeState
 value = 230
 triggerall = command = "a"
+triggerall = command != "Majinken"
+TriggerAll = Command != "holddown"
+TriggerAll = Command != "Kirisazame"
 trigger1 = statetype = S
 trigger1 = ctrl
 
@@ -1045,9 +1052,11 @@ trigger1 = ctrl
 type = ChangeState
 value = 240
 TriggerAll = Command != "Akisazame"
-triggerall = command = "b"
 trigger1 = statetype = S
+triggerall = command = "b"
 trigger1 = ctrl
+trigger2 = command = "b" || command = "a"
+Trigger2 = Command != "holddown"
 trigger2 = StateNo = 230
 Trigger2 = MoveContact || Time >= 14
 
@@ -1061,6 +1070,8 @@ trigger1 = statetype = S
 trigger1 = ctrl
 trigger2 = StateNo = 230
 Trigger2 = MoveContact || Time >= 14
+trigger3 = command = "c" || command = "a" || command = "b"
+Trigger3 = Command != "holddown"
 trigger3 = StateNo = 240
 Trigger3 = MoveContact || Time >= 17
 
