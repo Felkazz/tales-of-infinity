@@ -982,6 +982,8 @@ trigger1 = ctrl
 type = ChangeState
 value = 230
 triggerall = command = "a"
+triggerall = command != "Majinken"
+TriggerAll = Command != "holddown"
 trigger1 = statetype = S
 trigger1 = ctrl
 
@@ -990,9 +992,11 @@ trigger1 = ctrl
 [State -1, Sword Hit 2]
 type = ChangeState
 value = 240
-triggerall = command = "b"
 trigger1 = statetype = S
+trigger1 = command = "b"
 trigger1 = ctrl
+trigger2 = command = "b" || command = "a"
+Trigger2 = Command != "holddown"
 trigger2 = StateNo = 230
 Trigger2 = MoveContact || Time >= 14
 
@@ -1001,11 +1005,14 @@ Trigger2 = MoveContact || Time >= 14
 [State -1, Sword Hit 3]
 type = ChangeState
 value = 250
-triggerall = command = "c"
+trigger1 = command = "c"
 trigger1 = statetype = S
 trigger1 = ctrl
+trigger2 = command = "c"
 trigger2 = StateNo = 230
 Trigger2 = MoveContact || Time >= 14
+trigger3 = command = "c" || command = "a" || command = "b"
+Trigger3 = Command != "holddown"
 trigger3 = StateNo = 240
 Trigger3 = MoveContact || Time >= 17
 
