@@ -173,7 +173,7 @@ priority = 3, Hit
 pausetime = 5, 10
 sparkno = 0
 sparkxy = -10, -76
-hitsound = 5, 0
+hitsound = 201, 0
 guardsound = 6, 0
 ground.type = High
 ground.slidetime = 5
@@ -200,12 +200,19 @@ OnTop = 1
 OwnPal = 1
 RemoveOnGetHit = 1
 
-[State 200, Sound]
+[State 200, Voice Sound]
 Type = PlaySnd
 Trigger1 = Time = 0
 Value = S200, (0+(random%3))
 Volume = 0
 Channel = 0
+
+[State 200, Slash Sound]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = F200, 4
+Volume = 0
+Channel = 1
 
 [State 200, 5]
 type = ChangeState
@@ -237,7 +244,7 @@ priority = 3, Hit
 pausetime = 5, 10
 sparkno = 0
 sparkxy = -10, -76
-hitsound = 5, 0
+hitsound = 201, 0
 guardsound = 6, 0
 ground.type = High
 ground.slidetime = 5
@@ -282,12 +289,19 @@ OwnPal = 1
 RemoveOnGetHit = 1
 Scale = 0.6, 0.6
 
-[State 210, Sound]
+[State 210, Voice Sound]
 Type = PlaySnd
 Trigger1 = Time = 0
 Value = S200, (0+(random%3))
 Volume = 0
 Channel = 0
+
+[State 210, Slash Sound]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = F200, 4
+Volume = 0
+Channel = 1
 
 [State 210, 5]
 type = ChangeState
@@ -319,7 +333,7 @@ priority = 3, Hit
 pausetime = 5, 15
 sparkno = 0
 sparkxy = -10, -76
-hitsound = 5, 0
+hitsound = 201, 0
 guardsound = 6, 0
 ground.type = High
 ground.slidetime = 5
@@ -346,12 +360,19 @@ OnTop = 1
 OwnPal = 1
 RemoveOnGetHit = 1
 
-[State 220, Sound]
+[State 220, Voice Sound]
 Type = PlaySnd
 Trigger1 = Time = 0
 Value = S200, (0+(random%3))
 Volume = 0
 Channel = 0
+
+[State 220, Slash Sound]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = F200, 4
+Volume = 0
+Channel = 1
 
 [State 220, 5]
 type = ChangeState
@@ -381,7 +402,7 @@ priority = 3, Hit
 pausetime = 5, 10
 sparkno = 0
 sparkxy = -10, -76
-hitsound = 5, 0
+hitsound = 201, 0
 guardsound = 6, 0
 ground.type = High
 ground.slidetime = 5
@@ -408,12 +429,19 @@ OnTop = 1
 OwnPal = 1
 RemoveOnGetHit = 1
 
-[State 230, Sound]
+[State 230, Voice Sound]
 Type = PlaySnd
 Trigger1 = Time = 0
 Value = S200, (0+(random%3))
 Volume = 0
 Channel = 0
+
+[State 230, Slash Sound]
+Type = PlaySnd
+Trigger1 = Time = 0
+Value = F200, 4
+Volume = 0
+Channel = 1
 
 ;---------------------------------------------------------------------------
 ; Majinken
@@ -529,7 +557,7 @@ priority = 3, Hit
 pausetime = (ifelse((AnimElem = 15), 5, 0)), 10
 sparkno = 0
 sparkxy = -10, -76
-hitsound = 5, 0
+hitsound = 201, 0
 guardsound = 6, 0
 ground.type = High
 ground.slidetime = 5
@@ -622,12 +650,22 @@ ontop = 1
 ownpal = 1
 removeongethit = 1
 
-[State 990, Sound]
+[State 990, Voice Sound]
 Type = PlaySnd
 Trigger1 = Time = 0
 Value = S999, 0
 Volume = 0
 Channel = 0
+
+[State 990, Slash Sound]
+Type = PlaySnd
+Trigger1 = Time = 10
+Trigger2 = Time = 18
+Trigger3 = Time = 26
+Trigger4 = Time = 39
+Value = F200, 4
+Volume = 0
+Channel = 1
 
 [State 990, 5]
 type = ChangeState
@@ -665,7 +703,7 @@ priority = 3, Hit
 pausetime = (ifelse((AnimElem = 15), 5, 0)), 10
 sparkno = 0
 sparkxy = -10, -76
-hitsound = 5, 0
+hitsound = 201, 0
 guardsound = 6, 0
 ground.type = High
 ground.slidetime = 5
@@ -744,12 +782,25 @@ ontop = 1
 ownpal = 1
 removeongethit = 1
 
-[State 1000, Sound]
+[State 1000, Voice Sound]
 Type = PlaySnd
 Trigger1 = Time = 0
 Value = S1000, 0
 Volume = 0
 Channel = 0
+
+[State 1000, Slash Sound]
+Type = PlaySnd
+Trigger1 = Time = 10
+Trigger2 = Time = 18
+Trigger3 = Time = 26
+Trigger4 = Time = 34
+Trigger5 = Time = 42
+Trigger6 = Time = 50
+Trigger7 = Time = 58
+Value = F200, 4
+Volume = 0
+Channel = 1
 
 [State 1000, 5]
 type = ChangeState
@@ -763,7 +814,7 @@ ctrl = 1
 type    = S
 movetype= A
 physics = S
-juggle  = 5
+juggle  = 0
 poweradd= 15
 ctrl = 0
 anim = 1001
@@ -808,7 +859,7 @@ priority = 3, Hit
 pausetime = 0, 0
 sparkno = 0
 sparkxy = -10, -76
-hitsound = 5, 0
+hitsound = 201, 0
 guardsound = 6, 0
 ground.type = High
 ground.slidetime = 5
@@ -837,7 +888,7 @@ OnTop = 1
 OwnPal = 1
 RemoveOnGetHit = 1
 
-[State 1001, Sound]
+[State 1001, Voice Sound]
 Type = PlaySnd
 Trigger1 = PrevStateNo != 1000
 Trigger1 = Time = 0
@@ -845,12 +896,12 @@ Value = S1001, 0
 Volume = 0
 Channel = 0
 
-[State 1001, Var]
-Type = VarSet
-Trigger1 = PrevStateNo != 1000
+[State 1001, Slash Sound]
+Type = PlaySnd
 Trigger1 = Time = 0
-V = 59
-Value = 1
+Value = F200, 4
+Volume = 0
+Channel = 1
 
 [State 1001, End]
 Type = ChangeState
@@ -872,7 +923,7 @@ Ctrl = 0
 type    = A
 movetype= A
 physics = A
-juggle  = 6
+juggle  = 0
 poweradd= 50
 ctrl = 0
 anim = 230
@@ -889,7 +940,7 @@ priority = 3, Hit
 pausetime = 5, 5
 sparkno = 0
 sparkxy = -10, -76
-hitsound = 5, 0
+hitsound = 201, 0
 guardsound = 6, 0
 ground.type = High
 ground.slidetime = 5
@@ -918,13 +969,12 @@ OnTop = 1
 OwnPal = 1
 RemoveOnGetHit = 1
 
-[State 1002, Sound]
+[State 1002, Slash Sound]
 Type = PlaySnd
 Trigger1 = Time = 0
-Trigger1 = Var(59) = 0
-Value = S200, (0+(random%3))
+Value = F200, 4
 Volume = 0
-Channel = 0
+Channel = 1
 
 ;---------------------------------------------------------------------------
 ; Crouching Strong Punch

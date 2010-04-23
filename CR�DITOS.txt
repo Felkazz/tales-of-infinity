@@ -5,3 +5,10 @@ Frio, Kyaro = KraotsvsLlyod
 
 Stages:
 Forest, Mount Farlos, Pier, e Shadows Cave = Noctis
+
+Sounds:
+Slashs = Mouki / anamochi
+Lloyd = anamochi
+
+Effects:
+Majinken = Alffred
