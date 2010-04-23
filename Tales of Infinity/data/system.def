@@ -72,7 +72,7 @@ title.bgm.loop = 1        ;Set to 0 to prevent looping
 select.bgm = 
 select.bgm.loop = 0
   ;Music to play at versus screen.
-vs.bgm = 
+vs.bgm = sound/RB Custom_ Sixto Sounds - Tales of Symphonia _Go the Distance_ (Guitar Bass).mp3
 vs.bgm.loop = 1
 
 ;-------------------------------------------------------------------
