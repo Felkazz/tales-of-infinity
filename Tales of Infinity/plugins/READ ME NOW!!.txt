@@ -1,0 +1,13 @@
+if for some reason you hear no music, install the
+XPCodecPack-2.0.6 i provided here.
+
+you will then be able to play .ogg file types on your comp.
+which has alot less errors w/ mugen than using .mp3.
+zedz
+
+
+
+copy into or apply which plugin that is needed into your mugen.cfg file
+
+plugin = looptype=2, plugins/in_vorbis.dll, ogg
+plugin =looptype=2, plugins/DJ-VAN.dll, mp3, mp2, mpg, in_cube.dll, adx, n_mp3.dll, in_mpc.dll, mpc 

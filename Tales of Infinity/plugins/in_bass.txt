@@ -1,0 +1,90 @@
+
+  -- BASS Module Player Plugin 1.8.0 --
+
+  for WinAMP 2.x 
+
+  version 1.8.0 Copyright(c)2003 Hans E. Molin & Malte Clasen.
+  versions 1.3.0 and below Copyright(c)2001 Malte Clasen.
+
+This text is mainly ripped from the XMPlay/BASS documentation by Ian Luck.
+You can get XMPlay and BASS at http://www.un4seen.com/
+
+Installation
+============
+
+If at installation you chose not to rename "in_mod.dll" you have to
+remove/rename the default module player "in_mod.dll" manually 
+if you experience any problems like modules appearing twice after adding 
+a whole directory to the playlist.
+
+
+What's the point?
+=================
+BASS MPP is an XM/IT/MOD/S3M player for Windows 9x/NT. It's got the
+best (most accurate to FT2) XM reproduction to be heard from any player.
+All features/effects (including several FT2 quirks) are 100% supported.
+The IT reproduction is also practically balls-on, with full support for
+all effects/NNA/DCA/filters etc...
+
+Requirements
+============
+BASS MPP requires DirectX 3 or above, so it not only works with Windows
+95/98/2000, but also Windows NT 4.0 (with service pack 4). BASS does
+not require that a soundcard with DirectSound/DirectSound3D hardware
+accelerated drivers is installed, but it does improve performance if
+there is one. BASS also takes advantage of MMX acceleration, which
+improves the performance of the MOD music playback.
+
+Latest Version
+==============
+The latest version of BASS MPP can always be found at my homepage:
+
+        http://www.copro.org/malte/
+
+Version History
+===============
+
+1.8.0 [2003-04-21]
+- Updated to BASS 1.8
+- BASS.dll version check now checks for version 1.8 OR higher
+- Can automatically rename in_mod.dll to in_mod.bak at install
+  (if you choose to)
+- Compiled with MinGW
+- Happy birthday brother :)
+
+1.3.0 [2001-12-08]
+- win98 file info bug fixed
+
+1.2.1 [2001-10-07]
+- code completely rearranged in c++
+- additional playlist information (file info, song length) are now supported
+- PIMP installer used
+
+1.2.0
+- can display the length of a module in seconds
+
+0.9.0
+- volume ramping bug fixed
+
+0.8.4
+- time mode selection added
+
+Copyright, Disclaimer, and all that other jazz
+==============================================
+This program is free for non-commercial use, so if anyone tries to charge
+you for it kick 'em where it hurts.
+
+This software is provided as-is. The author makes absolutely no warranties
+on it. You use it at your own risk. The author shall not be held responsible
+for any damage that may result from its use, including, but not limited to,
+burning your toast while being too engrossed in the BASS MPP "experience".
+
+All trademarks and other registered names contained in the BASS MPP
+"package" are the property of their respective owners.
+
+Bug reports, Suggestions, Comments etc...
+=========================================
+If you have any of the aforementioned you can email:
+
+       Malte Clasen: malte.clasen@gmx.de
+       Hans E. Molin: kvasi@freeshell.org

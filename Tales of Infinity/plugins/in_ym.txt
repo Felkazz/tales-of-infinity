@@ -1,0 +1,189 @@
+========================
+======== YMAMP =========
+========================
+
+
+Introduction
+------------
+YMAMP is a WinAMP plugin that plays CYM and GYM log files produced by the
+emulators Callus and Genecyst. A Pentium 200MHz or faster is recommended for
+using YMAMP. However, it will run well on a machine as slow as a Pentium
+133MHz, but you will not have enough CPU time to run most visualizations with
+it. Anything slower than a Pentium 133MHz is not recommended, but there is
+nothing stopping you from trying anyway :) Most CYM files will use about 90%
+CPU time on a Pentium 133MHz. Most GYM files will use about 85% CPU time on
+a Pentium 133MHz. It is less on faster machines and much less with sampling
+rates lower than 48000. To use YMAMP, place in_ym.dll into your winamp\plugins
+folder and restart WinAMP. You should then be able to open CYM and GYM files
+from within WinAMP.
+
+IMPORTANT: Make sure that you have no other plugins that play GYM or CYM
+files in your winamp\plugins folder. YMAMP might not get used to play them
+otherwise.
+
+
+Warranty
+--------
+YMAMP comes with ABSOLUTELY NO WARRANTY. Use YMAMP at your own risk.
+
+
+Known problems
+--------------
+Seeking sometimes ruins the sound.
+
+Bitrate is not calculated. It always says zero.
+
+YMAMP can't stream files across a network.
+
+EQ does not work with 24000 and 48000 sampling rates.
+
+
+Source notes
+------------
+Sources to YMAMP are available from YMAMP's web site.
+
+Sources were written to be built with mingw32 or LCC-Win32, but it
+shouldn't be hard to build it with another compiler system.
+
+LCC-Win32 is the recommended free compiler system if you do not have access
+to a commercial compiler system like Visual C++. You can get LCC-Win32 from
+http://www.cs.virginia.edu/~lcc-win32/
+
+To compile with mingw32 or cygwin, type "make -f makefile.gcc".
+
+To compile with LCC-Win32, type "make -f makefile.lcc".
+
+I do not recommend building YMAMP with mingw32 or cygwin on a Windows 9x
+system.
+
+
+Other notes
+-----------
+Feel free to send me comments about YMAMP and tell me about any bugs you find.
+My E-Mail address is given below.
+
+Do not ask me about problems using this plugin with versions of WinAMP prior
+to 2.2x.
+
+The default sampling rate is 44100 since that is the most compatable rate.
+Use 48000 if you can since it sounds the best, or lower rates if you need
+the extra CPU time. Use 44100 or 22050 if you want to use EQ.
+
+There is no percussion or other sampled sound effects in CYM files. This is
+not a bug. Sampled sounds in Callus are produced by a Z80 chip and the data
+for it does not exist in CYM files. As far as GYM files are concerned, you
+must use Megasis to get sampled audio within the GYM file. Hopefully other
+Genesis emulators will add support for this.
+
+Not all CYM or GYM files use stereo sound. Don't think anything is wrong
+if it doesn't sound stereo.
+
+Do not ask me for roms for Callus, Genecyst, or any other emulator or
+where to find roms.
+
+Do not ask me to send you any CYM or GYM files. Use Callus, Genecyst,
+or Megasis to make them.
+
+You may freely distribute YMAMP, but you are not allowed to sell it.
+
+
+Credits
+-------
+YMAMP is written by Marp.
+
+The YM2151,	YM2612, and SN76496	emualtion code come from M.A.M.E. version 0.36b12.
+Some modifications were made to better suit YMAMP.
+
+The input minisdk from Nullsoft was used as a skeleton for YMAMP.
+
+YMAMP is compressed with UPX, the Ultimate Packer for eXecutables.
+
+Thanks to Sevy. His program MSP gave me the idea to write this plugin.
+
+Compression routines for GYM provided by zlib.
+
+Thanks to Sardu for creating Callus and Genecyst. They are great emulators.
+
+Thanks to Zophar's Domain and Emulation World for providing a new web site
+for YMAMP and MSP.
+
+
+Contacts
+--------
+YMAMP site: http://smsoft.zophar.net/
+
+My E-Mail address: marp@technologist.com
+
+Callus and Genecyst can be found at: http://bloodlust.zophar.net/
+
+Megasis can be found at: http://www.geocities.co.jp/Playtown-Spade/3163/
+
+zlib can be found at: http://www.cdrom.com/pub/infozip/zlib/zlib.html
+
+M.A.M.E. can be found at: http://www.mame.net/
+
+WinAMP can be found at: http://www.winamp.com/
+
+UPX can be found at: http://www.nexus.hu/upx/
+
+Zophar's Domain: http://www.zophar.net/
+
+Emulation World: http://www.emulationworld.com/
+
+
+History
+-------
+v2.0: Jan 02, 2000.
+-Emulation code has been updated and now comes from M.A.M.E. v0.36b12
+-Configuration is now saved in plugin.ini. You can safely delete the
+ old configuration file.
+-Updated web site URL to show YMAMP's new location. Webmasters please
+ update your links. This will probably be the last time it moves.
+-Redesigned the configuration dialog.
+-New configuration options added:
+ the ability to turn on/off individual channels
+ the ability to adjust the emulated clock speed
+-Redesigned "about" dialog.
+-New info dialog for GYM files.
+-Created a new GYM header format. Specifications for it are available
+ in the source package.
+-Added ability to compress/decompress GYM files.
+-Fixed problem with sampled audio in GYM files. Thanks to Tatsuyuki Satoh
+ for helping me fix this.
+
+v1.3: Sep 03, 1999.
+-DSP plugins now work with both GYM and CYM playback. E-Mail me at
+ marp@technologist.com if you still have problems using DSP plugins with YMAMP.
+-Fixed a display out-of-sync problem when using certain DSP plugins.
+-Default sampling rate is now 44100 for compatability reasons. Use 48000 if
+ you can.
+-Binary distribution is now compiled with gcc 2.9.5. This gives about a 5% to
+ 10% speed increase on a Pentium 133MHz over previous versions of YMAMP.
+-Improved makefile for gcc.
+-Merged in2.h and out.h into in_ym.h.
+
+v1.2: Jul 30, 1999.
+-DSP plugins now work with GYM playback.
+-Added a configuration dialog. It is now possible to configure the sampling
+ rate and thread priority.
+-YMAMP no longer assumes memory allocated successfully.
+-Improved visualization synchronization.
+-Cleaned up a large portion of the sources.
+-Reformatted sources to be more compact and readable.
+-Added some comments to in_ym.c for people interested in the source.
+-Eliminated almost all of the dozens of warnings that Visual C++ would give.
+-Added a makefile for building with LCC-Win32.
+-Seeking is now back to 1/60 sec precision since 1/1000 sec precision didn't
+ improve anything.
+
+v1.1: Released Jul 04, 1999.
+-Seeking is now 1/1000 second precise.
+-Playback loops adjusted to be more logical. Reduces CPU consumption by about
+ 2-3% on a Pentium 133MHz.
+-Added build date and time to the "about" dialog.
+-Updated web site URL to show YMAMP's new location.
+
+v1.0: Released Jun 27, 1999.
+-Initial release.
+
+Enjoy.
