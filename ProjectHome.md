@@ -1,0 +1,1 @@
+This is a M.U.G.E.N. project!
